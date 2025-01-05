@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1736063342.64911 "resume.tex" "resume.pdf" "resume" 1736063343.55735 0
+["pdflatex"] 1736065951.59182 "resume.tex" "resume.pdf" "resume" 1736065952.55761 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc" 1256929440 2840 216e6e45ad352e2456e1149f28885bee ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc" 1256929440 2327 9d6df24f9c4f7368395224341a95523a ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/lm/lmex10.tfm" 1256929440 992 ce925c9346c7613270a79afbee98c070 ""
@@ -116,8 +116,8 @@
   "C:/Users/allan/AppData/Roaming/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/allan/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/allan/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1699094857 48766 0b93839be28e9744a24c45075c75b2e2 ""
-  "resume.aux" 1736063343 1297 3615ebc31aea05db5d427cf94ab16287 "pdflatex"
-  "resume.tex" 1736063341 14580 2de80f4d47b3233454e9198a56b29589 ""
+  "resume.aux" 1736065952 1297 18c8a8aab36328449b3867323925f923 "pdflatex"
+  "resume.tex" 1736065950 14827 5f4b553f7f3032b678d5ddcdc93d4604 ""
   (generated)
   "resume.aux"
   "resume.log"
