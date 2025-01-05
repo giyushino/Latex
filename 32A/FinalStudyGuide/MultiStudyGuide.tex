@@ -1,0 +1,77 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{MATH 32A Final Study Guide}}
+\author{Allan Zhang}
+\date{The date doesn't matter}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+
+\section{Quick Reminder on Single Variable Calculus}
+\begin{itemize}
+	\item Applied to functions of one variable
+	\item Classic example is business owner, attempts to maximize profit $\rightarrow$ function of single variable x, 
+	\begin{itemize}
+		\item Profit = $f(x)$ where x = set price of object 
+	\end{itemize}
+	\item More realistic model is $f(x_1, x_2, x_3)$ where $x_1 = $ price, $x_2 = $ money spent on advertisment, $x_3 =$ market flux 
+\end{itemize}
+
+\section{Vectors}
+\begin{itemize}
+	\item Def) Plane: $\mathbb{R}^2$: points are $(a, b)$ where $a \text{ and } b $ are real numbers
+	\item Def) Vector: $P, Q$ points $\rightarrow$ $\vec{PQ}$ vector starts at $P \text{, ends at } Q$ 
+\end{itemize}
+\begin{tikzpicture}
+	\draw[thin,gray!40] (-4,-4) grid (4,4);
+	\fill (3, 2) circle (1pt) node[right] {$(a, b)$};
+	\draw[->] (0,0) -- (3,2);
+	\draw[<->] (-4,0)--(4,0) node[right]{$x$};
+  	\draw[<->] (0,-4)--(0,4) node[above]{$y$};
+	\draw (3, 0.1) -- (3, -0.1) node[below] {$a$};
+	\draw(0.1, 2) -- (-0.1, 2) node[left] {$b$};
+\end{tikzpicture}
+\begin{itemize}
+	\item Take vector $\vec{PQ}$ where $P = (a, b) \quad Q = (c, d)$ 
+	\item[] \quad Components of $\vec{PQ}$ are $\langle c - a, d -b \rangle$ = $\begin{bmatrix} c-a \\ d- b \end{bmatrix}$
+\end{itemize}
+\begin{tikzpicture}
+	\draw[thin,gray!40] (-4,-4) grid (4,4);
+	\fill (3, 2) circle (0pt) node[right] {$\vec{v}$};
+	\draw[->] (0,0) -- (3,2); node[above];
+	\draw[<->] (-4,0)--(4,0) node[right]{$x$};
+  	\draw[<->] (0,-4)--(0,4) node[above]{$y$}
+	\draw[->] (0,-3) -- (3, -1) 
+	\fill (2.8, -1) circle (0pt) node[left] {Translation of $\vec{v}$};
+\end{tikzpicture}
+
+Translating a vector does not change the components, only the basepoints
+
+The component only takes into consideration the magnitude and direction 
+\subsection{Properities of Vectors in 2-D} 
+\begin{itemize}
+	\item Length of vector $\langle a, b \rangle = \sqrt{a^2+b^2}$
+	\item $\vec{v} = \langle a, b \rangle \quad \vec{w} = \langle c, d \rangle$
+\end{itemize}
+\end{document}
+
+

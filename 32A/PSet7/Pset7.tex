@@ -1,0 +1,108 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{MATH 32A Problem Set 7}}
+\author{Allan Zhang}
+\date{November 18th, 2024}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+
+
+\section{Question 1}
+Suppose the tangent plane to a function $g(x, y)$ at a point $P$ has a normal
+vector $\langle 0, -1, 1 \rangle$. If you increase the value of $ y$ by a small amount, do you expect that the
+function will increase in value, decrease in value, or stay the same? Explain your answer. \\
+
+Let's take into consideration the tangent plane. Let $P = (x_0, y_0)$ The equation of the tangent plane is: \[
+0(x-x_0) -1(y-y_0)+(g(x, y) -g(x_0, y_0)) = 0
+\]
+\[
+g(x, y) = y - y_0 + g(x_0, y_0)
+\]
+From this simplified form, we can see that if we increase the value of $y$, the function $g(x, y)$ will increase as well. 
+
+\newpage
+\section{Question 2}
+Let $I = W/H^2$ denote body mass index, where $W$ is body weight and $H$ is
+the body height. Suppose that $(W, H) = (30, 1.2)$. Use linearization and/or differentials
+to estimate the change in height that would cause BMI to change by 3, if weight is held constant. 
+
+\[
+	I_{H} = -2\frac{W}{H^3}
+\]
+\[
+        -2\frac{W}{H^3} \cdot \Delta H = 3
+\]
+\[
+	-2\frac{30}{1.2^3} \cdot \Delta H = 3  
+\]
+\[
+	\Delta H = -0.0864
+\]
+
+\newpage
+
+\section{Question 3}
+Let $g(x, y) = 3\sin^2(x)y^4$. Compute the directional derivative of $g$ in the direction of the vector $\langle 1, 1 \rangle$ at the point $(0, 2)$
+
+\[
+	g_x = 6 \sin(x)\cos(x)y^4 \quad \quad 12\sin^2(x)y^4
+\]
+\[ \nabla g(0, 2) = \langle 6 \sin(x)\cos(x)y^4,  12 \sin^2(x)y^3  \rangle = \langle 
+ 0,  12 \sin^2(x)y^3  \rangle  = \langle 0, 0 \rangle\]
+
+ \[ D_{\vec{u}}\nabla g = \nabla g \cdot \vec{u} = 
+	 \langle 0, 0 \rangle \cdot \frac{1}{\sqrt{2}}\langle 1, 1 \rangle = 0 + 0 = 0 \]
+
+\[
+	\text{The directional derivative is simply 0}
+\]
+\newpage
+\section{Question 4}
+Let $f(x, y, z) = x^2\sqrt{y}-7z$. Determine the direction from the point $(1, 4, 1)$ in which $f$ is increasing the fastest, and calculate the rate of change in that direction
+
+\[
+	\nabla f = \langle 2x\sqrt{y}, \frac{x^2}{2\sqrt{y}}, -7 \rangle
+\]
+\[
+	\nabla f(1, 4, 1) = \langle 4, \frac{1}{4}, -7 \rangle
+\]
+
+\[
+	\text{rate} = \sqrt{4^2+(\frac{1}{4})^2+(-7)^2} = \sqrt{65 + \frac{1}{16}} = \sqrt{\frac{1041}{16}}
+\]
+
+\[
+	\text{The direction at which $f$ is increasing the fastest is $ \sqrt{\frac{16}{1041}} \cdot \langle 4, \frac{1}{4}, -7 \rangle
+$}
+\]
+\newpage
+
+\section{Question 5}
+Plot level curves for the function $f(x, y) = xy$ at heights -1, 0, and 1. Plot $\nabla(f)$ at the points $(0, 1), and (1, -1)$
+
+hello
+
+
+
+\end{document}
+
