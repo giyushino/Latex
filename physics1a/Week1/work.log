@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.4)  6 JAN 2025 08:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.4)  6 JAN 2025 08:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./random.tex
-(random.tex
+**./work.tex
+(work.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -895,8 +895,8 @@ File: pppdftex.def 2024/10/28 v0.6c Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count328
 \AM@templatesizebox=\box72
 )
-(random.aux)
-\openout1 = `random.aux'.
+(work.aux)
+\openout1 = `work.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
@@ -973,10 +973,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 21.
- (random.out)
-(random.out)
+ (work.out)
+(work.out)
 \@outlinefile=\write4
-\openout4 = `random.out'.
+\openout4 = `work.out'.
 
 
 (C:\Users\allan\AppData\Roaming\MiKTeX\tex/latex/pdflscape\pdflscape.sty
@@ -1005,77 +1005,24 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-pdfTeX warning: pdflatex (file ./worksheet.pdf): PDF inclusion: found PDF versi
-on <1.7>, but at most version <1.5> allowed
-<worksheet.pdf, id=6, 614.295pt x 794.97pt>
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf>
-Package pdftex.def Info: worksheet.pdf  used on input line 31.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-
-
-pdfTeX warning: pdflatex (file ./worksheet.pdf): PDF inclusion: found PDF versi
-on <1.7>, but at most version <1.5> allowed
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf>
-Package pdftex.def Info: worksheet.pdf  used on input line 31.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-
-
-pdfTeX warning: pdflatex (file ./worksheet.pdf): PDF inclusion: found PDF versi
-on <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./worksheet.pdf): PDF inclusion: found PDF versi
-on <1.7>, but at most version <1.5> allowed
-<worksheet.pdf, id=9, page=1, 614.295pt x 794.97pt>
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf, page 1>
-Package pdftex.def Info: worksheet.pdf , page1 used on input line 31.
-(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf, page 1>
-Package pdftex.def Info: worksheet.pdf , page1 used on input line 31.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-
-
 [1
 
-{C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf, page 1>
-Package pdftex.def Info: worksheet.pdf , page1 used on input line 31.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf, page 1>
-Package pdftex.def Info: worksheet.pdf , page1 used on input line 31.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-
-
-File: worksheet.pdf Graphic file (type pdf)
-<use worksheet.pdf, page 1>
-Package pdftex.def Info: worksheet.pdf , page1 used on input line 31.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-[2
-
- <./worksheet.pdf>]
-
-[3] (random.aux)
+{C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (work.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `random.out' has not changed.
+Package rerunfilecheck Info: File `work.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26869 strings out of 473577
- 543182 string characters out of 5726301
- 917478 words of memory out of 5000000
- 49467 multiletter control sequences out of 15000+600000
+ 26855 strings out of 473577
+ 542884 string characters out of 5726301
+ 919462 words of memory out of 5000000
+ 49455 multiletter control sequences out of 15000+600000
  565019 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,17n,107p,1185b,572s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,7n,107p,1183b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Progra
 m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/typ
@@ -1083,9 +1030,9 @@ e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
 2.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on random.pdf (3 pages, 4088116 bytes).
+Output written on work.pdf (1 page, 87252 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 54 PDF objects out of 1000 (max. 8388607)
+ 2 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

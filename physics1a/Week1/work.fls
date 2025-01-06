@@ -1,7 +1,7 @@
-PWD C:\Users\allan\nvim\latex\random
+PWD C:\Users\allan\nvim\latex\physics1a\Week1
 INPUT C:\Users\allan\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT random.tex
-OUTPUT random.log
+INPUT work.tex
+OUTPUT work.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
@@ -398,10 +398,10 @@ INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\eso-pic\eso-pic.sty
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pppdftex.def
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pppdftex.def
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pppdftex.def
-INPUT .\random.aux
-INPUT .\random.aux
-INPUT random.aux
-OUTPUT random.aux
+INPUT .\work.aux
+INPUT .\work.aux
+INPUT work.aux
+OUTPUT work.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -410,14 +410,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\random.out
-INPUT .\random.out
-INPUT random.out
-INPUT random.out
-INPUT .\random.out
-INPUT .\random.out
-OUTPUT random.out
-OUTPUT random.pdf
+INPUT .\work.out
+INPUT .\work.out
+INPUT work.out
+INPUT work.out
+INPUT .\work.out
+INPUT .\work.out
+OUTPUT work.out
+OUTPUT work.pdf
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
@@ -450,24 +450,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT C:\Users\allan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -476,9 +458,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT random.aux
-INPUT .\random.out
-INPUT .\random.out
+INPUT C:\Users\allan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT work.aux
+INPUT .\work.out
+INPUT .\work.out
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

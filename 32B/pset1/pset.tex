@@ -1,0 +1,234 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{MATH 32B Problem Set 1}}
+\author{Allan Zhang}
+\date{January 6, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+
+\section{Question 11}
+The following table gives the approximate height at quarter-meter intervals of a mound of gravel. Estimate the volume of the mound by computing the average of the two Riemann sums $S_{4,3}$ with lower-left and upper-right vertices of the subrectangles as sample points.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5} % Adjust row height
+\setlength{\tabcolsep}{10pt} % Adjust column spacing
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{0.75} & 0.1  & 0.2  & 0.2  & 0.15 & 0.1  \\ \hline
+ \textbf{0.5} & 0.2  & 0.3  & 0.5  & 0.4  & 0.2  \\ \hline
+ \textbf{0.25}& 0.15 & 0.2  & 0.4  & 0.3  & 0.2  \\ \hline
+ \textbf{$y:$ 0}    & 0.1  & 0.15 & 0.2  & 0.15 & 0.1  \\ \hline
+& \textbf{$x:$ 0} & \textbf{0.25} & \textbf{0.5}  & \textbf{0.75} & \textbf{1}    \\ \hline
+\end{tabular}
+\end{center}
+
+Computing area using lower-left verticies as sample points:
+The verticies we will be using are: 
+\[\begin{bmatrix}
+	0.2 & 0.3 & 0.5 & 0.4 \\ 
+	0.15 & 0.2 & 0.4  & 0.3\\
+	0.1 & 0.15 & 0.2  & 0.15
+\end{bmatrix}\]
+
+Note that $\Delta x$ and $\Delta y$ are both 0.25, meaning the volume of each rectangle will be the height of the rectangles times $0.25^2$, which is 0.0625
+\[ 0.0625 \cdot \begin{bmatrix}
+	0.2 & 0.3 & 0.5 & 0.4 \\ 
+	0.15 & 0.2 & 0.4  & 0.3\\
+	0.1 & 0.15 & 0.2  & 0.15
+\end{bmatrix} = \begin{bmatrix}
+	0.0125 & 0.01875 & 0.03125 & 0.025 \\ 
+	0.009375 & 0.0125 & 0.025  & 0.01875\\
+	0.00625 & 0.009375 & 0.0125  & 0.009375
+\end{bmatrix} \]
+
+Adding up these areas gives us 0.190625
+
+Now, let's repeat, except we will use the upper-right verticies as sample points
+
+\[ 0.0625 \cdot \begin{bmatrix}
+	0.2  & 0.2  & 0.15 & 0.1 \\ 
+	0.3  & 0.5  & 0.4  & 0.2 \\
+	0.2  & 0.4  & 0.3  & 0.2
+\end{bmatrix} = 
+\begin{bmatrix}
+	0.0125 & 0.0125 & 0.009375 & 0.00625 \\ 
+	0.01875 & 0.03125 & 0.025 & 0.0125 \\
+	0.0125 & 0.025 & 0.01875 & 0.03125
+\end{bmatrix} \]
+
+Adding up these areas gives us 0.196875. The average of these two sums is \textbf{0.19375}, which is our estimate for the volume of the mound.
+\newpage
+\section{Question 15}
+Use symmetry to evauate the double integral
+\[
+	\iint_\mathcal{R} x^3 \,dA, \quad \mathcal{R} = [-4, 4] \times [0, 5]
+\]
+
+Note that that $x^3$ is odd and lacks horizontal or vertical shifts. This means so for some value $a$, the area between the curve and $[-a, 0]$ will be equal to the area between the curve and $[0, a]$ multiplied by $-1$.
+
+Also, note that we can split the domain into two sub-domains. Let us split $\mathcal{R}$ into $\mathcal{R}_1 = [-4, 0] \times [0, 5]$ and $\mathcal{R}_2 = [0, 4] \times [0, 5]$.
+\[
+	\iint_\mathcal{R} x^3 \,dA, \quad \mathcal{R} = [-4, 4] \times [0, 5] = 
+\iint_{\mathcal{R}_1} x^3 \,dA, \quad \mathcal{R}_1 = [-4, 0] \times [0, 5] + 
+	\iint_{\mathcal{R}_2} x^3 \,dA, \quad \mathcal{R}_2 = [0, 4] \times [0, 5]
+\]
+
+From the observation we stated before, it can be said that 
+\[
+\iint_{\mathcal{R}_1} x^3 \,dA, \quad \mathcal{R}_1 = [-4, 0] \times [0, 5] =  
+	-\iint_{\mathcal{R}_2} x^3 \,dA, \quad \mathcal{R}_2 = [0, 4] \times [0, 5]
+\]
+
+We can rewrite the original expression as 
+\[
+-\iint_{\mathcal{R}_2} x^3 \,dA + 
+	\iint_{\mathcal{R}_2} x^3 \,dA = 0 
+\]
+
+This double integral evaluates to 0.
+\newpage
+\section{Question 17}
+Use symmetry to evaluate the double integral
+\[
+	\iint_\mathcal{R} \sin{x} \,dA, \quad \mathcal{R} = [0, 2\pi] \times [0, 2\pi]
+\]
+
+Note that $\sin{x}$ oscillates from -1 to 1. Importantly, without any transformations, $\sin x$ completes one whole revolution from 
+$0 \text{ to } 2\pi$, and the function from $0 \text{ to } \pi$ is identical to the function from $\pi \text{ to } 2\pi$ reflected over the $x-$axis. 
+
+Also remember that we can split the domain into two sub-domains. Let us split $\mathcal{R}$ into $\mathcal{R}_1 = [0, \pi] \times [0, 2\pi]$ and $\mathcal{R}_2 = [\pi, 2\pi] \times [0, 2\pi]$.
+
+\[
+	\iint_\mathcal{R} \sin{x} \,dA, \quad \mathcal{R} = [0, 2\pi] \times [0, 2\pi] =
+	\iint_{\mathcal{R}_1} \sin{x} \,dA, \quad \mathcal{R}_1 = [0, \pi] \times [0, 2\pi] +
+	\iint_{\mathcal{R}_2} \sin{x} \,dA, \quad \mathcal{R}_2 = [\pi, 2\pi] \times [0, 2\pi]
+\]
+
+From what we said before, we can observe that
+\[
+	\iint_{\mathcal{R}_1} \sin{x} \,dA, \quad \mathcal{R}_1 = [0, \pi] \times [0, 2\pi] = -
+	\iint_{\mathcal{R}_2} \sin{x} \,dA, \quad \mathcal{R}_2 = [\pi, 2\pi] \times [0, 2\pi]
+\]
+
+Finally, we can state that
+\[
+	\iint_\mathcal{R} \sin{x} \,dA, \quad \mathcal{R} = [0, 2\pi] \times [0, 2\pi] =
+	-\iint_{\mathcal{R}_2} \sin{x} \,dA + \iint_{\mathcal{R}_2} \sin{x} \,dA = 0
+\]
+
+The double integral evaluates to 0.
+\newpage
+\section{Question 19}
+Evaluate the iterated integral
+\[
+	\int_1^3 \int_0^ 2 x^3y \,dy \,dx
+\]
+
+\[
+	\int_1^3 \int_0^ 2 x^3y \,dy \,dx =\int_1^3 \left(\int_0^ 2 x^3y \,dy \right) dx 
+\]
+\[
+	= \int_1^3 \left( \left. x^3\cdot \frac{y^2}{2}\right|_{y=0}^{y=2} \right) dx 
+\]
+\[
+	= \int_1^3 \left( x^3\cdot (\frac{4}{2} - \frac{0}{2})  \right) dx 
+\]
+\[
+	= \int_1^3 2x^3 \,dx = \left. \frac{x^4}{2} \right |_{x = 1}^{x=3}  = \frac{81}{2} - \frac{1}{2} = \frac{80}{2} = 40
+\]
+
+The iterated integral evaluates to 40.
+\newpage
+\section{Question 21}
+Evaluate the iterated integral
+\[
+	\int_4^9 \int_{-3}^{8} 1 \,dx \,dy
+\]
+\[
+	\int_4^9 \left ( \int_{-3}^{8} 1 \,dx \right )dy = 
+\]
+\[
+	 \int_4^9 x \Big|_{x=-3}^{x=8} dy = 
+\]
+\[
+	\int_4^9 11 \, dy =  11x \Big |_{x=4}^{x=9} = 99 - 44 = 55 
+\]
+
+The iterated integral evaluates to 55.
+
+\newpage
+\section{Question 23}
+Evaluate the iterated integral
+\[
+	\int_{-1}^1 \int_{0}^{\pi} x^2 \sin y \,dy \,dx
+\]
+\[	
+	\int_{-1}^1 \left (\int_{0}^{\pi} x^2 \sin y \,dy \right )dx
+\]
+\[
+	\int_{-1}^1 \left( x^2 \cdot -\cos y  \Big |_{y = 0}^{y=\pi} \right )dx
+\]
+\[
+	\int_{-1}^1  x^2 (1 - (-1)) \, dx
+\]
+\[
+	\int_{-1}^1  2x^2 \, dx = \left . \frac{2x^3}{3} \right |_{x=-1}^{x=1} = \frac{2}{3} - \frac{-2}{3} = \frac{4}{3}
+\]
+
+The iterated integral evaluates to $\frac{4}{3}$.
+\newpage
+\section{Question 25}
+Evaluate the iterated integral
+\[
+\int_2^6 \int_1^4 x^2\, dx\,dy
+\]
+\[
+\int_2^6 \left( \int_1^4 x^2\, dx \right) dy
+\]
+\[
+	\int_2^6 \left( \left. \frac{x^3}{3} \right|_{x=1}^{x=4} \right) dy
+\]
+\[
+	\int_2^6  \frac{64}{3} - \frac{1}{3} \,dy= 
+	\int_2^6  \frac{63}{3} \,dy
+\]
+\[
+	\left . \frac{63x}{3} \right|_{x=2}^{x=6} = \frac{378 - 126}{3} = \frac{252}{3} = 84
+\]
+
+The iterated integral evaluates to 84.
+\newpage
+\section{Question 37}
+Evaluate the integral
+\[
+	\iint_{\mathcal{R}}\frac{x}{y} \,dA, \quad \mathcal{R} = [-2, 4] \times [1, 3]
+\]
+
+
+\end{document}

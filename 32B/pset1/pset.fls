@@ -1,7 +1,7 @@
-PWD C:\Users\allan\nvim\latex\random
+PWD C:\Users\allan\nvim\latex\32B\pset1
 INPUT C:\Users\allan\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT random.tex
-OUTPUT random.log
+INPUT pset.tex
+OUTPUT pset.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
@@ -387,21 +387,14 @@ INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pdfpages.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\eso-pic\eso-pic.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pppdftex.def
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pppdftex.def
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pppdftex.def
-INPUT .\random.aux
-INPUT .\random.aux
-INPUT random.aux
-OUTPUT random.aux
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT .\pset.aux
+INPUT .\pset.aux
+INPUT pset.aux
+OUTPUT pset.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -410,20 +403,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\random.out
-INPUT .\random.out
-INPUT random.out
-INPUT random.out
-INPUT .\random.out
-INPUT .\random.out
-OUTPUT random.out
-OUTPUT random.pdf
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
-INPUT C:\Users\allan\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
+INPUT .\pset.out
+INPUT .\pset.out
+INPUT pset.out
+INPUT pset.out
+OUTPUT pset.pdf
+INPUT .\pset.out
+INPUT .\pset.out
+OUTPUT pset.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
@@ -450,24 +437,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT C:\Users\allan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
-INPUT .\worksheet.pdf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -476,9 +447,13 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT random.aux
-INPUT .\random.out
-INPUT .\random.out
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\allan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT pset.aux
+INPUT .\pset.out
+INPUT .\pset.out
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
@@ -491,7 +466,11 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb

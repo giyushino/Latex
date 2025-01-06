@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1736180904.12936 "random.tex" "random.pdf" "random" 1736180907.52525 0
+["pdflatex"] 1736181410.63645 "work.tex" "work.pdf" "work" 1736181412.86301 0
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -227,13 +227,12 @@
   "C:/Users/allan/AppData/Roaming/MiKTeX/tex/latex/tkz-euclide/tools/tkz-tools-eu-text.tex" 1714898312 2987 70d199c8261c52dcf68ada665afbe102 ""
   "C:/Users/allan/AppData/Roaming/MiKTeX/tex/latex/tkz-euclide/tools/tkz-tools-eu-utilities.tex" 1714898312 5841 4d6899f8fcd52df016f6c3e84e42f5b2 ""
   "C:/Users/allan/AppData/Roaming/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "random.aux" 1736180906 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
-  "random.out" 1736180906 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "random.tex" 1736180898 1251 d4abf9c002b1a07af4f323105cdf7097 ""
-  "worksheet.pdf" 1736180810 4005920 4c93d8e69ce123b4bb7d5f0ce9c99837 ""
+  "work.aux" 1736181412 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "work.out" 1736181412 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "work.tex" 1736181409 1246 7f82c5887c5e2322590fbb754fc3de57 ""
   (generated)
-  "random.aux"
-  "random.log"
-  "random.out"
-  "random.pdf"
+  "work.aux"
+  "work.log"
+  "work.out"
+  "work.pdf"
   (rewritten before read)

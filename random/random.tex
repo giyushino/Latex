@@ -8,8 +8,9 @@
 \usepackage[all]{hypcap}
 \usepackage{fancyhdr}
 \usepackage{amsfonts}
-
+\usepackage{pdfpages}
 \usetikzlibrary{angles,calc, decorations.pathreplacing}
+
 
 \definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
 \definecolor{capri}{rgb}{0.0, 0.75, 1.0}
@@ -26,6 +27,8 @@
 \color{black}
 \maketitle
 
+
+\includepdf[pages=1]{worksheet.pdf}
 
 $\lim_{(x, y)\to(\pi, 0)}{\frac{\cos x}{\sin y}}$
 
