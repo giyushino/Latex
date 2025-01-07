@@ -280,15 +280,62 @@ The solution to this evaluated integral is $8\ln 3$
 \section{Question 45}
 Let $f(x, y) = mxy^2$, where $m$ is a constant. Find a value of $m$ such that $\iint_{\mathcal{R}} f(x, y) \, dA = 1$, where $\mathcal{R} = [0,1] \times [0,2]$
 
+\[
+	\int_0^2 \int_0^1 mxy^2 \,dx\,dy 
+\]
+\[
+	\int_0^2 \left ( \left . \frac{mx^2y^2}{2} \right |_{x = 0}^{x = 1} \right )dy 
+\]
+\[
+	\int_0^2 \frac{my^2}{2}\,dy 
+\]
+\[
+	\left. \frac{my^2}{2} \right |_{y = 0}^{y = 2} 
+\]
+\[
+	2m = 1
+\]
+\[
+	m = \frac{1}{2}
+\]
+
+When $m = \frac{1}{2}$, the expression $\iint_{\mathcal{R}} f(x, y) \, dA, \mathcal{R} = [0,1] \times [0,2] = 1$ is true! 
 
 \newpage
 \section{Question 48}
-a. Which is easier, antidifferentiating $xe^{xy}$ with respect to $x$ or with respect to $y$? Explain.\\
-b. Evaluate $\iint_{\mathcal{R}} xe^{xy} \, dA = 1$, where $\mathcal{R} = [0,1] \times [0,1]$
+a) Which is easier, antidifferentiating $xe^{xy}$ with respect to $x$ or with respect to $y$? Explain.\\
+b) Evaluate $\iint_{\mathcal{R}} xe^{xy} \, dA$, where $\mathcal{R} = [0,1] \times [0,1]$
+
+a) It is easier antidifferentiating $xe^{xy}$ with respect to $y$, as we can simply treat $x$ as a constant. Computing $\int xe^{xy} \, dy$ requires the same steps as solving $\int 4e^{4y}\,dy$, which is relatively simple
+
+b)
+\[
+	\iint_{\mathcal{R}} xe^{xy} \, dA, \mathcal{R} = [0,1] \times [0,1]
+\]
+\[
+	\int_0^1 \int_0^1 xe^{yx} \,dy \, dx
+\]
+\[
+	\int_0^1 \left(e^{yx} \Big |_{y = 0}^{y = 1}\right)dx
+\]
+\[
+	\int_0^1 e^{x} - 1\,dx
+\]
+\[
+	e^x - x \Big |_{x = 0}^{x = 1}
+\]
+\[
+	e - 1 - 1 - 0 = e -2
+\]
+
+The integral evaluates to $e-2$
+
+
 \newpage
 \section{Question 49}
-a. Which is easier, antidifferentiating $\frac{y}{1+xy}$ with respect to $x$ or with respect to $y$? Explain.\\
-b. Evaluate $\iint_{\mathcal{R}} \frac{y}{1+xy} \, dA = 1$, where $\mathcal{R} = [0,1] \times [0,1]$
+a) Which is easier, antidifferentiating $\frac{y}{1+xy}$ with respect to $x$ or with respect to $y$? Explain.\\
+b) Evaluate $\iint_{\mathcal{R}} \frac{y}{1+xy} \, dA$, where $\mathcal{R} = [0,1] \times [0,1]$
+
 
 
 \end{document}
