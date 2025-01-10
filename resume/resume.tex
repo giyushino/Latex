@@ -239,7 +239,7 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
         \textit{Los Angeles, CA}    
             
         \textit{Nov 2024 – Present}}
-            \textbf{Undergraduate Research Assisstant $|$ BigML}
+            \textbf{Undergraduate Research Assistant $|$ BigML}
             
             \textit{UCLA}
         \end{twocolentry}
@@ -249,7 +249,8 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
             \begin{highlights}
                 \item Set up experiments involving vision transformers, 2D projection layer (MLP), and LLMs to study why VLMs perform poorly on spatial reasoning tasks
                 \item Used mechanistic interpretability techniques to extract tensors from every layer, analyzed them to understand how each layer processes input data. Created heatmaps using Matplotlib and Seaborn, visualizing model's predictions for every input token
-		%\item Wrote functions to extract attention heads and visualize the weights each head in every layer assigns to individual input tokens
+                \item Created custom probing functions to determine if data passed through VLM retained spatial information encoded into the embeddings, specifically before and after the frozen multimodal projector 
+                %\item Wrote functions to extract attention heads and visualize the weights each head in every layer assigns to individual input tokens
             \end{highlights}
         \end{onecolentry}
     
@@ -286,6 +287,26 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
         \begin{twocolentry}{
             
             
+        \textit{\href{https://github.com/giyushino/whatToEatAtUCLA}{What2Eat@UCLA}}}
+        \textbf{UCLA Dining Assistant}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item Using Deepseek API and online data, created chatbot to help students decide where to eat at UCLA
+            \item Created pipeline to to scrape UCLA's dining hall menus and extract menu items, descriptions, and ingredients for each dining hall. Used BeautifulSoup to access raw HTML files, wrote functions to extract and clean data, and stored it to readable .txt file. 
+            \item Provided Deepseek-chat with data about each dining hall, allowing users to ask chatbot for suggestions based on their preferences. Bot can take into account flavor/cuisine preferences, allergens, dietary restrictions, as well as any other criteria for choosing where to eat. 
+            \item Currently implementing small, lightweight open source model, encoders, and cosine similarity functions to replicate Deepseek's functionality.
+ 		    \item Tools Used: Python, bs4, openai, Transformers
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+        \begin{twocolentry}{
+            
+            
         \textit{\href{https://github.com/giyushino/clip-vit-large-patch14-batch}{Fine-Tuning Functions}}}
             \textbf{Efficient Finetuning Pipeline}
         \end{twocolentry}
@@ -300,25 +321,7 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
         \end{onecolentry}
 
 
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-            
-            
-        \textit{\href{https://github.com/giyushino/hand-detection}{Drone Control}}}
-            \textbf{Hand-Controlled Drone}
-        \end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Created and labeled dataset consisting of 400+ images of hands pointing up, down, left, right, backwards, and forwards. Trained YOLOv8 model with the data and utilized OpenCV to detect directions
-                real time. Fed real-time collected information to FPV drone’s flight computer to control movement
-                \item Tools Used: Python, OpenCV, YOLOv8 
-            \end{highlights}
-        \end{onecolentry}
-
-
+     
         \vspace{0.2 cm}
         \begin{twocolentry}{
             
@@ -351,7 +354,7 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
     \section{Skills}
         
         \begin{onecolentry}
-            \textbf{Programming Languages and Frameworks:} Python, PyTorch, NumPy, Matplotlib, TensorFlow, scikit-learn,  OpenCV, Hugging Face, \LaTeX, MATLAB, HTML (basic), CSS (basic), Bash, Git
+            \textbf{Programming Languages and Frameworks:} Python, PyTorch, NumPy, Matplotlib, TensorFlow, scikit-learn,  OpenCV, Hugging Face, \LaTeX, C++ (basic)%, HTML (basic), CSS (basic), Bash, Git
         \end{onecolentry}
 
         \vspace{0.2 cm}
@@ -382,5 +385,23 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
             \end{highlights}
         \end{onecolentry}
 
+
+   \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+            
+        \textit{\href{https://github.com/giyushino/hand-detection}{Drone Control}}}
+            \textbf{Hand-Controlled Drone}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created and labeled dataset consisting of 400+ images of hands pointing up, down, left, right, backwards, and forwards. Trained YOLOv8 model with the data and utilized OpenCV to detect directions
+                real time. Fed real-time collected information to FPV drone’s flight computer to control movement
+                \item Tools Used: Python, OpenCV, YOLOv8 
+            \end{highlights}
+        \end{onecolentry}
 
 

@@ -1,0 +1,14 @@
+Important things to note: Always remember to turn in projects properly, should be zip files with no subfolders within the zip file. 
+
+Learning C++ Programming:
+	
+Data: There are different types of data, such as integer numbers, numbers with decimal places, and these are represented differently. 
+
+Expressions: 
+    ex) a = 40, b < 20, etc 
+
+We go from learning about what are the different types of data to what are the correct expresions and how to construct them. 
+
+
+
+
