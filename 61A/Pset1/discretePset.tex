@@ -1,0 +1,97 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{MATH 61A Problem Set 1}}
+\author{Allan Zhang}
+\date{January 11, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+\section*{Problem 1}
+Draw the truth table for $P \to R$, and $P \to Q \text{ and } Q \to R$. Explain in words, referrring to the truth tables, why the former statement implies the latter.
+
+\begin{center}
+\text{Truth tables for \( P \to R \), \( P \to Q \), and \( Q \to R \)}\\
+\vspace{0.2cm}
+\begin{tabular}{ccc} % Three columns for the three tables
+  % First table: \( P \to R \)
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \( P \) & \( R \) & \( P \to R \) \\
+    \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & T \\
+    F & F & T \\
+    \hline
+  \end{tabular}
+  &
+  % Second table: \( P \to Q \)
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \( P \) & \( Q \) & \( P \to Q \) \\
+    \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & T \\
+    F & F & T \\
+    \hline
+  \end{tabular}
+  &
+  % Third table: \( Q \to R \)
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \( Q \) & \( R \) & \( Q \to R \) \\
+    \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & T \\
+    F & F & T \\
+    \hline
+  \end{tabular}
+\end{tabular}
+\vspace{0.2cm}
+
+\text{Truth table for $P \to Q$ and $Q \to R$}\\
+\begin{tabular}{|c|c|c|}
+\hline
+\( P \to Q \) & \( Q \to R \) & \( P \to Q \text{ and }Q \to R \) \\
+\hline
+T & T & T \\ 
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+From these truth tables, we can observe that $P \to R$ is false when $P$ is true and $R$ is false. There are two cases when $P$ is true, and $Q$ is either true or false, providing us with two cases, either $P \to Q$ is true or false. In the case where the statement is true, $Q$ is true, and vice versa. Now, let us consider when $R$ is false. When $Q$ is false but $R$ is true, $Q \to R$ is false. When $Q \text{ and } R$ are false, $Q \to R$ is true.
+
+Using these observations, I will explain how the former statement implies the latter. We can see how  
+
+
+\end{document}

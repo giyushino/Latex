@@ -1,0 +1,20 @@
+CS 31 Project 1 Report
+
+1. The specific input I provided to the program built from original.cpp that produced incorrect, unusual, or nonsense output was: 20 total voters, -5 voted for Tarris, and -10 voted for Hump. The program stated that -25.0% percent of the voters voted for Tarris and -50.0% of the voters voted for Hump. Even though the input was technically valid, as every input was an integer, the output does not make sense. There can not be a negative percentage of voters supporting either candidate. Also, -5 + -10 does not add up to 20 total voters. 
+
+2. The logic error I introduced into compile_error.cpp was that I switched the positions forTarris and forHump in line 30. This caused the program to print out the wrong predicted winner of the election. When I entered 20 total voters, 15 voted for Tarris and 5 voted for Hump, the program predicted Harris to win, even though they had a lower percentage of votes. 
+
+3. The two errors I introduced to compi;e_error.cpp were:
+    1. I removed "int numberSurveyed;", meaning that when numberSurveyed was used in the program, it was not declared, thus causing an error. 
+    2. I removed a semicolon in the line "cout << pctTrarris << "% say they will prob   ably vote for Trarris." << endl;", causing a syntax error. 
+
+This is the exact error I recieved after trying to compile it:
+compile_error.cpp:13:20: error: 'numberSurveyed' was not declared in this scope
+   13 |             cin >> numberSurveyed;
+      |                    ^~~~~~~~~~~~~~
+compile_error.cpp:26:87: error: expected ';' before 'cout'
+   26 |             cout << pctTrarris << "% say they will probably vote for Trarris." << endl
+      |                                                                                       ^
+      |                                                                                       ;
+   27 |             cout << pctHump << "% say they will probably vote for Hump." << endl;
+      |             ~~~~
