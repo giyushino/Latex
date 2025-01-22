@@ -32,66 +32,164 @@
 \color{black}
 \maketitle
 \section*{Problem 1}
-Draw the truth table for $P \to R$, and $P \to Q \text{ and } Q \to R$. Explain in words, referrring to the truth tables, why the former statement implies the latter.
+\section*{Problem 1}
+Draw the truth table for \(P \implies R\), and \(P \implies Q \text{ and } Q \implies R\). Explain in words, referring to the truth tables, why the latter statement implies the former.
 
 \begin{center}
-\text{Truth tables for \( P \to R \), \( P \to Q \), and \( Q \to R \)}\\
+\text{Truth table}\\
 \vspace{0.2cm}
-\begin{tabular}{ccc} % Three columns for the three tables
-  % First table: \( P \to R \)
-  \begin{tabular}{|c|c|c|}
-    \hline
-    \( P \) & \( R \) & \( P \to R \) \\
-    \hline
-    T & T & T \\
-    T & F & F \\
-    F & T & T \\
-    F & F & T \\
-    \hline
-  \end{tabular}
-  &
-  % Second table: \( P \to Q \)
-  \begin{tabular}{|c|c|c|}
-    \hline
-    \( P \) & \( Q \) & \( P \to Q \) \\
-    \hline
-    T & T & T \\
-    T & F & F \\
-    F & T & T \\
-    F & F & T \\
-    \hline
-  \end{tabular}
-  &
-  % Third table: \( Q \to R \)
-  \begin{tabular}{|c|c|c|}
-    \hline
-    \( Q \) & \( R \) & \( Q \to R \) \\
-    \hline
-    T & T & T \\
-    T & F & F \\
-    F & T & T \\
-    F & F & T \\
-    \hline
-  \end{tabular}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\(P\) & \(Q\) & \(R\) & \(P \implies Q\) & \(Q \implies R\) & \(P \implies R\) & Explanation & \((P \implies Q \text{ and } Q \implies R) \implies (P \implies R)\) \\
+\hline
+T & T & T & T & T & T & 1 & T\\
+T & T & F & T & F & F & 2 & T\\
+T & F & T & F & T & T & 3 & T\\
+T & F & F & F & T & F & 4 & T\\
+F & T & T & F & T & F & 5 & T\\
+F & T & F & T & F & T & 6 & T\\
+F & F & T & T & T & T & 7 & T\\
+F & F & F & T & T & T & 8 & T\\
+\hline
 \end{tabular}
+\end{center}
+
+1. When \(P\), \(Q\), and \(R\) are all true, \(P \implies Q\) and \(Q \implies R\) are both true statements. \(P \implies Q \wedge Q \implies R\) is true and true, which is true. Since \(P \implies R\) is also true, we now have a true implies true statement, which is true.
 \vspace{0.2cm}
 
-\text{Truth table for $P \to Q$ and $Q \to R$}\\
+2. In this case, \(P \implies Q\) is true because true \(\implies\) true is true. \(Q \implies R\) and \(P \implies R\) are false because true \(\implies\) false is false. \(P \implies Q \wedge Q \implies R\) is false because true and false is false. \(P \implies R\) is false for the same reason. Now we have the statement false implies false, which is true. 
+\vspace{0.2cm}
+
+3. \(P \implies Q\) is false because true implies false is false. \(Q \implies R\) is true because false implies true is true. \(P \implies R\) is true because true implies true is true. \(P \implies Q \wedge Q \implies R\) is true and false, which is false. Now we have the statement false implies true, which is true.
+\vspace{0.2cm}
+
+4. \(P \implies Q\) is false because false implies true is false. \(Q \implies R\) is true because false implies false is true. \(P \implies R\) is false because true implies false is false. \(P \implies Q \wedge Q \implies R\) is false and true, which is false. Now we have the statement false implies false, which is true.
+\vspace{0.2cm}
+
+5. \(P \implies Q\) is false because false implies true is false. \(Q \implies R\) is true because true implies true is true. \(P \implies R\) is true because false implies true is true. \(P \implies Q \wedge Q \implies R\) is false and true, which is false. Now we have the statement false implies false, which is true.
+\vspace{0.2cm}
+
+6. \(P \implies Q\) is false because false implies true is true. \(Q \implies R\) is false because true implies false is false. \(P \implies R\) is true because false implies false is true. \(P \implies Q \wedge Q \implies R\) is true and false, which is false. Now we have the statement false implies true, which is true.
+\vspace{0.2cm}
+
+7. \(P \implies Q\) is true because false implies false is true. \(Q \implies R\) is true because false implies true is true. \(P \implies R\) is true because false implies true is true. \(P \implies Q \wedge Q \implies R\) is true and true, which is true. Now we have the statement true implies true, which is true.
+\vspace{0.2cm}
+
+8. \(P \implies Q\) is true because false implies false is true. \(Q \implies R\) is true because false implies false is true. \(P \implies R\) is true because false implies false is true. \(P \implies Q \wedge Q \implies R\) is true and true, which is true. Now we have the statement true implies true, which is true.
+
+\newpage
+\section{Exercise 1.5.1}
+1. $\neg P$
+
+\vspace{0.2cm}
+\begin{tabular}{|c|c|}
+\hline 
+$P$ & $\neg P$ \\
+\hline
+T & F \\
+F & T \\
+\hline
+\end{tabular}
+
+\vspace{0.2cm}
+This is equivalent to $P|P$
+
+\vspace{0.2cm}
 \begin{tabular}{|c|c|c|}
+\hline 
+$P$ & $P$ & $P|P$ \\
 \hline
-\( P \to Q \) & \( Q \to R \) & \( P \to Q \text{ and }Q \to R \) \\
+T & T & F \\
+F & F & T \\
 \hline
-T & T & T \\ 
+\end{tabular}\vspace{0.5cm}\\
+2. $P \wedge Q$
+
+\vspace{0.2cm}
+\begin{tabular}{|c|c|c|}
+\hline 
+$P$ & $Q$ & $P \wedge Q$ \\
+\hline
+T & T & T \\
 T & F & F \\
 F & T & F \\
 F & F & F \\
 \hline
 \end{tabular}
-\end{center}
 
-From these truth tables, we can observe that $P \to R$ is false when $P$ is true and $R$ is false. There are two cases when $P$ is true, and $Q$ is either true or false, providing us with two cases, either $P \to Q$ is true or false. In the case where the statement is true, $Q$ is true, and vice versa. Now, let us consider when $R$ is false. When $Q$ is false but $R$ is true, $Q \to R$ is false. When $Q \text{ and } R$ are false, $Q \to R$ is true.
+\vspace{0.2cm}
+This is equivalent to $(P|Q)|(P|Q)$
 
-Using these observations, I will explain how the former statement implies the latter. We can see how  
+\vspace{0.2cm}
+\begin{tabular}{|c|c|c|}
+\hline 
+$P|Q$ & $P|Q$ & $(P|Q)|(P|Q)$\\
+\hline
+F & F & T \\
+T & T & F \\
+T & T & F \\
+T & T & F \\
+\hline
+\end{tabular} \vspace{0.5cm}\\
+3. $P \vee Q$
 
+\vspace{0.2cm}
+\begin{tabular}{|c|c|c|}
+\hline 
+$P$ & $Q$ & $P \vee Q$ \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{tabular}
 
-\end{document}
+\vspace{0.2cm}
+We can rewrite this as $\neg(\neg P \wedge \neg Q)$. From the first part of the problem, we can know that $\neg P = P|P$ and $\neg Q = Q|Q$. From the second problem, we know that $P \wedge Q = (P|Q)|(P|Q)$. Therefore, $\neg(\neg P \wedge \neg Q) = ((P|P)|(P|P))|((Q|Q)|(Q|Q))$.
+\newpage
+\section{1.5.7}
+Find the cardinalities of the following sets 
+
+1. $\{1, 2\} \cup \mathcal{P}(\{1, 2\})$
+\[
+    \mathcal{P}(\{1, 2\}) = \{\emptyset, \{1\}, \{2\}, \{1,2\}\}
+\]
+We could have also calculated the cardinality of this set by using the general formular: 
+\[
+    |\mathcal{P}(A)| = 2^{|A|}
+\]
+\[
+    |\mathcal{P}(\{1, 2\})| = 2^2 = 4
+\]
+\[
+    |\{1,2\}| = 2
+\]
+\[
+    \{1, 2\} \cup \mathcal{P}(\{1, 2\}) = \{1, 2, \emptyset, \{1\}, \{2\}, \{1,2\}\} = 2 + 4
+\]
+
+There are 6 unique elements in this set, meaning the cardinality of this set is \textbf{6}
+
+2. $\{\{1\}, \{2\}\} \cup \mathcal{P}(\{1, 2\})$
+\[
+    \{\{1\}, \{2\}\} \cup \mathcal{P}(\{1, 2\}) = \{\{1\},\{2\},\emptyset, \{1\},\{2\}\} = \{\emptyset, \{1\},\{2\}\}
+\]
+Since the union of these sets only has 3 unique elements, the cardinality of this set is \textbf{3}.
+
+3. $\{0,1,2,3\} \times \{\emptyset, \{0,1,2,3\}$ 
+
+The cardinality of one set times another is the product of the cardinalities of the two sets.
+
+\[
+    |\{0,1,2,3\}| = 4
+\]
+\[
+    |\{\emptyset, \{0,1,2,3\}| = 2
+\]
+\[
+    |\{0,1,2,3\} \times \{\emptyset, \{0,1,2,3\}| = 4 \times 2 = 8
+\]
+
+The cardinality of this set is \textbf{8}.
+\end{document}   
