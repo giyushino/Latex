@@ -1,7 +1,7 @@
-PWD C:\Users\allan\nvim\Latex\resume
+PWD C:\Users\allan\nvim\Latex\cv
 INPUT C:\Users\allan\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT resume.tex
-OUTPUT resume.log
+INPUT cv.tex
+OUTPUT cv.log
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
@@ -157,15 +157,15 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT .\resume.aux
-INPUT .\resume.aux
-INPUT resume.aux
-OUTPUT resume.aux
+INPUT .\cv.aux
+INPUT .\cv.aux
+INPUT cv.aux
+OUTPUT cv.aux
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-OUTPUT resume.pdf
+OUTPUT cv.pdf
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
@@ -182,6 +182,7 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\fontawesome5\ufonta
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\fontawesome5\ufontawesomebrands0.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fontawesome5\fa5brands0.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
@@ -200,7 +201,6 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmex10.tfm
-INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri10.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri8.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fontawesome5\fa5free1solid.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri9.tfm
@@ -211,7 +211,7 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\fontawesome5\
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\fontawesome5\fa5free1.enc
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\fontawesome5\fa5brands0.enc
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT resume.aux
+INPUT cv.aux
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\type1\public\fontawesome5\FontAwesome5Brands-Regular.pfb
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\type1\public\fontawesome5\FontAwesome5Brands-Regular.pfb
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\type1\public\fontawesome5\FontAwesome5Free-Regular.pfb

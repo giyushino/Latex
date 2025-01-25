@@ -1,16 +1,23 @@
 #include <iostream>
 #include <cctype>
 #include <iomanip>
+
 using namespace std;
 // Main function to control inputs and outputs
 int main() {
-    string first_name, day; // Initialize the name of the customer and day of the week as strings
-    int num_cups = 0; // Initialize the number of cups of coffee purchased as an integer
-    double total_price = 0; // Initialize the final price as a double data type to support decimals
-    char coffee[2], extra[2]; // Initialize the type of coffee and extra items as chars with length of 1 
-    bool first_name_flag = false, day_flag = false, num_cups_flag = false, coffee_flag = false, extra_flag = false; // If these flags are fault, there was nothing wrong with the input. If true, we know there was something wrong with user input.
+    /*
+     && means AND, || means OR, ! means not 
+    */
+
+    string first_name, day; 
+    int num_cups = 0; 
+    double total_price = 0; 
+    char coffee[2], extra[2]; 
+    bool first_name_flag = false, day_flag = false, num_cups_flag = false, coffee_flag = false, extra_flag = false; 
+
     cout << "Input:\nCustomer's first name: ";
-    cin >> first_name;
+    getline(cin, first_name);
+    //cin >> first_name;
     if (!isupper(first_name[0])) {
         first_name_flag = true;
     } 
@@ -69,7 +76,6 @@ int main() {
     }
 
     cout << "\nOutput:\n---\n";
-    //cout << "First name flag: " << first_name_flag << " Day flag: " << day_flag << " Cup flag: " << num_cups_flag << " coffee flag: " << coffee_flag << " extra_flag: " << extra_flag;
     if (first_name_flag == 1) {
         cout << "The first name must start with an uppercase letter."; 
         exit(0);

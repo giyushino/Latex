@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  25 JAN 2025 13:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  25 JAN 2025 14:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./resume.tex
-(resume.tex
+**./cv.tex
+(cv.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -480,9 +480,8 @@ LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-(resume.aux)
-\openout1 = `resume.aux'.
+) (cv.aux)
+\openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
 LaTeX Font Info:    ... okay on input line 148.
@@ -511,15 +510,15 @@ LaTeX Font Info:    ... okay on input line 148.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* h-part:(L,W,R)=(42.67912pt, 528.93675pt, 42.67912pt)
+* v-part:(T,H,B)=(28.45274pt, 723.83812pt, 42.67912pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=500.484pt
-* \textheight=681.15898pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-52.36449pt
+* \textwidth=528.93675pt
+* \textheight=723.83812pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-80.81725pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=0.0pt
@@ -574,30 +573,30 @@ LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
 n input line 187.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-94.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+09.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-194.
+209.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-194.
+209.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 194.
+(Font)              <10> on input line 209.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 194.
+(Font)              <7> on input line 209.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 194.
+(Font)              <5> on input line 209.
  [1
 
 {C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/alla
@@ -608,7 +607,7 @@ pData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:/Users
 rands0.enc}{C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
 mathsy.enc}] [2] 
 enddocument/afterlastpage: lastpage setting LastPage.
-(resume.aux)
+(cv.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -616,12 +615,12 @@ L3 programming layer <2024-01-04>
  ) 
 Here is how much of TeX's memory you used:
  15204 strings out of 474486
- 262289 string characters out of 5743754
- 1949542 words of memory out of 5000000
+ 262221 string characters out of 5743754
+ 1953542 words of memory out of 5000000
  37281 multiletter control sequences out of 15000+600000
  597676 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,473b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,436b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5
 /FontAwesome5Brands-Regular.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/allan/App
@@ -634,9 +633,9 @@ pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.
 pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.p
 fb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.p
 fb>
-Output written on resume.pdf (2 pages, 218866 bytes).
+Output written on cv.pdf (2 pages, 218440 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

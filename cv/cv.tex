@@ -3,10 +3,10 @@
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
-    left=2 cm, % seperation between body and page edge from the left
-    right=2 cm, % seperation between body and page edge from the right
+    top=1 cm, % seperation between body and page edge from the top
+    bottom=1.5 cm, % seperation between body and page edge from the bottom
+    left=1.5 cm, % seperation between body and page edge from the left
+    right=1.5 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
     % showframe % for debugging 
 ]{geometry} % for adjusting page geometry
@@ -188,20 +188,28 @@
     \end{header}
 
     \vspace{0.3 cm - 0.3 cm}
-    \section{Skills}
+
+    \section{Education}
+
+
+
         
+        \begin{twocolentry}{
+            
+            
+        \textit{Sept 2024 – June 2028}}
+            \textbf{University of California, Los Angeles}
+
+            \textit{BS in Applied Mathematics}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
         \begin{onecolentry}
-            \textbf{Programming Languages and Frameworks:} Python, PyTorch, NumPy, Matplotlib, OpenCV, YOLO, Jax, Hugging Face, \LaTeX, C++%, HTML (basic), CSS (basic), Bash, Git
+            \begin{highlights}
+                \item GPA: 4.00 %(\href{https://example.com}{a link to somewhere})
+                \item \textbf{Relevant Coursework:}  Multivariable Calculus, Linear Algebra, Discrete Structures, Intro to C++ \\ (Math 32A, Math 32B, Math 33A, Math 61A, CS 31)
+            \end{highlights}
         \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{onecolentry}
-            \textbf{Languages:} English, Korean
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
 
     \section{Experience}
         \begin{twocolentry}{
@@ -223,18 +231,28 @@
             \end{highlights}
         \end{onecolentry}
     
-
-
-
-    
     \section{Projects}
+           \vspace{0.2 cm}
 
-
-
-        
         \begin{twocolentry}{
             
             
+        \textit{\href{https://github.com/giyushino/tinyMathLLM}{TinyMathLLM}}}
+        \textbf{TinyMathLLM}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item{Tested different methods of training and fine-tuning small, opensource models to create lightweight math chabots that can run locally. Attempted to see if model could learn to do math from question + answer dataset. Also tested if model could learn to extract important values from questions and classify problem types, allowing it to be implemented into a math agent}
+            \item{Experimented if TinyLlama (1.1B parameters) could truly learn how to do math, specifically testing model on addition, multiplication, derivatives, integrals, matrix multiplication, and determinant questions}
+            \item{Both methods were trained using 4bit-quanitzation + low-rank adaption, as well as built-in Transformers training loop. Wrote custom LORA implementation from scratch to speed up inference}
+            \item{Created custom datasets for both use cases, including 100k+ example user inputs + model responses. Used Deepkseek-chat as judge to guage model performance}
+            \end{highlights}
+        \end{onecolentry}     
+        \vspace{0.2cm}
+
+        \begin{twocolentry}{
         \textit{\href{https://github.com/giyushino/MyOwnDoodleGuesser}{MyOwnDoogleGuesser}}}
             \textbf{Doodle Guesser}
         \end{twocolentry}
@@ -242,11 +260,9 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Using a vision transformer (OpenAI's CLIP-Vit-Large-Patch-14), downstreamed model to predict animal drawings created by users. Collected and processed 1,000,000+ images from 6 classes to create dataset to fine-tune model on. Improved model's accuracy from 54\% to 87\% after fine-tuning
-                \item Also created CLIP model from scratch using PyTorch. Wrote custom tokenzier and encoders to embed input labels and images into multi-dimensional vectors. Achieved 70\% accuracy after being trained on subset of previous dataset, only using 200,000 images. %Created functions to split dataset into batches before training/inference, replicated PyTorch's built in softmax and cross entropy loss functions only using NumPy
-                \item Both models used to create game similar to Google Doodle where users draw animals from 6 specified classes and model guesses what animal was drawn. Users' drawings converted into 28x28 tensor consisting of 0s and 1s, fed into model for prediction
-                
-		\item Tools Used: Python, PyTorch, Pygame, Hugging Face, NumPy
+            \item{Fine-tuned vision transformer (CLIP-Vit-Large-Patch-14) on 6 different animal drawings. Collected and processed 1,000,000+ images from 6 classes to create custom dataset. After training, accuracy increased from 54$\%$ to 87$\%$. Worst group accuracy increased from 39$\%$ to 76$\%$}
+            \item{Created CLIP model from scratch using PyTorch. Wrote custom tokenizer and encoders to embed input labels and images into multi-dimensional vectors. Acheived 70$\%$ accuracy after only being trained of a subset of the previous dataset (200,000 images)}
+            \item{Created GUI using Pygame to allow users to draw on a canvas. After drawing, screenshot was taken, processed, and fed into model, softmax taken of the outputted logits to predict the most likely class}
             \end{highlights}
         \end{onecolentry}
 
@@ -263,11 +279,9 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item Using Deepseek API and online data, created chatbot to help students decide where to eat at UCLA
-            \item Created pipeline to to scrape UCLA's dining hall menus and extract menu items, descriptions, and ingredients for each dining hall. Used BeautifulSoup to access raw HTML files, wrote functions to extract and clean data, and stored it to readable .txt file. 
-            \item Provided Deepseek-chat with data about each dining hall, allowing users to ask chatbot for suggestions based on their preferences. Bot can take into account flavor/cuisine preferences, allergens, dietary restrictions, as well as any other criteria for choosing where to eat. 
-            \item Currently implementing small, lightweight open source model, encoders, and cosine similarity functions to replicate Deepseek's functionality.
- 		    \item Tools Used: Python, bs4, openai, Transformers
+            \item{Using OpenAI API and Deepseek-chat, created chatbot that recommends UCLA dining halls based on student preferences. Real time data about dining halls menus and hours was scraped from UCLA Dining website and processed using BeautifulSoup}
+            \item{Deepeek was fed with data about each dining hall, including menu + nutrional information for each item. Taking into account user's flavor/cuisines preferences, dietary restrictions, and other criteria, chatbot would recommend dining halls}
+            \item{Currently fine-tuning small, opensource model on example chat data to improve performance and remove reliance on OpenAI. Model can be run locally using 4-bit quanitzation}
             \end{highlights}
         \end{onecolentry}
 
@@ -289,40 +303,22 @@
             \end{highlights}
         \end{onecolentry}
 
+  
+ 
+    \section{Skills}
+        
+        \begin{onecolentry}
+            \textbf{Programming Languages and Frameworks:} Python, PyTorch, NumPy, Matplotlib, TensorFlow, scikit-learn,  OpenCV, Hugging Face, \LaTeX, C++ (basic)%, HTML (basic), CSS (basic), Bash, Git
+        \end{onecolentry}
 
         \vspace{0.2 cm}
-        \begin{twocolentry}{
-            
-        \textit{2020 - 2021}}
-            \textbf{Self Published Novel}
-        \end{twocolentry}
 
-        \vspace{0.10 cm}
         \begin{onecolentry}
-            \begin{highlights}
-                \item Wrote a 45,000 word novel,  published it online. Amassed 272,000 reads, 7,000 comments, and 6,200 reviews. Reviewed other authors' works,  providing grammatical advice
-            \end{highlights}
+            \textbf{Languages:} English, Korean
         \end{onecolentry}
- 
-    \section{Education}
- 
-        \begin{twocolentry}{
-            
-            
-        \textit{Sept 2024 – June 2028}}
-            \textbf{University of California, Los Angeles}
 
-            \textit{BS in Applied Mathematics}
-        \end{twocolentry}
+        \vspace{0.2 cm}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item \textbf{GPA:} 4.00 %(\href{https://example.com}{a link to somewhere})
-                \item \textbf{Relevant Coursework:}  Multivariable Calculus, Linear Algebra, Discrete Structures, Computer Science \\ (Math 32A, Math 32B, Math 33A, Math 61A, CS 31)
-            \end{highlights}
-        \end{onecolentry}
-    
 
 \end{document}
 
@@ -363,10 +359,34 @@
         \end{onecolentry}
 
 
+
+        \vspace{0.2 cm}
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{July 2024 - Present}}
+            \textbf{Self Study}
+
+            \textit{Machine Learning and Data Science}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Textbooks:}  \textit {Reinforcement Learning:
+An Introduction}, \textit {An Introduction to Statistical Learning with Applications in Python}, \textit{Dive into Deep Learning} 
+            \item 
+            \textbf{Courses:}  Andrew Ng's Machine Learning Specialization
+
+            \end{highlights}
+        \end{onecolentry}
+
+   
      
         \vspace{0.2 cm}
         \begin{twocolentry}{
-            
+           
         \textit{Work in Progress}}
             \textbf{Flappy Bird AI}
         \end{twocolentry}
@@ -376,5 +396,19 @@
             \begin{highlights}
                 \item Created own version of Flappy Bird in Python using Pygame. Currently creating neural network that utilizes Q-learning to learn to play the game. Game state is collected at every frame is collected and fed into model, including bird’s vertical position, vertical velocity, and distance from both pipes
                 \item Tools used: Python, PyTorch, Pygame
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+        \begin{twocolentry}{
+            
+        \textit{2020 - 2021}}
+            \textbf{Self Published Novel}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Wrote a 45,000 word novel,  published it online. Amassed 272,000 reads, 7,000 comments, and 6,200 reviews. Reviewed other authors' works,  providing grammatical advice
             \end{highlights}
         \end{onecolentry}
