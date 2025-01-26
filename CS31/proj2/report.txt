@@ -1,3 +1,57 @@
-i kept on getting the flag for coffee as true for some reason,even though my logic was correct adn identical to the other code that was the same exact. I fixed this by init
 if name = b=nymber
 round if edge case?  
+is there a case where the cost shoudl round up?
+
+
+Project 2:
+
+As someone who has never used a language where variable types need to be declared, I found the whole process of deciding what type a certain variable should be quite challenging. For example, I knew double and float could both be used to store decimal numbers, but I wasn't sure which one to use. However, after some research, I learned that double is more precise than float. Even though both variable types are valid to use for the scope of this project, I ended up using double. Another challenge I had was learning to deal with invalid inputs and clearing the buffer. There were many moments where I believed I had finished the project, only for one of the testcases to fail because I didn't clear the buffer. I struggled specifically with the invalid inputs into a char, but after reviewing the lecture slides, I got into the habit of clearing the buffer and ignoring a large number of lines. 
+
+The biggest hurdle I faced this project was a bug with the boolean flags I set to mark if the user had inputted an inproper value. At first, I did not initialize any of the boolean flags, as I didn't yet have the habit of initializing any of my variables. However, near the end stage of finishing up this project, I kept on running into a bug where even if the coffee type was valid, the program would still mark it as incorrect and output an error message at the end. After going crazy for a good 30 minutes, I decided to manually set each flag to false, and voila! The bug was fixed, and I realized the importance of initializing variables. 
+
+Test case 1: I used this testcase because it has all valid inputs, and the output should match the example given in the project 
+Input: 
+Customer's first name: Allan
+Number of cups: 3
+Type of coffee (r=regular, d=decaf): r
+Any extra items? (y/n): y
+Day of the week: Wednesday
+
+Output:
+The total charge for Maria is $11.86
+
+
+Test case 2: I used this testcase to test if the program could handle a multiple word input for name, and to see if it could correctly set the name_flag to true.
+Input: 
+Customer's first name: allan zhang
+Number of cups: 3
+Type of coffee (r=regular, d=decaf): r
+Any extra items? (y/n): y
+Day of the week: Wednesday
+
+Output:
+The first name must start with an uppercase letter.
+
+
+Test case 3: I used this testcase for the same reasons as above, but I also wanted to test if the program could handle an invalid input for the number of cups. Also with 2 errors, I needed to test if the program would only output the first error message.
+Input: 
+Customer's first name: allan zhang
+Number of cups: x
+Type of coffee (r=regular, d=decaf): r
+Any extra items? (y/n): y
+Day of the week: Wednesday
+
+Output:
+The first name must start with an uppercase letter.
+
+
+Test case 4: I used this testcase for the same reasons as above, but I also wanted to test if the program could handle an invalid input for the number of cups. Also with 2 errors, I needed to test if the program would only output the first error message.
+Input: 
+Customer's first name: allan zhang
+Number of cups: x
+Type of coffee (r=regular, d=decaf): r
+Any extra items? (y/n): y
+Day of the week: Wednesday
+
+Output:
+The first name must start with an uppercase letter.
