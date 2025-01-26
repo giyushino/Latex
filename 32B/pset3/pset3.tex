@@ -1,0 +1,138 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{MATH 32B Problem Set ?}}
+\author{Allan Zhang}
+\date{January 25, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+
+\section{Question 24}
+Evaluate $\iint_{\mathcal{D}} x \sqrt{x^2+y^2} \, dA$, where $\mathcal{D}$ is the shaded region enclosed by the lemniscate curve $r^2 = \sin2\theta$
+\vspace{0.2cm}
+
+First, let us find the bounds of the region. Given the diagram, we can clearly see that 
+\[
+    0 \leq \theta \leq \frac{\pi}{2}
+\]
+\[
+    r^2 = \sin2\theta
+\]
+\[
+    r = \sqrt{\sin2\theta} 
+\]
+\[
+    0 \leq r \leq \sqrt{\sin2\theta}
+\]
+Now, let us rewrite the original function in polar coords
+\[
+    x\sqrt{x^2+y^2} = r(\cos\theta) r = r^2 \cos\theta
+\]
+Now, let us integrate
+\[
+    \int_0^{\frac{\pi}{2}} \int_0^{\sqrt{\sin2\theta}} r^2 \cos\theta \cdot r \, dr \, d \theta
+\]
+\[
+    \int_0^{\frac{\pi}{2}} \left ( \left . \frac{r^4}{4} \cos\theta \right |_0^{\sqrt{\sin2\theta}}  \right ) \, d \theta
+\]
+\[
+    \int_0^{\frac{\pi}{2}} \frac{(\sin2\theta)^2}{4} \cos\theta \, d \theta
+\]
+\[ 
+    \int_0^{\frac{\pi}{2}} \frac{(2\sin\theta\cos\theta)^2}{4} \cos\theta \, d \theta
+\]
+\[ 
+    \int_0^{\frac{\pi}{2}} \frac{4\sin^2\theta\cos^3\theta}{4} \, d \theta
+\]
+\[ 
+    \int_0^{\frac{\pi}{2}} \sin^2\theta\cos^3\theta \, d \theta
+\]
+\[
+    \int_0^{\frac{\pi}{2}} \sin^2\theta\cos\theta(1-\sin^2\theta) \, d \theta
+\]
+\[
+    u = \sin\theta \quad du = \cos\theta \, d\theta
+\]
+\[
+    \int_0^1 u^2 (1-u^2) \, du
+\]
+\[
+    \frac{u^3}{3} - \frac{u^5}{5} \Big |_0^1
+\]
+\[
+    \frac{1}{3} - \frac{1}{5} = \frac{1}{2}
+\]
+\newpage
+\section{Question 39}
+Find the volume of the region appearing between the two surfaces
+\[
+    z = x^2+y^2 \quad \quad z = 8 - x^2-y^2
+\]
+\vspace{0.2cm}
+
+First, let us find where the surfaces intersect
+\[
+    x^2+y^2 = 8 - x^2-y^2
+\]
+\[
+    2x^2+2y^2 = 8
+\]
+\[
+    x^2+y^2 = 4
+\]
+\[
+    r^2 = 4 \quad \quad 0 \leq r \leq 2
+\]
+Just from the shape of the surfaces, we know that
+\[
+    0 \leq \theta \leq 2\pi
+\]
+To compute the volume in between the surfaces, we will need to integrate the height over the bounds. The height is the upper bounds minus the lower bound
+\[
+    \text{Lower bound: } z = r^2 \quad \text{Upper bound: } z = 8-r^2
+\]
+\[
+    \text{Height: } 8-r^2 - r^2 = 8-2r^2
+\]
+\[
+    \int_0^{2\pi} \int_0^2 (8-2r^2) r \, dr \, d\theta
+\]
+\[
+   \left . 4r^2 - \frac{r^4}{2} \right |_0^2
+\]
+\[
+    16 - 8 = 8 
+\]
+\[
+    \int_0^{2\pi} 8 \, d\theta
+\]
+\[
+16 \pi
+\]
+
+\end{document}
