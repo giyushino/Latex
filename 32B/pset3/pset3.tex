@@ -32,6 +32,42 @@
 \color{black}
 \maketitle
 
+\section{Question 5}
+Sketch the region $\mathcal{D}$ indicated and integrate $f(x,y)$ over $\mathcal{D}$ using polar coordinates
+
+\[
+    f(x,y) = y(x^2+y^2)^{-1}; \quad y \geq \frac{1}{2}, \quad x^2+y^2 \leq 1
+\]
+First, let's solve for the bounds or integration
+\[
+    y = r \sin\theta \quad r\sin\theta \geq \frac{1}{2} \quad r \geq \frac{1}{2\sin\theta}
+\]
+\[
+    x^2+y^2 = r \quad r^2 \leq 1 \quad r \leq 1
+\]
+Since we know that $y \geq \frac{1}{2}$
+\[
+    \frac{\pi}{6} \leq \theta \leq \frac{5\pi}{6}
+\]
+\[
+    \int_{\frac{\pi}{6}}^{\frac{5\pi}{6}} \int_{\frac{1}{2\sin\theta}}^{1}  \sin\theta \,dr \, d\theta  
+\]
+\[
+    \int_{\frac{\pi}{6}}^{\frac{5\pi}{6}} (1-\frac{1}{2\sin\theta}) \sin\theta \, d\theta 
+\]
+\[
+    \int_{\frac{\pi}{6}}^{\frac{5\pi}{6}} \sin\theta - \frac{1}{2} \, d\theta 
+\]
+\[
+-\cos\theta - \frac{\theta}{2} \Big|_{\frac{\pi}{6}}^{\frac{5\pi}{6}}
+\]
+\[
+    \frac{\sqrt{3}}{2} - \frac{5\pi}{6} - (- \frac{\sqrt{3}}{2} - \frac{\pi}{6})
+\]
+\[
+    \sqrt{3} - \frac{\pi}{3}
+\]
+\newpage
 \section{Question 24}
 Evaluate $\iint_{\mathcal{D}} x \sqrt{x^2+y^2} \, dA$, where $\mathcal{D}$ is the shaded region enclosed by the lemniscate curve $r^2 = \sin2\theta$
 \vspace{0.2cm}

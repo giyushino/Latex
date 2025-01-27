@@ -1,5 +1,4 @@
 \documentclass[10pt, letterpaper]{article}
-
 % Packages:
 \usepackage[
     ignoreheadfoot, % set margins without considering header and footer
@@ -138,6 +137,8 @@
   }%
 }%
 
+
+
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
 
@@ -224,7 +225,7 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item{Aided PhD student in developing pipelines to train and evaulate custom, lightweight VLMs on spatial reasoning tasks, attemping to understand where and why model fails. Findings allow us to work on creating optimal, high-quality datasets to improve performance}
+                \item{Aided PhD student Siddharth Joshi in developing pipelines to train and evaulate custom, lightweight VLMs on spatial reasoning tasks, attemping to understand where and why model fails. Findings allow us to work on creating optimal, high-quality datasets to improve performance}
                 \item{Wrote functions to create highly modular datasets, testing the effects of modality mismatch, spurious correlations, alignment between visual and textual context, and number of unique images per class on model's performance}
                 \item{Utilizing mechanistic interpretability techniques, used hooks to extract each layer's activation patterns, as well as the model's predictions during each layer. Created heatmaps using Seaborn to visualize how data is processed throughout the model}
                 \item{Used custom linear probes to determine if tensors passed through model still retained spatial information, specifically testing the tensors passed through the multimodal projector}
@@ -245,8 +246,7 @@
         \begin{onecolentry}
             \begin{highlights}
             \item{Tested different methods of training and fine-tuning small, opensource models to create lightweight math chabots that can run locally. Attempted to see if model could learn to do math from question + answer dataset. Also tested if model could learn to extract important values from questions and classify problem types, allowing it to be implemented into a math agent}
-            \item{Experimented if TinyLlama (1.1B parameters) could truly learn how to do math, specifically testing model on addition, multiplication, derivatives, integrals, matrix multiplication, and determinant questions}
-            \item{Both methods were trained using 4bit-quanitzation + low-rank adaption, as well as built-in Transformers training loop. Wrote custom LORA implementation from scratch to speed up inference}
+            \item{Trained TinyLlama (1.1B param) on both strategies using 4bit-quanitzation + low-rank adaption, as well as built-in Transformers training loop. Wrote custom LORA implementation from scratch to speed up inference}
             \item{Created custom datasets for both use cases, including 100k+ example user inputs + model responses. Used Deepkseek-chat as judge to guage model performance}
             \end{highlights}
         \end{onecolentry}     
@@ -412,3 +412,6 @@ An Introduction}, \textit {An Introduction to Statistical Learning with Applicat
                 \item Wrote a 45,000 word novel,  published it online. Amassed 272,000 reads, 7,000 comments, and 6,200 reviews. Reviewed other authors' works,  providing grammatical advice
             \end{highlights}
         \end{onecolentry}
+
+
+

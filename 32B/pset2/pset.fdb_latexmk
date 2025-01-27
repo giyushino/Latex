@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1737169303.06213 "pset.tex" "pset.pdf" "pset" 1737169306.85245 0
-  "C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1732011128 82011 97247c01f6bfb6f6d0c40fab12a08423 ""
+["pdflatex"] 1737929202.27937 "pset.tex" "pset.pdf" "pset" 1737929203.56807 0
+  "C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1737910852 82347 0a47e4f8d01f5d55a2e12fd68cc2a137 ""
   "C:/Users/allan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1731998384 24225047 56e8fc5f6fbe91c7c54f323f2b897dff ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -223,9 +223,9 @@
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "pset.aux" 1737169306 1243 6f45e46d4e12cc9dbad7b2096ebf3126 "pdflatex"
-  "pset.out" 1737169306 1132 ad98bcbc91a3365ad32cf660c5f2c25e "pdflatex"
-  "pset.tex" 1737169302 12262 7c2aed445596123d5e315f6471ccb2af ""
+  "pset.aux" 1737929203 1243 6f45e46d4e12cc9dbad7b2096ebf3126 "pdflatex"
+  "pset.out" 1737929203 1132 ad98bcbc91a3365ad32cf660c5f2c25e "pdflatex"
+  "pset.tex" 1737929201 12268 d2b01c35e19297b17e21654967f61d01 ""
   (generated)
   "pset.aux"
   "pset.log"

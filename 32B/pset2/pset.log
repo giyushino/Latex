@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  17 JAN 2025 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  26 JAN 2025 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1051,7 +1051,7 @@ Package rerunfilecheck Info: File `pset.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  26085 strings out of 474486
- 536733 string characters out of 5743754
+ 536679 string characters out of 5743754
  1938542 words of memory out of 5000000
  47790 multiletter control sequences out of 15000+600000
  565624 words of font info for 66 fonts, out of 8000000 for 9000
@@ -1069,7 +1069,7 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/al
 lan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
 /Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7
 .pfb>
-Output written on pset.pdf (10 pages, 150004 bytes).
+Output written on pset.pdf (10 pages, 150002 bytes).
 PDF statistics:
  147 PDF objects out of 1000 (max. 8388607)
  21 named destinations out of 1000 (max. 500000)

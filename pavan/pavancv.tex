@@ -1,0 +1,167 @@
+\documentclass[letterpaper,12pt]{article}
+\def\theme{MidnightBlue}
+\usepackage[style=ieee,url=false,doi=false,maxbibnames=99,sorting=ydnt,dashed=false]{biblatex}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{fontawesome}
+\usepackage{parskip}
+\usepackage{dashrule}
+\usepackage{fancyhdr}
+% \usepackage[hidelinks]{hyperref}
+\usepackage{lastpage}
+\usepackage[
+    colorlinks=true,         % Use colored text for links instead of boxes
+    linkcolor=,          % Color for internal links
+    urlcolor=blue,           % Color for URLs
+    citecolor=blue,          % Color for citations
+    pdfborder={0 0 0}        % Remove border around links
+]{hyperref}
+
+\definecolor{red}{RGB}{218, 0, 55}
+% \definecolor{aqua}{RGB}{0, 109, 180u
+\definecolor{aqua}{RGB}{57, 141, 137}
+
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newcommand{\code}[1]{\fontfamily{lmss}\selectfont #1}
+\newcommand*\tick{\item[\faAngleRight]}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\geometry{top=1.4cm, bottom=1.4cm, left=1cm, right=1cm}
+
+% \bibliography{papers}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[LO,CE]{\code{\textcolor{aqua}{Last Updated \today}}}
+% \fancyfoot[CO,RE]{\code{\thepage}/\textcolor{aqua}3}
+\fancyfoot[CO,RE]{\code{\thepage/\textcolor{aqua}{\pageref{LastPage}}}}
+
+\begin{center}
+    \Huge {\fontfamily{lmss}\selectfont
+        \textbf{Pavan K. \textcolor{aqua}{Yeddanapudi
+}}}\\
+\normalsize \color{aqua} \code{Undergraduate Student $\bullet$ Researcher}
+\end{center}
+
+\begin{center}
+    \color{aqua}{\normalsize\faEnvelope}{ \code {\href{mailto:pky@mit.edu}{\color{aqua}pky@mit.edu}}} $|$ {\large\faMobilePhone}{ \code{\href{tel:2092195299}{\color{aqua}+1 209-219-5299 }}} $|$ {\normalsize\faGithub}{ \code {\href{https://github.com/pyfb78}{\color{aqua}pyfb78}}} %$|$ {\normalsize\faHome} {\code {anisha-yeddanapudi.github.io}}
+\end{center}
+\hfill \\
+\begin{minipage}{18cm}
+    \Large\code{\textcolor{aqua}{\textbf{Education}}} \textcolor{aqua}{\rule[0.5ex]{16.25cm}{1px}} \hfill  
+    \begin{minipage}{19cm}
+\hfill\\
+    \large \code{\textbf{Massachusetts Institute of Technology}} \hfill \large{Sept 2024 - Today} \\
+    \normalsize \code{B.S in Electrical Engineering and Computing} \hfill \normalsize Cambridge, MA\\
+    % \small \code{ \textit{Thesis Title} } \\
+
+    %%%%%%%%%%%%%%%%%%
+    % \large \code{\textbf{University of California, Berkeley}} \hfill \large{Aug 2021 - May 2024} \\
+    % \normalsize \code{BA in Physics \& Applied Math --- Honors in Physics} \hfill \normalsize Berkeley, CA\\
+    % \small \code{ GPA: 3.81 }\\
+
+    %%%%%%%%%%%%%%%
+    \large \code{\textbf{Las Positas College}} \hfill \large{Jan 2024 - May 2024} \\
+    \normalsize \code{Concurrent enrollment during HS} \hfill \normalsize Livermore, CA\\
+    \small \code{ GPA: 4.0 }\hfill \\
+\end{minipage}
+\end{minipage}
+
+\begin{minipage}{18cm}
+    \Large\code{\textcolor{aqua}{\textbf{Experience}}} \textcolor{aqua}{\rule[0.5ex]{16.25cm}{1px}} \\
+% \begin{minipage}{19cm}
+    \hfill\\ \large\color{black}\code{\textbf{Signals, Information, and Algorithms Laboratory}} \hfill Sept 2024 - Today \\
+    \normalsize \code{} \hfill \normalsize Cambridge, MA \\
+     \small Advisor(s): Dr. Jongha Ryu \hfill \normalsize \color{white} Cambridge, MA 
+    
+    \color{darkgray}\begin{itemize}
+        \tick Read research papers on using Neural Networks to approximate Mutual information between two \newline
+        probability distributions
+        \tick Implementing algorithm involving utilizing NeuralSVD framework to find eigenfunctions for the kernal function and passing them through KSG estimator to then find approximation for mutual information
+        \tick Reading and implementing algorithms involving using representation theory to minimize dimension of data in order to speed up calculations and approximate important processes for analyzing data
+    \end{itemize}
+
+    \textcolor{aqua}{\rule[0.5ex]{19.25cm}{1px}}
+    
+    % \hfill\\ \large\color{black}\code{\textbf{MIT Media Lab}} \hfill Sept 2024 - Today \\
+    % \normalsize \code{} \hfill \normalsize Cambridge, MA \\
+    %  \small Advisor(s): Mr. Abhishek Singh \hfill \normalsize \color{white} Cambridge, MA 
+     \large\color{black} \code{\textbf{MIT Media Lab}} \hfill \large{Sept 2024 - Nov 2024} \\
+    \normalsize \code{} \hfill \normalsize Cambridge, MA \\
+        \small Advisor(s): Mr. Abhishek Singh \hfill \normalsize \color{white} Cambridge, MA 
+
+    
+    \color{darkgray}\begin{itemize}
+        \tick Writing code to optimize program for training machine learning models in a decentralized manner
+        \tick Devloping algorithms that ensure models are collaboratively trained across a permission-less network, balancing the need for personalization with collective training
+        \tick Implemented testing infrastructure in order to allow for continuous development and integration in an open-source environment
+        \tick Conducting experiments in order to evaluate performance of decentralized AI models under different conditions, minimizing communication overhead, privacy leakage, and optimizing model accuracy
+\end{itemize}
+
+% \end{minipage} 
+    \hfill\\ \large\color{black}\code{\textbf{San Jose BioRob Lab}} \hfill August 2023 - May 2024 \\
+    \normalsize \code{} \hfill \normalsize San Jose, CA \\
+     \small Advisor(s): Prof. Lin Jiang (PI), Mr. Tadeas Horn \hfill \normalsize \color{white} San Jose, CA 
+
+    % \large\color{black} \code{\textbf{San Jose BioRob Lab}} \hfill \large{August 2023 - May 2024} \\
+    % \normalsize \code{} \hfill \normalsize San Jose, CA \\
+    %     \small Advisor(s): Prof. Lin Jiang (PI), Mr. Tadeas Horn \hfill \normalsize \color{white} San Jose, CA
+        \color{darkgray}\begin{itemize}
+            \tick Created embedded circuitry in order to make electronics for touch-sensitive glove that lets the user receive feedback for tasks they are currently doing, such as a doctor getting an assessment during surgery
+            \tick Implemented matlab simulations to map out movement or robotic glove in real time and collect data to analyze and give feedback to the doctor
+            \tick Produced unity simulation for seeing what the position of the glove is in real-time on the screen, allowing for future innovations such as simulations for doctors
+    \end{itemize} 
+\end{minipage}
+
+\newpage
+
+\begin{minipage}{18cm}
+    % \Large\code{\textcolor{aqua}{\textbf{Experience}}} \textcolor{aqua}{\rule[0.5ex]{16.25cm}{1px}} \\
+% \begin{minipage}{19cm}
+    \hfill\\ \large\color{black}\code{\textbf{UCSB Math Department}} \hfill August 2023 - May 2024 \\
+    % \normalsize \code{} \hfill \normalsize Cambridge, MA \\
+     \small Advisor(s): Dr. Daryl Cooper \hfill \normalsize \color{white} Cambridge, MA 
+    
+    \color{darkgray}\begin{itemize}
+        \tick Explored relation between the surface area and volume of a multidimensional polygons and some of it's other properties 
+        \tick Proved and reinterpreted existing theorem between the volume of multidimensional sphere and Euler's Identity
+        \tick Used interpretation to explore the field of linear programming and optimization problems that involve higher dimensional polygons and shapes
+\end{itemize}
+    
+\end{minipage}
+
+\begin{minipage}{18cm}
+    \Large\code{\textcolor{aqua}{\textbf{Personal Projects}}} \textcolor{aqua}{\rule[0.5ex]{16.25cm}{1px}} \\
+% \begin{minipage}{19cm}
+    \hfill\\ \large\color{black}\code{\textbf{Ball Catching Robotic Arm}} \hfill April 2022 - Feb 2024 \\
+    % \normalsize \code{} \hfill \normalsize Cambridge, MA \\
+     \small  \hfill \normalsize \color{white} Cambridge, MA 
+    
+    \color{darkgray}\begin{itemize}
+        \tick Constructed \href{https://github.com/pyfb78/Robotic-Arm-Ball-Tracker}{\textcolor{blue}{stepper motor library}} from scratch in Cpp, allowing the arm to have seamless movement in whatever direction I want
+        \tick Programmed the machine to track a ball using live camera detection with communication utilizing a serial port connection from the python end to the cpp end
+        \tick Read \href{http://wpage.unina.it/fabio.ruggiero/Papers/J5.pdf}{\color{blue}research papers} to understand how to camera-in-hand system for the arm to be able to attempt the catch the ball in real time
+        \tick Used linear interpolation in order to create \href{https://github.com/pyfb78/Robotic-Arm-Ball-Tracker/blob/main/PythonBallTracking/old_files/ball_trajectory.py}{\color{blue}system} that can track the trajectory of a moving ball and will allow the robot to analyze where it will end up and how to reach a future point along the path
+        \tick Utilized the tensorflow library to create a \href{https://github.com/pyfb78/Robotic-Arm-Hand-Gesture-Control}{\color{blue}program} that allows me to control the robotic arm itself using gesture recognition
+    \end{itemize}
+    
+   \hfill\\ \large\color{black}\code{\textbf{Neural Network for Image Recognition}} \hfill Nov 2023 - Jan 2024 \\
+    % \normalsize \code{} \hfill \normalsize Cambridge, MA \\
+     \small  \hfill \normalsize \color{white} Cambridge, MA 
+    
+    \color{darkgray}\begin{itemize}
+        \tick Implemented \href{https://github.com/pyfb78/Image-Recognition/}{\color{blue} VGG-19 Neural Network} in the tensorflow library in order to analyze and identify images in the open-source CIFAR-100 dataset
+        \tick Read and analyzed \href{https://arxiv.org/pdf/1409.1556}{\color{blue}research paper} on how to implement said network, constructing the neural network from the information I had read
+        \tick Created and modified my own implementation of the \href{https://github.com/pyfb78/Image-Recognition/blob/main/train.py}{\color{blue}{Cross Entropy Loss}} function in order to better suit the dataset that was being analyzed and understood
+    \end{itemize}
+
+\end{minipage}
+
+\end{document}
