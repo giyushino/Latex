@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1737912530.05246 "cv.tex" "cv.pdf" "cv" 1737912530.79082 0
-  "C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1737910852 82347 0a47e4f8d01f5d55a2e12fd68cc2a137 ""
+["pdflatex"] 1738405338.16557 "cv.tex" "cv.pdf" "cv" 1738405339.09298 0
+  "C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738115980 82347 0a47e4f8d01f5d55a2e12fd68cc2a137 ""
   "C:/Users/allan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1731998384 24225047 56e8fc5f6fbe91c7c54f323f2b897dff ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1651500229 2920 d63721872b8c77041b88e51b8f7c291d ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc" 1651500229 3042 0e2b14b9be7d01075a4c4591d5d1781b ""
@@ -117,8 +117,8 @@
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1700599895 7147 d45559f8a31b8c53ada0640516660003 ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/allan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "cv.aux" 1737912530 1297 6af941ad1ebba531fd8ee231f01602cb "pdflatex"
-  "cv.tex" 1737912529 17172 0cacbbcedd31a0a62ed2968a89a48ea1 ""
+  "cv.aux" 1738405338 1297 62519ef40e9ebb7620de29f76d45091b "pdflatex"
+  "cv.tex" 1738405337 15865 f0dcd3fed3236643a488792bb4e7b355 ""
   (generated)
   "cv.aux"
   "cv.log"

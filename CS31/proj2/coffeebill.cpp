@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 #include <cctype>
 #include <iomanip>
 #include <string>
@@ -18,7 +18,7 @@ int main() {
     // Ask user for first name
     cout << "Input:\nCustomer's first name: ";
     getline(cin, first_name);
-    // Check if first letter is uppercause using isupper() function
+    // Check if first letter is uppercase using isupper() function
     if (!isupper(first_name[0])) {
         first_name_flag = true;
     }
@@ -48,13 +48,14 @@ int main() {
     cout << "Any extra items? (y/n): ";
     cin.getline(extra, 2);
     // If extra item is not y or n, set flag to true. Ignore error flag in buffer
-    if (extra[0] != 'y' && extra[0] != 'd') {
+    if (extra[0] != 'y' && extra[0] != 'n') {
         extra_flag = true;
-        if (cin.fail()) { 
+       if (cin.fail()) { 
             cin.clear();
             cin.ignore(10000,'\n');   
-        }   
+        } 
     }
+    
     // If day entered is not valid day with proper capitalization, set flag to true 
     cout << "Day of the week: ";
     cin >> day;
@@ -68,7 +69,7 @@ int main() {
         exit(0);
     }
     if (num_cups_flag == 1) {
-        cout << "The number of cups must be positive";
+        cout << "The number of cups must be positive.";
         exit(0);
     }
     if (coffee_flag == 1) {
@@ -76,11 +77,11 @@ int main() {
         exit(0);
     }
     if (extra_flag == 1) {
-        cout << "You must enter y or n";
+        cout << "You must enter y or n.";
         exit(0);
     }
     if (day_flag == 1) {
-        cout << "You must enter a valid day of the week";
+        cout << "You must enter a valid day of the week.";
         exit(0);
     }
     // If none of the flags are true, calculate and output the total charge!
@@ -96,9 +97,7 @@ int main() {
     if (day == "Wednesday") {
         total_price = total_price * 0.85;
     }
-
+    // Output the total charge
     cout << "The total charge for " <<  first_name << " is $" << fixed << setprecision(2) << total_price;
-    
-    return 0; 
-    
+    return 0;  
 }

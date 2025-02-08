@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  26 JAN 2025 09:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  1 FEB 2025 02:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -565,38 +565,38 @@ nput line 168.
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
 mefree1.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 188.
+ input line 184.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
 mebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 188.
+n input line 184.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-10.
+06.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-210.
+206.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-210.
+206.
 
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 210.
+(Font)              <10> on input line 206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 210.
+(Font)              <7> on input line 206.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 210.
+(Font)              <5> on input line 206.
  [1
 
 {C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/alla
@@ -605,7 +605,7 @@ pData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free2.enc}{C:/Users
 /allan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}
 {C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5b
 rands0.enc}{C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
-mathsy.enc}] [2] 
+mathsy.enc}] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (cv.aux)
  ***********
@@ -614,13 +614,13 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15204 strings out of 474486
- 262221 string characters out of 5743754
- 1952542 words of memory out of 5000000
+ 15203 strings out of 474486
+ 262215 string characters out of 5743754
+ 1950542 words of memory out of 5000000
  37281 multiletter control sequences out of 15000+600000
  597676 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,436b,659s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,326b,533s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5
 /FontAwesome5Brands-Regular.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><C:/Users/allan/App
@@ -633,9 +633,9 @@ pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.
 pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.p
 fb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.p
 fb>
-Output written on cv.pdf (2 pages, 218454 bytes).
+Output written on cv.pdf (1 page, 213292 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

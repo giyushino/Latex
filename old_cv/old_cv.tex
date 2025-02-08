@@ -221,8 +221,10 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item{Aided PhD student Siddharth Joshi in training and evaulating custom, lightweight VLMs on spatial reasoning tasks using mechanistic interpretability techniques (i.e. linear probing, ablation studies, and feature visualization)}
+                \item{Aided PhD student Siddharth Joshi in training and evaulate custom, lightweight VLMs on spatial reasoning tasks, attemping to understand where and why model fails. Findings allow us to work on creating optimal, high-quality datasets to improve performance}
                 \item{Wrote functions to create highly modular datasets, testing the effects of modality mismatch, spurious correlations, alignment between visual and textual context, and number of unique images per class on model's performance}
+                \item{Utilizing mechanistic interpretability techniques, used hooks to extract each layer's activation patterns, as well as the model's predictions during each layer. Created heatmaps using Seaborn to visualize how data is processed throughout the model}
+                \item{Used custom linear probes to determine if tensors passed through model still retained spatial information, specifically testing the tensors passed through the multimodal projector}
             \end{highlights}
         \end{onecolentry}
     
@@ -239,8 +241,9 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item{Researched how datasets, model architecture, compute power, prompting, low-rank adapation, etc can be optimized to finetune LLMs. Demonstrated effectiveness of using LLMs to extract data from questions and using tools}
-            \item{Finetuned TinyLlama (1.1B) on custom datasets entirely on RTX 4070, demonstrating effective math agents can be trained with limited resources. Despite training 0.0024$\%$ of params using LoRA and using 4-bit quantization, model experienced significant improvment in performance}
+            \item{Tested different methods of training and fine-tuning small, opensource models to create lightweight math chabots that can run locally. Attempted to see if model could learn to do math from question + answer dataset. Also tested if model could learn to extract important values from questions and classify problem types, allowing it to be implemented into a math agent}
+            \item{Trained TinyLlama (1.1B param) on both strategies using 4bit-quanitzation + low-rank adaption, as well as built-in Transformers training loop. Wrote custom LORA implementation from scratch to speed up inference}
+            \item{Created custom datasets for both use cases, including 100k+ example user inputs + model responses. Used Deepkseek-chat as judge to guage model performance}
             \end{highlights}
         \end{onecolentry}     
         \vspace{0.2cm}
@@ -253,8 +256,8 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item{Fine-tuned OpenaAI CLIP-Vit-Large-Patch-14 and custom vision transformer on 6 different animal drawings. Collected and processed 1,000,000+ images of 6 classes from web to create custom dataset}
-            \item{Using custom training + inference pipeline, accuracy increased from 54$\%$ to 87$\%$, worst group improved from 39$\%$ to 76$\%$. Custom model achieved 70$\%$ accuracy with only 200,000 training images}
+            \item{Fine-tuned vision transformer (CLIP-Vit-Large-Patch-14) on 6 different animal drawings. Collected and processed 1,000,000+ images from 6 classes to create custom dataset. After training, accuracy increased from 54$\%$ to 87$\%$. Worst group accuracy increased from 39$\%$ to 76$\%$}
+            \item{Created CLIP model from scratch using PyTorch. Wrote custom tokenizer and encoders to embed input labels and images into multi-dimensional vectors. Acheived 70$\%$ accuracy after only being trained of a subset of the previous dataset (200,000 images)}
             \item{Created GUI using Pygame to allow users to draw on a canvas. After drawing, screenshot was taken, processed, and fed into model, softmax taken of the outputted logits to predict the most likely class}
             \end{highlights}
         \end{onecolentry}
@@ -272,14 +275,31 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item{Using OpenAI API and Deepseek-chat, created chatbot that recommends UCLA dining halls based on dietary preferences. Real time data about dining halls menus was scraped from UCLA Dining website and processed using BeautifulSoup}
-            \item{Menu + nutrional info of each dish in every dining hall fed into model. Taking into account user's flavor/cuisines preferences, dietary restrictions, and other criteria, chatbot would recommend dining halls. Responses saved to JSON file to distill weaker open-source model}
+            \item{Using OpenAI API and Deepseek-chat, created chatbot that recommends UCLA dining halls based on student preferences. Real time data about dining halls menus and hours was scraped from UCLA Dining website and processed using BeautifulSoup}
+            \item{Deepeek was fed with data about each dining hall, including menu + nutrional information for each item. Taking into account user's flavor/cuisines preferences, dietary restrictions, and other criteria, chatbot would recommend dining halls}
+            \item{Currently fine-tuning small, opensource model on example chat data to improve performance and remove reliance on OpenAI. Model can be run locally using 4-bit quanitzation}
             \end{highlights}
         \end{onecolentry}
 
 
         \vspace{0.2 cm}
- 
+        \begin{twocolentry}{
+            
+            
+        \textit{\href{https://github.com/giyushino/clip-vit-large-patch14-batch}{Fine-Tuning Functions}}}
+            \textbf{Efficient Finetuning Pipeline}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Wrote functions to efficiently fine-tune and evaluate models on weak GPUs or CPU. Functions focused on batching images fed into model to reduce VRAM requirements and preventing Google Colab from crashing
+                \item Tested on OpenAI's CLIP-Vit-Large-Patch-14 model using CIFAR-10 dataset. Using built-in training functions from Hugging Face caused Google Colab to crash, custom functions did not. Saw 5\% improvement in accuracy (91\% $\rightarrow$ 96\%) with limited training data, computational power, and time. To prevent overfitting, wrote new function to shuffle training dataset for every epoch
+                \item Tools Used: Python, PyTorch, Google Colab, Hugging Face
+            \end{highlights}
+        \end{onecolentry}
+
+  
  
     \section{Skills}
         
@@ -298,23 +318,7 @@
 
 \end{document}
 
-        \begin{twocolentry}{
-            
-            
-        \textit{\href{https://github.com/giyushino/clip-vit-large-patch14-batch}{Fine-Tuning Functions}}}
-            \textbf{Efficient Finetuning Pipeline}
-        \end{twocolentry}
 
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Wrote functions to efficiently fine-tune and evaluate models on weak GPUs or CPU. Functions focused on batching images fed into model to reduce VRAM requirements and preventing Google Colab from crashing
-                \item Tested on OpenAI's CLIP-Vit-Large-Patch-14 model using CIFAR-10 dataset. Using built-in training functions from Hugging Face caused Google Colab to crash, custom functions did not. Saw 5\% improvement in accuracy (91\% $\rightarrow$ 96\%) with limited training data, computational power, and time. To prevent overfitting, wrote new function to shuffle training dataset for every epoch
-                \item Tools Used: Python, PyTorch, Google Colab, Hugging Face
-            \end{highlights}
-        \end{onecolentry}
-
- 
         \begin{twocolentry}{
             
         \textit{\href{https://github.com/giyushino/UCLABathroom}{UCLA Bathroom}}}

@@ -1,7 +1,7 @@
-PWD C:\Users\allan\nvim\Latex\random
+PWD C:\Users\allan\nvim\Latex\random\temp
 INPUT C:\Users\allan\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT random.tex
-OUTPUT random.log
+INPUT temp.tex
+OUTPUT temp.log
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\base\size10.clo
@@ -151,10 +151,10 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.c
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\random.aux
-INPUT .\random.aux
-INPUT random.aux
-OUTPUT random.aux
+INPUT .\temp.aux
+INPUT .\temp.aux
+INPUT temp.aux
+OUTPUT temp.aux
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -192,7 +192,7 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt12.tf
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-OUTPUT random.pdf
+OUTPUT temp.pdf
 INPUT C:\Users\allan\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -203,7 +203,7 @@ INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT random.aux
+INPUT temp.aux
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\allan\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

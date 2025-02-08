@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  29 JAN 2025 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  8 FEB 2025 01:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./pset.tex
-(pset.tex
+**./pset5.tex
+(pset5.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -938,8 +938,8 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \backup@length=\skip64
 \ar@cellbox=\box71
 )
-(pset.aux)
-\openout1 = `pset.aux'.
+(pset5.aux)
+\openout1 = `pset5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -1021,9 +1021,9 @@ fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package hyperref Info: Link coloring OFF on input line 26.
- (pset.out) (pset.out)
+ (pset5.out) (pset5.out)
 \@outlinefile=\write4
-\openout4 = `pset.out'.
+\openout4 = `pset5.out'.
 
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 27.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
@@ -1040,39 +1040,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1
 
-{C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] (pset.aux)
+{C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (pset5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `pset.out' has not changed.
-(rerunfilecheck)             Checksum: 3BB283A203CED78445B63AAB7B118DAE;1389.
+Package rerunfilecheck Info: File `pset5.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25917 strings out of 474486
- 532765 string characters out of 5743754
- 1947542 words of memory out of 5000000
- 47617 multiletter control sequences out of 15000+600000
- 565932 words of font info for 67 fonts, out of 8000000 for 9000
+ 25864 strings out of 474486
+ 532219 string characters out of 5743754
+ 1927542 words of memory out of 5000000
+ 47589 multiletter control sequences out of 15000+600000
+ 563925 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,1183b,444s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,6n,107p,1184b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/allan/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/allan/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/allan/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/allan/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/
-allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
-/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb>
-Output written on pset.pdf (12 pages, 155572 bytes).
+cmbx12.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb>
+Output written on pset5.pdf (1 page, 34894 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 30 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

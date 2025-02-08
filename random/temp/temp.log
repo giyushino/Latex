@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  28 JAN 2025 17:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.18)  28 JAN 2025 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./random.tex
-(random.tex
+**./temp.tex
+(temp.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\allan\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -501,8 +501,8 @@ tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box70
-) (random.aux)
-\openout1 = `random.aux'.
+) (temp.aux)
+\openout1 = `temp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
@@ -596,40 +596,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/allan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+[3]
 
-LaTeX Warning: File `game_tree.png' not found on input line 80.
+LaTeX Warning: File `game_tree.png' not found on input line 79.
 
 
-random.tex:80: Package pdftex.def Error: File `game_tree.png' not found: using 
-draft setting.
+temp.tex:79: Package pdftex.def Error: File `game_tree.png' not found: using dr
+aft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 ...aphics[width=0.4\textwidth]{game_tree.png}
+l.79 ...aphics[width=0.4\textwidth]{game_tree.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3] [4] (random.aux)
+[4] [5] (temp.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 15128 strings out of 474486
- 303926 string characters out of 5743754
- 1933542 words of memory out of 5000000
- 37177 multiletter control sequences out of 15000+600000
+ 15125 strings out of 474486
+ 303856 string characters out of 5743754
+ 1932542 words of memory out of 5000000
+ 37174 multiletter control sequences out of 15000+600000
  565961 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,6n,93p,842b,316s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,6n,93p,826b,316s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmex10.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -643,9 +640,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
 C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
 t10.pfb><C:/Users/allan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmtt12.pfb>
-Output written on random.pdf (4 pages, 138473 bytes).
+Output written on temp.pdf (5 pages, 139507 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

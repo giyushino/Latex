@@ -1,0 +1,43 @@
+CS 31 Project 3
+Allan Zhang | 606490358
+
+Obstacles:
+
+    As this was the most difficult project I have worked on with C++, there were many challenges I faced. At first, I was completely lost and did not know where I should even start. Feeling overwhelmed, I first created empty functions that were in the project specifications. Once I had these written, it wasn't too bad to get started. One of the first obstacles I faced was deciding how exactly I should extract the numbers from the string. As someone who writes a lot in Python, I felt a little intimidated by the lack of easy string manipulation. My original intuition was to check if the character in the string was 'Q', 'p', or 'd', but I realized the trailing numbers could have more than 1 digit. After a lot of thinking, I decided to keep track of all of the indices of where a 'Q', 'p', or 'd' was located. Then I would locate each digit as a substring in between the indices. 
+
+    Another obstacle I faced was making sure strings that had leading 0s were invalid. However, once I implemented my previous functionality, I realized that I could check the length of the string. If the string had a length greater than 1, but the first character in the string was '0', then that number contained a leading 0. As a result, I would return false since the string is invalid. 
+
+    Even though the idea I came up with sounded good, in practice, it was pretty difficult to implement. I struggled a lot with making sure that the substring I accessed was actually the number I wanted. The way substring works in C++ is it accepts 2 parameters. The first parameter asks for where we want to begin slicing the string from, and the second parameter asks for how far out we should extend. After a lot of testing, I found that 'string temp = results.substr(all_indicies[i] + 1, all_indicies[i + 1] - all_indicies[i] - 1);' gives the number properly.
+
+    I also struggled with making sure that there even was a number in between the key characters. I resolved this issue by looping through the indices I stored in the vector. If any index was only 1 less than the index after it, then there couldn't have been a number in between the indices. I returned false when this happened.
+
+
+Description of program:
+
+    isValidQC is the core function in my program, and it has the string results as its only parameter. If the string is empty, I immediately return false. Otherwise, I go into the main meat of my code. First, I declare 4 vectors to store the indices of Q, p, d, and all of them together. Instead of looping through the string as a char, I initialize an int to be 0 and iterate through the length of the length of the string. If the results[i] is either Q, p, or d, I store that index to the appropriate vector. For each letter, I store the index to all_indicies. Next, I check if there's an equal number of Qs, ps, and ds. If they don't match, that means one of these key values are missing, which invalidates the string. Next, I check that each key value has a number corresponding to it by making sure none of the indices I saved is only 1 less than another index. If this is the case, that means there is no number in between those two indices. Finally, I use the indices to access substrings of the main string. Since each batch starts with a Q, which in our list of vectors, will always be a multiple of 3, as I iterate through the numbers in the all_indicies vectorr, if i % 3 == 0, I know that this is the number corresponding to Q. If i % 3 != 0, then I know the number corresponding to this index must be related to p or d. I add the number to another count. If the values of Q and this other count are equal to each other, this batch is valid, and I reset these counts to 0. Otherwise, the string is not valid and I return false.
+
+    The rest of the functions are relatively similar to each other and are based off of blocks of code in isValidQC. For passQC, I make sure the string is valid by passing it through isValidQC. Next, I run the same exact for loop to gather all of the indices. After this, I run a for loop, checking if the index I stored is corresponds to a p in the original string. If this is the case, I gather the substring, turn it into a number, and add it to a count. I return this count. defectQC and totalQC are the exact same, except I check for d and Q respectively. For batches, I iterate through the string and count every time a Q shows up. 
+
+
+Testcases:
+
+1. "Q5d1p" I used this test case because it's a very simple test case that should make the program fail. Since there's no number after p, the program should fail, and it does. isValidQC returns false, and all of the other ones return -1. At first, my program did not handle this correctly, because the way my for loops were set up, I did not check if there was a number corresponding to the very last key.
+
+2. "Q500d499p1" I used this test case because it makes sure my program can handle cases where the numbers associated to each key is multiple digits long. 
+
+3. "Q500d499p1d" I used this test case to make sure that my program could recognize when there was an extra key, even if it was a valid letter. 
+
+4. "Q12p12d0" I used this test case to make sure that that my program could validate strings that had 0 for either one of the passes or defects. My program did not handle this at first because I used to invalidate all cases that started with 0, even if it was only one digit long. This is when I changed my program to make sure it only checked that the first digit was not 0 if it the length of the string was greater than 1. 
+
+5. "Q10p7d3Q5p3d2" I used this test case to make sure that my program could handle multiple batches. 
+
+6. "Q10p7d3Q5p3d2Q4p2d2" I used this test case to make sure that my program could handle 3 batches. 
+
+7. "Q10pd3" I used this test case to make sure that my program could properly detect that was an invalid string, even though the missing number is in the middle of the string.
+
+8. "Q05p3d2" I used this test case to make sure that my program could handle leading 0s, even for Qs.
+
+9. "Q10p7d2" This was a testcase that I initially failed on because I did not check if the number of passes and defects added up to the number of tests. I was too focused on validating the inputs and making sure each key and a number associated to it. I ended up adding the for loop checked if the number of tests added up to the passes and defects for each batch. 
+
+10. "Q10d10" I used this test case to make sure that my program invalidated strings that were missing a key
+
