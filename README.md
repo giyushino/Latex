@@ -1,3 +1,3 @@
 # Latex
 
-Everything seen here was written in and compiled in Neovim, Sumatra is used to view the PDFs. 
+Everything seen here was written in and compiled in Neovim, Sumatra/Sioyek is used to view the PDFs. 
