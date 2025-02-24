@@ -1,0 +1,528 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{MATH 32B Problem Set 6}}
+\author{Allan Zhang}
+\date{Febuary 14, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+
+\section*{17.3 Question 17}
+Find a potential function for $\textbf{F}$ or determine that $\textbf{F}$ is not conservative
+\[
+    \textbf{F} = \langle 2xy+5, x^2-4z, -4y \rangle
+\]
+Compute the curl
+\[
+\nabla \times \mathbf{F} =
+\begin{vmatrix}
+\hat{\imath} & \hat{\jmath} & \hat{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+2xy+5 & x^2-4z & -4y
+\end{vmatrix}
+\]
+
+For the \(\hat{\imath}\) component
+\[
+\frac{\partial (-4y)}{\partial y} - \frac{\partial (x^2 - 4z)}{\partial z} = (-4) - (-4) = 0
+\]
+
+For the \(\hat{\jmath}\) component
+\[
+\frac{\partial (2xy+5)}{\partial z} - \frac{\partial (-4y)}{\partial x} = 0 - 0 = 0
+\]
+
+For the \(\hat{k}\) component
+\[
+\frac{\partial (x^2 - 4z)}{\partial x} - \frac{\partial (2xy+5)}{\partial y} = (2x) - (2x) = 0
+\]
+
+Since \(\nabla \times \mathbf{F} = \mathbf{0}\), \(\mathbf{F}\) is conservative
+
+
+\[
+\frac{\partial f}{\partial x} = 2xy + 5
+\]
+
+Integrate with respect to \( x \)
+\[
+f(x,y,z) = x^2 y + 5x + g(y,z)
+\]
+
+\[
+\frac{\partial f}{\partial y} = x^2 - 4z
+\]
+
+\[
+\frac{\partial}{\partial y} (x^2 y + 5x + g(y,z)) = x^2 + \frac{\partial g}{\partial y} = x^2 - 4z
+\]
+
+\[
+\frac{\partial g}{\partial y} = -4z
+\]
+
+Integrate with respect to \( y \)
+\[
+g(y,z) = -4yz + h(z)
+\]
+
+\[
+\frac{\partial f}{\partial z} = -4y
+\]
+
+\[
+\frac{\partial}{\partial z} (x^2 y + 5x - 4yz + h(z)) = -4y + h'(z) = -4y
+\]
+
+\[
+h'(z) = 0 \Rightarrow h(z) = C
+\]
+
+\[
+f(x,y,z) = x^2 y + 5x - 4yz + C
+\]
+
+\newpage
+\section*{17.3 Question 18}
+Find a potential function for $\textbf{F}$ or determine that $\textbf{F}$ is not conservative
+\[
+    \textbf{F} = \langle yze^{xy}, xze^{xy}, e^{xy} -y \rangle
+\]
+Compute the curl
+\[
+\nabla \times \mathbf{F} =
+\begin{vmatrix}
+\hat{\imath} & \hat{\jmath} & \hat{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+yze^{xy} & xze^{xy} & e^{xy} - y
+\end{vmatrix}
+\]
+
+For the \(\hat{\imath}\) component
+\[
+\frac{\partial}{\partial y} (e^{xy} - y) - \frac{\partial}{\partial z} (xze^{xy}) 
+\]
+
+\[
+xe^{xy} - 0 = xe^{xy}
+\]
+
+For the \(\hat{\jmath}\) component
+\[
+\frac{\partial}{\partial z} (yze^{xy}) - \frac{\partial}{\partial x} (e^{xy} - y)
+\]
+
+\[
+ye^{xy} - (yze^{xy} + xye^{xy}) = ye^{xy} - yze^{xy} - xye^{xy}
+\]
+
+For the \(\hat{k}\) component
+\[
+\frac{\partial}{\partial x} (xze^{xy}) - \frac{\partial}{\partial y} (yze^{xy})
+\]
+
+\[
+z(e^{xy} + xye^{xy}) - z(xe^{xy} + yz e^{xy}) = ze^{xy} + xzye^{xy} - xze^{xy} - yz^2 e^{xy}
+\]
+
+Since \(\nabla \times \mathbf{F} \neq \mathbf{0}\), the field is not conservative
+
+\newpage
+\section*{17.3 Question 19}
+Evaluate 
+\[
+    \int_{\mathcal{C}} 2xyz \, dx + x^2z \, dy + x^2y \,dz
+\] 
+over the path $\textbf{r}(t) = (t^2, \sin(\pi t/4), e^{t^2-2t})$ for $0 \leq t \leq 2$
+\[
+\mathbf{F} = (2xyz, x^2z, x^2y)
+\]
+
+$\text{Check if } \mathbf{F} \text{ is conservative:}$
+\[
+\frac{\partial f}{\partial x} = 2xyz, \quad \frac{\partial f}{\partial y} = x^2z, \quad \frac{\partial f}{\partial z} = x^2y
+\]
+
+\[
+f(x, y, z) = x^2 yz + g(y, z)
+\]
+
+\text{Differentiate with respect to } y:
+\[
+\frac{\partial}{\partial y} (x^2 yz + g(y, z)) = x^2z + g_y(y, z)
+\]
+
+\[
+g_y(y, z) = 0 \Rightarrow g(y, z) = h(z)
+\]
+
+\[
+\frac{\partial}{\partial z} (x^2 yz + h(z)) = x^2 y + h'(z)
+\]
+
+\[
+h'(z) = 0 \Rightarrow h(z) = C
+\]
+
+\text{Potential function:}
+\[
+f(x, y, z) = x^2 yz + C
+\]
+
+\text{Evaluate at endpoints:}
+\[
+\mathbf{r}(2) = (4,1,1), \quad \mathbf{r}(0) = (0,0,1)
+\]
+
+\[
+f(4,1,1) = 16, \quad f(0,0,1) = 0
+\]
+
+\text{Compute the result:}
+\[
+f(\mathbf{r}(2)) - f(\mathbf{r}(0)) = 16 - 0 = 16
+\]
+
+
+
+\newpage
+\section*{20}
+Evaluate 
+\[
+    \oint_{\mathcal{C}} \sin x \, dx + z \cos y \, dy + \sin y \, dz
+\] where $\mathcal{C}$ is the ellipse $4x^2+9y^2 = 36$, oriented clockwise.
+
+By Stokes' Theorem,
+\[
+\oint_{\mathcal{C}} \mathbf{F} \cdot d\mathbf{r} = \iint_{S} (\nabla \times \mathbf{F}) \cdot d\mathbf{S}
+\]
+where \(\mathbf{F} = (\sin x, z \cos y, \sin y)\)
+
+Compute the curl of \(\mathbf{F}\):
+\[
+\nabla \times \mathbf{F} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+\sin x & z \cos y & \sin y
+\end{vmatrix}
+= \mathbf{0}
+\]
+
+Since \(\nabla \times \mathbf{F} = \mathbf{0}\),
+\[
+\oint_{\mathcal{C}} \mathbf{F} \cdot d\mathbf{r} = 0
+\]
+
+\textbf{Answer:}
+\[
+\boxed{0}
+\]
+\newpage
+\section*{24}
+The vector field has a uniform curl, which means it might not be conservative. Vector fields are only conservative if their curl is zero. 
+\[
+    \nabla \times \textbf{F} = 0
+\]
+From the diagram, it looks like there's a rotational component, there is likely a consistent shear in one direction, meaning the curl is non0. As a result, the vector field is not conservative.
+\newpage
+\section*{1}
+    a) v 
+    \newline
+    b) iii 
+    \newline
+    c) i 
+    \newline
+    d) iv 
+    \newline
+    e) ii
+\newpage
+\section*{2}
+Show that $G(r, \theta) = (r \cos \theta, r \sin \theta, 1 - r^2)$ parameterizes the paraboloid $z = 1 - x^2 - y^2$. Describe the grid curves of this parameterization
+\[
+x = r \cos \theta, \quad y = r \sin \theta, \quad z = 1 - r^2
+\]
+
+The equation of the paraboloid is
+\[
+z = 1 - x^2 - y^2
+\]
+
+Substituting
+\[
+x^2 + y^2 = r^2
+\]
+\[
+z = 1 - r^2
+\]
+which matches the third component of \( G(r, \theta) \)
+
+For constant \( r \), the parameterization describes horizontal circles
+\[
+x = r \cos \theta, \quad y = r \sin \theta, \quad z = 1 - r^2
+\]
+
+For constant \( \theta \), the parameterization describes vertical parabolas
+\[
+x = r \cos \theta, \quad y = r \sin \theta, \quad z = 1 - r^2
+\]
+\newpage
+\section*{7}
+Calculate $\textbf{T}_u, \textbf{T}_v \text{ and } \textbf{N}(u, v)$ for the parameterized surface at the given point. Then find the equation of the tangent plane to the surface at that point
+\[
+    G(u,v) = (2u+v, u-4v, 3u); \quad u = 1, \quad v = 4
+\]
+
+Using the determinant:
+\[
+\mathbf{N} =
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+2 & 1 & 3 \\
+1 & -4 & 0
+\end{vmatrix}
+\]
+
+Expanding:
+\[
+\mathbf{N} = (12, 3, -9).
+\]
+
+Substituting \( u = 1, v = 4 \) into \( G(u,v) \):
+\[
+G(1,4) = (6, -15, 3).
+\]
+
+The equation of the tangent plane is:
+\[
+A(x - x_0) + B(y - y_0) + C(z - z_0) = 0.
+\]
+
+Using \( (x_0, y_0, z_0) = (6, -15, 3) \) and \( (A, B, C) = (12, 3, -9) \):
+\[
+12(x - 6) + 3(y + 15) - 9(z - 3) = 0.
+\]
+
+Expanding:
+\[
+12x + 3y - 9z = 0.
+\]
+
+Dividing by 3:
+\[
+4x + y - 3z = 0.
+\]
+
+Thus, the equation of the tangent plane is:
+\[
+4x + y - 3z = 0.
+\]
+\[
+\textbf{T}_u = \langle 2, 1, 3 \rangle, \textbf{T}_v = \langle 1, -4, 0 \rangle \textbf{N}(u, v) = 3\langle 4, 1, -3 \rangle
+\]
+\newpage
+\section*{9}
+Calculate $\textbf{T}_u, \textbf{T}_v \text{ and } \textbf{N}(u, v)$ for the parameterized surface at the given point. Then find the equation of the tangent plane to the surface at that point
+$$
+G(\theta, \phi)=(\cos \theta \sin \phi, \sin \theta \sin \phi, \cos \phi) ; \quad \theta=\frac{\pi}{2}, \quad \phi=\frac{\pi}{4}
+$$
+Compute \(\textbf{T}_\theta\) and \(\textbf{T}_\phi\):
+\[
+\textbf{T}_\theta = \frac{\partial G}{\partial \theta} = (-\sin \theta \sin \phi, \cos \theta \sin \phi, 0)
+\]
+\[
+\textbf{T}_\phi = \frac{\partial G}{\partial \phi} = (\cos \theta \cos \phi, \sin \theta \cos \phi, -\sin \phi)
+\]
+
+Evaluate at \(\theta = \frac{\pi}{2}\), \(\phi = \frac{\pi}{4}\):
+\[
+\textbf{T}_\theta = \left(-\frac{\sqrt{2}}{2}, 0, 0\right)
+\]
+\[
+\textbf{T}_\phi = \left(0, \frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}\right)
+\]
+
+Compute \(\textbf{N}(\theta, \phi) = \textbf{T}_\theta \times \textbf{T}_\phi\):
+\[
+\textbf{N} = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+-\frac{\sqrt{2}}{2} & 0 & 0 \\
+0 & \frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2}
+\end{vmatrix} = \left(0, -\frac{1}{2}, -\frac{1}{2}\right)
+\]
+
+Find the tangent plane at \(G\left(\frac{\pi}{2}, \frac{\pi}{4}\right) = \left(0, \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}\right)\):
+\[
+\textbf{N} \cdot (x - x_0, y - y_0, z - z_0) = 0
+\]
+\[
+0(x - 0) - \frac{1}{2}\left(y - \frac{\sqrt{2}}{2}\right) - \frac{1}{2}\left(z - \frac{\sqrt{2}}{2}\right) = 0
+\]
+Simplify:
+\[
+y + z - \sqrt{2} = 0
+\]
+\[
+\textbf{N} = \mathbf{i} \left( \cos \theta \sin \phi \cdot (-\sin \phi) - 0 \cdot \sin \theta \cos \phi \right)
+\]
+\[
+- \mathbf{j} \left( -\sin \theta \sin \phi \cdot (-\sin \phi) - 0 \cdot \cos \theta \cos \phi \right)
+\]
+\[
++ \mathbf{k} \left( -\sin \theta \sin \phi \cdot \sin \theta \cos \phi - \cos \theta \sin \phi \cdot \cos \theta \cos \phi \right)
+\]
+Simplify:
+\[
+\textbf{N} = \mathbf{i} (-\cos \theta \sin^2 \phi) - \mathbf{j} (\sin \theta \sin^2 \phi) + \mathbf{k} (-\sin^2 \theta \sin \phi \cos \phi - \cos^2 \theta \sin \phi \cos \phi)
+\]
+\noindent
+\[    y + z - \sqrt{2} = 0, 
+\]
+\[
+\mathbf{T}_\theta=\langle-\sin \theta \sin \phi, \cos \theta \sin \phi, 0\rangle,   \mathbf{T}_\phi=\langle\cos \theta \cos \phi, \sin \theta \cos \phi,-\sin \phi\rangle,  \mathbf{N}(u, v)=-\cos \theta \sin ^2 \phi \mathbf{i}-\sin \theta \sin ^2 \phi \mathbf{j}-\sin \phi \cos \phi \mathbf{k}
+\]
+
+\newpage
+\section*{10}
+Calculate $\textbf{T}_u, \textbf{T}_v \text{ and } \textbf{N}(u, v)$ for the parameterized surface at the given point. Then find the equation of the tangent plane to the surface at that point
+$$
+G(r, \theta)=(r \cos \theta, r \sin \theta, 1 - r^2) ; \quad r=\frac{1}{2}, \quad \theta=\frac{\pi}{4}
+$$
+
+\[
+G(r, \theta) = (r \cos \theta, r \sin \theta, 1 - r^2); \quad r = \frac{1}{2}, \quad \theta = \frac{\pi}{4}.
+\]
+
+First, compute the partial derivatives of \( G(r, \theta) \) with respect to \( r \) and \( \theta \):
+
+\[
+\mathbf{T}_r = \frac{\partial G}{\partial r} = \left( \cos \theta, \sin \theta, -2r \right),
+\]
+\[
+\mathbf{T}_\theta = \frac{\partial G}{\partial \theta} = \left( -r \sin \theta, r \cos \theta, 0 \right).
+\]
+
+At \( r = \frac{1}{2} \) and \( \theta = \frac{\pi}{4} \):
+
+\[
+\mathbf{T}_r = \left( \cos \frac{\pi}{4}, \sin \frac{\pi}{4}, -2 \cdot \frac{1}{2} \right) = \left( \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}, -1 \right),
+\]
+\[
+\mathbf{T}_\theta = \left( -\frac{1}{2} \sin \frac{\pi}{4}, \frac{1}{2} \cos \frac{\pi}{4}, 0 \right) = \left( -\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, 0 \right).
+\]
+
+Next, compute the normal vector \( \mathbf{N}(r, \theta) \) as the cross product of \( \mathbf{T}_r \) and \( \mathbf{T}_\theta \):
+
+\[
+\mathbf{N}(r, \theta) = \mathbf{T}_r \times \mathbf{T}_\theta.
+\]
+
+Calculating the cross product:
+
+\[
+\mathbf{N}(r, \theta) = \begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} & -1 \\
+-\frac{\sqrt{2}}{4} & \frac{\sqrt{2}}{4} & 0
+\end{vmatrix}.
+\]
+
+Expanding the determinant:
+
+\[
+\mathbf{N}(r, \theta) = \mathbf{i} \left( \frac{\sqrt{2}}{2} \cdot 0 - (-1) \cdot \frac{\sqrt{2}}{4} \right) - \mathbf{j} \left( \frac{\sqrt{2}}{2} \cdot 0 - (-1) \cdot \left( -\frac{\sqrt{2}}{4} \right) \right) + \mathbf{k} \left( \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{2}}{4} - \frac{\sqrt{2}}{2} \cdot \left( -\frac{\sqrt{2}}{4} \right) \right).
+\]
+
+Simplifying:
+
+\[
+\mathbf{N}(r, \theta) = \mathbf{i} \left( \frac{\sqrt{2}}{4} \right) - \mathbf{j} \left( -\frac{\sqrt{2}}{4} \right) + \mathbf{k} \left( \frac{1}{4} + \frac{1}{4} \right).
+\]
+
+Thus:
+
+\[
+\mathbf{N}(r, \theta) = \left( \frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, \frac{1}{2} \right).
+\]
+
+
+\[
+G\left( \frac{1}{2}, \frac{\pi}{4} \right) = \left( \frac{1}{2} \cos \frac{\pi}{4}, \frac{1}{2} \sin \frac{\pi}{4}, 1 - \left( \frac{1}{2} \right)^2 \right) = \left( \frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, \frac{3}{4} \right).
+\]
+
+The equation of the tangent plane is given by:
+
+\[
+\mathbf{N} \cdot ( \mathbf{r} - \mathbf{r}_0 ) = 0,
+\]
+
+
+\[
+\left( \frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, \frac{1}{2} \right) \cdot \left( x - \frac{\sqrt{2}}{4}, y - \frac{\sqrt{2}}{4}, z - \frac{3}{4} \right) = 0.
+\]
+
+Expanding the dot product:
+
+\[
+\frac{\sqrt{2}}{4} \left( x - \frac{\sqrt{2}}{4} \right) + \frac{\sqrt{2}}{4} \left( y - \frac{\sqrt{2}}{4} \right) + \frac{1}{2} \left( z - \frac{3}{4} \right) = 0.
+\]
+
+Simplifying:
+
+\[
+\frac{\sqrt{2}}{4} x + \frac{\sqrt{2}}{4} y + \frac{1}{2} z - \frac{\sqrt{2}}{4} \cdot \frac{\sqrt{2}}{4} - \frac{\sqrt{2}}{4} \cdot \frac{\sqrt{2}}{4} - \frac{1}{2} \cdot \frac{3}{4} = 0.
+\]
+
+Further simplification:
+
+\[
+\frac{\sqrt{2}}{4} x + \frac{\sqrt{2}}{4} y + \frac{1}{2} z - \frac{2}{16} - \frac{2}{16} - \frac{3}{8} = 0.
+\]
+
+Combine constants:
+
+\[
+\frac{\sqrt{2}}{4} x + \frac{\sqrt{2}}{4} y + \frac{1}{2} z - \frac{1}{8} - \frac{1}{8} - \frac{3}{8} = 0.
+\]
+
+\[
+\frac{\sqrt{2}}{4} x + \frac{\sqrt{2}}{4} y + \frac{1}{2} z - \frac{5}{8} = 0.
+\]
+
+\[
+2\sqrt{2} x + 2\sqrt{2} y + 4 z - 5 = 0.
+\]
+
+
+\[
+2\sqrt{2} x + 2\sqrt{2} y + 4 z - 5 = 0.
+\]
+
+
+\[
+\mathbf{T}_r = \left( \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}, -1 \right), \quad \mathbf{T}_\theta = \left( -\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, 0 \right), \quad \mathbf{N}(r, \theta) = \left( \frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, \frac{1}{2} \right).
+\]
+\end{document}
