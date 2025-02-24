@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740348059.67987 "pset4.tex" "pset4.pdf" "pset4" 1740348060.25889 0
+["pdflatex"] 1740353081.4164 "pset4.tex" "pset4.pdf" "pset4" 1740353081.94046 0
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1736268207 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1736268207 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1736268207 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -25,6 +25,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1736268207 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1736268207 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1736268207 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1736268207 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1736268207 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1736268207 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1736268207 40635 c40361e206be584d448876bba8a64a3b ""
@@ -217,9 +218,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740336546.57115 5313514 5f980f8baa599101e1a3800e5c70e02c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740336538 7112990 4c823f62494e4966a5771cb16c32de8b ""
-  "pset4.aux" 1740348060.18187 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "pset4.out" 1740348060.11631 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "pset4.tex" 1740338278.95413 1150 bbc70d0a4b4903eae549ff0b93cc5c34 ""
+  "pset4.aux" 1740353081.88912 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "pset4.out" 1740353081.82634 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "pset4.tex" 1740353079.98512 1669 13aab1e493e1b562fad34e55d93161de ""
   (generated)
   "pset4.aux"
   "pset4.log"
