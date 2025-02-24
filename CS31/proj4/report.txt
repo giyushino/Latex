@@ -1,0 +1,102 @@
+Project 4 Write UP || Allan Zhang || 606490358 
+
+One of the largest obstacles I had to overcome was the shifting left of words in the array. I struggled with this for a very long time and didn't truly understand what it was asking for until I read the frequency asked questions and saw the extra examples. However, I still struggled with finding where I should start shifting. Sometimes the starting value - amount would be less than 0, and other times it was larger. I couldn't just set the starting value to starting index - amount. In the end, I decided on a simple if then statement, where if n - amount was greater than 0, the starting index would be that value. Otherwise, we would start at 0. Another obstacle I faced was actually implementing the isValidFloat function, as once again, I wasn't sure what the question meant. At first, I thought we would only accept numbers that were valid decimals, but after reading the FAQ, I was even more confused once I knew full numbers were considered valid floats. However, once I learned that it just meant numbers that could be valid floats in C++, I created the function relatively quickly.
+
+
+Test cases)
+
+Test case 1: 
+string test1[8] = {"samwell", "jon", "margaery", "daenerys", "tyrion", "sansa", "magdalena", "jon"};
+
+assert(locateMaximum(test1, 8) == 4);
+assert(countFloatingPointValues(test1, 6) == 0);
+assert(hasNoCapitals(test1, 8) == true);
+assert(shiftLeft(test1, 5, 2, "foo") == 2);
+
+I used this testcase because it was given from the assignment. Also, it was a good way to check if my program could properly detect 0 floats and no capitals. 
+
+
+Test case 2: 
+
+string test2[5] = {"mamaBbcca", "mamaBbcca", "12.", "98.76", "tyrion"};
+
+assert(locateMaximum(test2, 0) == -1);
+assert(countFloatingPointValues(test2, 0) == -1);
+assert(hasNoCapitals(test2, 0) == true);
+assert(shiftLeft(test2, 0, 4, "foo") == -1);
+
+I used this testcase because it was also given from the assignment. However, I used this testcase as an edgecase where all of the n values were 0. This should result in all -1s or true for no capitals.  
+
+
+Test case 3:
+
+string test3[6] = {"1.23", "45", "6.7", "abc", "8.9", "10.0"};
+
+assert(locateMaximum(test3, 3) == 2);
+assert(countFloatingPointValues(test3, 6) == 5);
+assert(hasNoCapitals(test3, 6) == true);
+assert(shiftLeft(test3, 1, 3, "foo") == 1);
+
+I used this as a testcase because it was a very good way to check if my program could correctly compare the values between numbers and letters in string form. 
+
+
+Test case 4: 
+
+string test4[4] = {"Zebra", "apple", "Banana", "cat"};
+
+assert(locateMaximum(test4, 4) == 3);
+assert(countFloatingPointValues(test4, 4) == 0);
+assert(hasNoCapitals(test4, 4) == false);
+assert(shiftLeft(test4, 4, 1, "foo") == 1);
+
+I used this testcase because it contains mixed uppercase and lowercase letters. This ensures that my program correctly identifies that not all elements are lowercase and handles capital letters properly. This was actually a testcase I did not get correct at first, as my assert statement was incorrect. I thought uppercase letters were greater than lowercase. 
+
+
+Test case 5: 
+string test5[5] = {"ant", "bee", "cat", "dog", "elk"};
+
+assert(locateMaximum(test5, 5) == 4);
+assert(countFloatingPointValues(test5, 5) == 0);
+assert(hasNoCapitals(test5, 5) == true);
+assert(shiftLeft(test5, 5, 3, "bar") == 3);
+
+
+I used this testcase because locate maximum should give me the very last element of the array, which it does correctly. Also no capitals works as intended. 
+
+
+Test case 6: 
+
+string test6[3] = {"", "", ""};
+
+assert(locateMaximum(test6, 3) == 0);
+assert(countFloatingPointValues(test6, 3) == 0);
+assert(hasNoCapitals(test6, 3) == true);
+assert(shiftLeft(test6, 3, 2, "xyz") == 2);
+
+I actually did not pass this testcase at first because my program kept on accepting empty strings are valid floating point values, which is wrong. I fixed this by adding a statement to check if an array is emptry at the beginning of my for loop. 
+
+
+Test case 7: 
+
+string test7[1] = {"hello"};
+
+assert(locateMaximum(test7, 1) == 0);
+assert(countFloatingPointValues(test7, 1) == 0);
+assert(hasNoCapitals(test7, 1) == true);
+assert(shiftLeft(test7, 1, 0, "foo") == 0);
+
+
+I used this testcase because it consists of only one element. This ensures that all functions handle the n=1 case correctly. ShiftLeft shifting by 0 should not modify the array.
+
+
+Test case 8: 
+
+string test8[5] = {"zoo", "zoo", "cat", "zoo", "dog"};
+
+assert(locateMaximum(test8, 5) == 0);
+assert(countFloatingPointValues(test8, 5) == 0);
+assert(hasNoCapitals(test8, 5) == true);
+assert(shiftLeft(test8, 5, 5, "foo") == 5);
+
+
+I used this testcase to to make sure my program could deal with duplicates correctly, and it did as it correctly indexed the first zoo as the greatest value.  
