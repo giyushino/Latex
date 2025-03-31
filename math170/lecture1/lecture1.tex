@@ -1,0 +1,90 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}, top=0.5in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{Math 170E Lecture 1}}
+\author{Allan Zhang}
+\date{March 31, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+\section*{Basic Notions of Probability Theory}
+Consider an experiment with unknown probabilistic outcome, set of all possible outcomes $S$ is called the \textit{sample space}
+
+\begin{itemize}
+
+    \item[] Ex) For the experiment where a coin is flipped three times, 
+\[
+    S = \{\text{TTT, TTH, THH, THT, HTT, HTH, HHT, HHH}\}
+\]
+
+\item[] Elements $s\in S$ are outcomes, while $A \subset S$ are events
+\end{itemize}
+We consider a function $\mathbb{P}:\{A \subset S\} \rightarrow [0, 1]$, which heuristically assigns to each event $A$ the probability $\mathbb{P}(A)$ that it occurs. P also satisfies some natural properties like $\mathbb{P}(A\sqcup B)$
+\[
+A \sqcup B = A \cup B \text{ in the case that } A \cap B = \emptyset
+\]
+
+\subsection*{Conditional Probability}
+\[\mathbb{P} := \frac{\mathbb{P} = (A \cap B)}{\mathbb{P}(B)}\]
+This equation represents the conditional probability of event $A$ occurring given that event $B$ has already occurred. In other words, it's the probability that $A$ happens under the condition that $B$ is true.
+
+
+\subsection*{Example Problem}
+Given that you flip a coin 3 times, what are the chances that 
+
+1. You get exactly 2 heads?
+
+2. You get exactly 2 heads if the first flip is heads 
+
+3. The first flip was heads if you know there were exactly two heads 
+\vspace{0.3cm}
+
+Problem 1
+\[
+    \text{The total number of combinations is 2 * 2 * 2 = 8}
+\]
+\[
+    \text{Writing out the sample space, we know that the possible outcomes are:}
+\]
+\[S = \{\text{TTT, TTH, THH, THT, HTT, HTH, HHT, HHH}\}\]
+\[
+    \text{There are 3 cases where there are 2 heads, so the answer is } \boxed{\frac{3}{8}}
+\]
+\vspace{0.3cm}
+
+Problem 2 
+\begin{center}
+    If we look at the cases where the first flip was heads, we are left with $\{\text{HTT, HHT, HTH, HHH}\}$. Then out of these 4 choices, we only have 2 cases where there are 2 heads, so the solution is $\boxed{\frac{1}{2}}$
+\end{center}
+
+Problem 2 
+\begin{center}
+    The subset which includes all elements with 2 heads is $\{THH, HTH, HHT\}$. From this, we can observe that there are two elements where the combination begins with heads, so the solution is $\boxed{\frac{2}{3}}$
+\end{center}
+\end{document}
+
+\noindent

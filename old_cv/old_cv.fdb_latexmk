@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741338968.31676 "pset.tex" "pset.pdf" "pset" 1741338968.47106 2
+["pdflatex"] 1741338981.98926 "old_cv.tex" "old_cv.pdf" "old_cv" 1741338982.14201 2
   "/usr/share/texmf-dist/tex/generic/iftex/iftex.sty" 1736268207 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty" 1736268207 1057 525c2192b5febbd8c1f662c9468335bb ""
   "/usr/share/texmf-dist/tex/latex/base/article.cls" 1736268207 20144 147463a6a579f4597269ef9565205cfe ""
@@ -8,11 +8,11 @@
   "/usr/share/texmf-dist/tex/latex/graphics/keyval.sty" 1736268207 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1736268207 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1741338814 7113018 21d3f0d1b9b6f5e10714797281a61966 ""
-  "pset.aux" 1741338020.55373 1468 765cedb14d6cf24e1e04f072aa83bfcf "pdflatex"
-  "pset.tex" 1741338020.55507 10823 781a6f694ea826ccc9e7aa7544ac58e4 ""
-  "xcolor.sty" 0 -1 0 ""
+  "old_cv.aux" 1741338981.98734 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "old_cv.tex" 1741338099.03501 16523 ea62d86e67731e977c113a9576294190 ""
+  "titlesec.sty" 0 -1 0 ""
   (generated)
-  "pset.aux"
-  "pset.log"
-  "pset.pdf"
+  "old_cv.aux"
+  "old_cv.log"
+  "old_cv.pdf"
   (rewritten before read)

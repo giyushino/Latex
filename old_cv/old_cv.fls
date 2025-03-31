@@ -1,8 +1,8 @@
-PWD /home/allan/nvim/latex/32B/pset1
+PWD /home/allan/nvim/latex/old_cv
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT pset.tex
-OUTPUT pset.log
+INPUT old_cv.tex
+OUTPUT old_cv.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/size10.clo
