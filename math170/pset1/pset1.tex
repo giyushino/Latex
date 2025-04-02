@@ -1,0 +1,120 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}, top=0.25in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{Math 170E Lecture 1}}
+\author{Allan Zhang}
+\date{April 1, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle 
+\section*{Some elementary set theory}
+\begin{itemize}
+    \item[(a)] Show that for any function $f: S \rightarrow T$ we have
+        \[
+            S = \bigsqcup_{t \in \text{im}(S)} f^{-1}(\{t\}) 
+        \]
+        $$\text{that is, } S = \bigcup_{t\in \text{im}(S)}f^{-1}(\{t\}) \text{ and } f^{-1}(\{t_1\}) \cap f^{-1}(\{t_2\}) = \emptyset \text{ whenever } t_1 \neq t_2$$
+        \item[ ] 
+        \textbf{Solution}: In other words, we need to show that the union of all preimages over all elements in the image is equal to the domain $S$, and all the preimages are disjoint.
+        \vspace{0.2cm} 
+
+        Since $f$ is a function, we know every element in the preimage must be mapped to 1 element in the codomain at most. 
+        \[
+            \forall s \in S \, \,\forall t_1 \in T \, \,\forall t_2 \in T \, \, ((s, t_1) \in f \wedge (s, t_2) \in f \rightarrow t_1 = t_2)
+        \]
+        
+        As a result, we know that the preimage, $f^{-1}(\{t\})$ must contain at least one element $s \in S$. If $t$ were not mapped to by at least one element, then it would be impossible to have been in the image. Simply put, if $t$ were not in the image, there cannot be a preimage 
+        \vspace{0.2cm} 
+
+        Additionally, since every element $s \in S$ is mapped to an element $t \in \text{im}(S)$, finding the set of elements that map to $t$ will net us either $\{s\}$, or the set $\{s_0, s_1, ..., s_n\}$, where $n$ is the number of elements in $S$ that mapped to a specific value $t$. After taking the union of all of these sets, we must be left with $S$  
+        \[
+            \bigcup_{t \in \text{im}(S)} f^{-1}(\{t\}) = S
+        \]
+        
+        Finally, from the definition of a function, we know that $s$ can only be mapped to 1 element in $T$
+        \[
+            \text{if }s \in f^{-1}(\{t_0\}) \text{, then } f(s) = t_0 \]\[
+            \text{if }s \in f^{-1}(\{t_1\}) \text{, then } f(s) = t_1 \]\[
+        \]
+        Since $t_0 \neq t_1, s$ cannot possibly be in both preimages. This holds true in general, where an element $s \in S$ cannot be in two different preimages. As a result, 
+        \[
+        f^{-1}(\{t_1\}) \cap f^{-1}(\{t_2\}) = \emptyset \text{ whenever } t_1 \neq t_2
+        \]
+        must hold true. The intersection of these two sets must be the empty set
+        \vspace{0.2cm} 
+        
+        We have proven two facts. Firstly, we know that taking the union of the preimages over all the elements in the image will give us the initial domain $S$ we started with. Additionally, we have just proven that the preimages of every element in the image are disjoint. Thus, taking the disjoin union between all of the elements in the image must net us the initial domain. We can finally state 
+
+        \[
+            S = \bigsqcup_{t \in \text{im}(S)} f^{-1}(\{t\}) 
+        \]
+        is a true statement
+
+
+
+
+
+
+
+
+    \item[(b)] Show that for any $B_1,B_2 \subset T$ we have $$f^{-1}(B_1 \cup B_2)=f^{-1}(B_1) \cup f^{-1}(B_2)$$.  
+
+    \item[(c)] Show that for any $B_1,B_2 \subset T$ we have $$f^{-1}(B_1 \cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2)$$.
+\end{itemize}
+\newpage
+
+\section*{The $n$ coin flips experiment}
+\begin{itemize}
+    \item[(a)] 
+    \item[(b)] 
+    \item[(c)] 
+\end{itemize}
+\newpage
+
+\section*{Enumeration practice}
+\begin{itemize}
+    \item[(a)] 
+    \item[(b)] 
+    \item[(c)] 
+\end{itemize}
+
+
+\end{document}
+
+Let $f: S \to T$ be a function from the set $S$ to the set $T$, that is, a rule which assigns to each $s \in S$ an element $f(s) \in T$.
+
+Recall that for some $t \in T$ there may be more than one $s \in S$ such that $f(s) = t$ (that is, the function may not be injective), but that there is only one element $t = f(s) \in T$ assigned to each $s \in S$ by definition (this is sometimes called the vertical line test when $S = T = \mathbb{R}$).
+
+Let $A \subset S$, a subset of $S$, and define the image $f(A) \subset T$ as the subset
+$$f(A) = \{ f(s) \mid s \in A \} = \{ t \in T \mid t = f(s) \text{ for some } s \in A \} \subset T.$$
+
+In particular, let $\operatorname{im}(f) = f(S) = \{ t \in T \mid t = f(s) \text{ for some } s \in S \}$.
+
+Similarly, let $B \subset T$, a subset of $T$, and define the preimage as the subset
+$$f^{-1}(B) = \{ s \in S \mid f(s) \in B \} \subset S.$$
+
+Note that the preimage is always defined, even if the function $f$ itself is not invertible!

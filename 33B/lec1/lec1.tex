@@ -1,0 +1,126 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}, top=0.25in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{Math 33B Lecture 1}}
+\author{Allan Zhang}
+\date{March 31, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle
+\section*{Examples and Direction Fields}
+\subsection*{Example 1: General Questions}
+A car accelerates s.t. its velocity at time $t$ is $v(t) = e^t$ 
+\vspace{0.2cm}
+
+How far has the car traveled after $t$ seconds?
+
+\textbf{Solution: }
+\[
+    \text{Let $x(t) = $ distance traveled at time $t$}
+\]
+\[
+    \text{Then by definition, } \frac{\mathrm{d} x}{\mathrm{d} t} = v(t)
+    \quad v(t) = e^t
+\]
+\[
+    \text{Problems like this have a family of solutions: } e^t + C, \quad C \in \mathbb{R}
+\]
+\[
+    \text{In this case, we must solve for $C$ which gives the correct solution}
+\]
+\[
+    \text{We want } x(0) = 0 \quad x(0) = e^0 + C\quad 0 = 1 + C \quad C = -1 
+\]
+\[
+    \text{More generally, for questions with the form }
+    \frac{\mathrm{d} x}{\mathrm{d} t} = f(t) 
+    \text{, we can solve by integrating}
+\]
+\[
+    x(t) = \int^t f(S) \mathrm{d}s + C
+\]
+\subsection*{Example 2: Population Growth}
+You go to a field and see $P_0$ rabbits and want to figure out how many rabbits in the future. 
+To model rabbit population, need 2 ingredients: 
+\begin{itemize}
+    \item[] $\alpha$ = birth rate = probability given rabbit reproduces per unit time
+    \item[] $\beta = $ death rate = probability given rabbit die in a unit time interval
+\end{itemize}
+
+\noindent
+We want to find the population at time $t$, call this $P(t)$
+\[
+    P(t+\Delta t) - P(t)= \text{change in population}
+\]
+\[
+    = \text{$\#$ born - $\#$ die}
+\]
+\[
+    = \alpha \Delta t P(t) - \beta \Delta t P(t)
+\]
+\[\text{After dividing by $\Delta t $} \]
+\[
+    \frac{P(t + \Delta t) - P(t)}{\Delta t} = \alpha P(t) - \beta P(t) 
+\]
+\[
+    \text{As $\Delta t \rightarrow 0$, } \frac{\mathrm{d}P}{\mathrm{d}t} = (\alpha - \beta) P(t)
+\]
+\[
+    \text{When substituting }(\alpha - \beta) \text{ with $r$, we get } 
+    \frac{\mathrm{d}P}{\mathrm{d}t} = rP(t) 
+\]
+
+Example solutions: $P(t) = e^{rt} \quad P(t) = 2e^{rt}$
+
+Generally, solutions are of the form $Ce^{rt}$, where $C = P_0$, the initial population size $P(0)$
+\newpage
+\subsection*{Example 3: Logistic Growth}
+A more realistic model for population growth is the logistic equation 
+\[
+    \frac{\mathrm{d}P}{\mathrm{d} t} = rP(1 - \frac{P}{K})
+\]
+where $K$ is the carrying capacity, the max population size the environment can hold
+\[
+    \text{If } P << K \rightarrow \frac{P}{K} \approx 0 \quad \frac{\mathrm{d}P}{\mathrm{d}t} = rP 
+\]
+     
+\[
+    \text{If } P \approx K \rightarrow \frac{P}{K} \approx 1 \quad 1 - \frac{P}{K} \rightarrow  
+ \frac{\mathrm{d}P}{\mathrm{d}t} = 0
+\]
+\subsection*{Direction Fields}
+Some equations can't be solved, but we can still learn about the solution from the direction field. 
+
+    DEF: A DE is in normal form if it is written as 
+    \[
+         \frac{\mathrm{d}y}{\mathrm{d}x} = f(x, y)
+    \]
+\end{document}
+
+\approx
+\noindent
+

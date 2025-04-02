@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.25)  25 MAR 2025 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.25)  1 APR 2025 14:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -475,24 +475,24 @@ LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on 
  (/usr/share/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 184.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 206.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 207.
  (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 206.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 207.
  (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 206.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 207.
  (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 206.
+(Font)              <10> on input line 207.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 206.
+(Font)              <7> on input line 207.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 206.
+(Font)              <5> on input line 207.
 
 
 [1
@@ -514,7 +514,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  75i,10n,79p,324b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on cv.pdf (1 page, 202468 bytes).
+Output written on cv.pdf (1 page, 202455 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
