@@ -1,0 +1,718 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+\section{Basics}
+
+Random experiment: outcome cannot be predicted with certainty
+\begin{itemize}
+    \item Ex: roll a die
+\end{itemize}
+
+Sample space $S$: collection of all possible outcomes
+\begin{itemize}
+    \item We always assume that $S$ is known
+    \item Ex: $S=\{1,2,3,4,5,6\}$
+\end{itemize}
+
+Event $A$: a part of the collection of all possible outcomes
+\begin{itemize}
+    \item $A\subset S$
+    \item Event $A$ occurred if the outcome of the experiment is in $A$
+    \item Ex: $A=\{2,4,6\}$
+\end{itemize}
+
+Empty set/null set $\emptyset$
+Union $\cup$
+Intersection $\cap$
+Complement $A^C=\{x\in S\mid x\notin A\}=S\backslash A$ ($A^\prime$ or $\bar{A}$)
+$S^C=\emptyset$, $\emptyset^C=S$
+
+$A_1,\dots,A_n$ are mutually exclusive if $A_i\cap A_j=\emptyset$ for all $i,j\in\{1,\dots,n\}$ where $i\neq j$
+$A_1,\dots,A_n$ are exhaustive if $A_1\cup\dots\cup A_n=S$
+
+Commutative laws
+\begin{itemize}
+    \item $A\cup B=B\cup A$
+    \item $A\cap B=B\cap A$
+\end{itemize}
+
+Associative laws
+\begin{itemize}
+    \item $(A\cup B)\cup C=A\cup(B\cup C)$
+    \item $(A\cap B)\cap C=A\cap(B\cap C)$
+\end{itemize}
+
+Distributive laws
+\begin{itemize}
+    \item $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$
+    \item $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$
+\end{itemize}
+
+De Morgan's laws:
+\begin{itemize}
+    \item $(A\cup B)^C=A^C\cap B^C$
+    \item $(A\cap B)^C=A^C\cup B^C$
+\end{itemize}
+
+Goal: define the probability of an event $A$
+Idea: repeat the experiment $n$ times
+
+$\mathcal{N}(A)$: number of times the event $A$ has occurred (frequency of event $A$)
+$\frac{\mathcal{N}(A)}{n}$: relative frequency of event $A$
+
+Idea: relative frequency of event $A$ $\approx$ probability of $A$ for large $n$
+We associate $A$ with $p$, which is the number about which the relative frequency tends to stabilize
+$p$ is called the probability of event $A$
+
+Define: a function $P(A)$ that is evaluated for a set is called a set function
+
+Define: probability is a real-valued set function $P$ that assigns to each event $A$ in the sample space $S$ a number $P(A)$ called the probability of event $A$, such that
+\begin{itemize}
+    \item $P(A)\ge0$ for all $A\subseteq S$
+    \item $P(S)=1$
+    \item If $A_1,A_2,\dots$ are events and $A_i\cap A_j=\emptyset$ for $i\neq j$, then $P(A_1\cup A_2\cup\dots)=P(A_1)+P(A_2)+\dots$ (countably additive)
+\end{itemize}
+
+Theorem:
+\begin{enumerate}
+    \item $P(\emptyset)=0$
+    \item $P(A_1+A_2+\dots)=P(A_1)+P(A_2)+\dots$ if $A_1,A_2,\dots$ are events such that $A_i\cap A_j=\emptyset$ for $i\neq j$ (mutually exclusive)
+    \item For each event $A$, $P(A^C)=1-P(A)$
+    \item For events $A,B$ with $A\subseteq B$, one has $P(A)\leq P(B)$
+    \item For each event $A$, $0\leq P(A)\leq1$
+    \item If $A,B$ are two events, $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+    \begin{enumerate}
+        \item If $A,B,C$ are three events, $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C)$
+    \end{enumerate}
+\end{enumerate}
+
+Proofs:
+\begin{enumerate}
+    \item Take $A_1=S,A_2=\emptyset,A_3\emptyset,\dots,A_n=\emptyset$ are mutually exclusive, so $1=P(S)=P(A_1+\dots)=P(A_1)+\dots=1+P(A_2)+\dots\rightarrow P(A_2)+\dots=0$ so $P(\emptyset)=0$
+    \item Take $B_1=A_1,\dots,B_k=A_k,B_{k+1}=\emptyset,\dots$, if $A_1,\dots,A_k$ are mutually exclusive, then so are $B_1,\dots$, $P(A_1+\dots)=P(B_1+\dots)=P(B_1)+\dots=P(B_1)+\dots+P(B_k)+P(B_{k+1})+\dots=P(A_1)+\dots+P(A_k)$ (finite additive)
+    \item $1=P(S)=P(A\cup A^C)=P(A)+P(A^C)$, $P(A^C)=1-P(A)$
+    \item $P(B)=P(A\cup(B\cap A^C))=P(A)+P(B\cap A^C)\ge P(A)$
+    \item $P(A)\le P(S)=1$ since $A\subseteq S$
+    \item $A\cup B=A\cup(A^C\cap B)$, $P(A\cup B)=P(A)+P(A^C\cap B)$, $B=(A\cap B)\cup(A^C\cap B)$, $P(B)=P(A\cap B)+P(A^C\cap B)$, $P(A^C\cap B)=P(B)-P(A\cap B)$, $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+\end{enumerate}
+
+\section{Methods of enumeration}
+
+Define: if each outcome has the same probability of occurring, we say that the outcomes are equally likely, that is $P(\{e_i\})=\frac{1}{m}$ for all $i\in\{1,\dots,m\}$, and $P(A)=\frac{\lvert A\rvert}{m}$
+
+Multiplication principle: experiment $E_1$ has $n_1$ outcomes, and for each outcome, experiment $E_2$ has $n_2$ outcomes, the composite experiment $E_1E_2$ has $n_1n_2$ outcomes
+
+Permutation: we fill $n$ positions with $n$ objects
+\begin{itemize}
+    \item $n$ choices for the first object
+    \item $n-1$ choices for the second object
+    \item $n-2$ choices for the third object
+    \item \dots
+    \item $1$ option for the last object
+\end{itemize}
+$n\cdot(n-1)\cdot(n-2)\cdot\dots\cdot1=n!$ possibilities
+Each of the $n!$ arrangements of $n$ different objects is called a permutation of the $n$ objects
+
+We fill $r$ positions with $n$ objects
+\begin{itemize}
+    \item $n$ choices for the first object
+    \item $n-1$ choices for the second object
+    \item $n-2$ choices for the third object
+    \item \dots
+    \item $n-r+1$ choices for the $r$-th object
+\end{itemize}
+$n\cdot(n-1)\cdot(n-2)\cdot\dots\cdot(n-r+1)=\frac{n!}{(n-r)!}=nPr$ possibilities
+Each arrangement is called a permutation of $n$ objects taken $r$ at a time
+
+Define: if $r$ objects from a set of $n$ objects are selected and the order is noted, the selected set of $r$ objects is called an ordered sample of size $r$
+
+Define: sampling with replacement occurs when an object is selected and then replaced before the next object is selected
+# of possible ordered samples of size $r$ taken from a set of $n$ objects is $n^r$ when sampling with replacement
+
+Define: sampling without replacement occurs when an object is not replaced after it has been selected
+# of possible ordered samples of size $r$ taken from a set of $n$ objects is $\frac{n!}{(n-r)!}$ when sampling without replacement
+
+We write $\begin{pmatrix}
+    n\\r
+\end{pmatrix}=nCr$ for the number of subsets with $r$ elements from a set with $n$ elements
+$nCr=\frac{n!}{(n-r)!r!}$
+Each of the $\begin{pmatrix}
+    n\\r
+\end{pmatrix}$ subsets is called a combination of $n$ objects taken $r$ at a time
+
+Binomial coefficient: $\begin{pmatrix}
+    n\\r
+\end{pmatrix}$
+Binomial formula: $(a+b)^n=\sum_{r=0}^n\begin{pmatrix}
+    n\\r
+\end{pmatrix}a^rb^{n-r}$
+Each of the $\begin{pmatrix}
+    n\\r
+\end{pmatrix}$ arrangements of $n$ objects, $r$ of type $A$, $n-r$ of type $B$, is called a distinguishable permutation
+
+If $a=b=1$, $(1+1)^n=\sum_{r=0}^n\begin{pmatrix}
+    n\\r
+\end{pmatrix}a^rb^{n-r}=\sum_{r=0}^n\begin{pmatrix}
+    n\\r
+\end{pmatrix}=2^n$
+
+\section{Conditional probability}
+
+Ex: 20 tulip bulbs, 8 bloom early and 12 bloom late, 13 are red and 7 are yellow, 5 are early and red
+\begin{table}[]
+    \centering
+    \begin{tabular}{cccc}
+         &   Early& Late&Total\\
+         Red& 
+     5& 8&13\\
+ Yellow& 3& 4&7\\
+ Total& 8& 12&20\\\end{tabular}
+\end{table}
+Probability of red given early $P(R\vert E)=\frac{5}{8}=\frac{N(R\cap E)}{N(E)}=\frac{N(R\cap E)/20}{N(E)/20}=\frac{P(R\cap E)}{P(E)}$
+
+Define: the conditional probability of an event $A$, given that event $B$ has occurred, is defined by $P(A\vert B)=\frac{P(A\cap B)}{P(B)}$ provided that $P(B)>0$
+
+Ex: two fair 4-sided dice are rolled
+$A=\{\text{the sum is }3\}$
+$B=\{\text{the sum is }3\text{ or }5\}$
+$A\subseteq B$
+$P(A\vert B)=\frac{P(A\cap B)}{P(B)}=\frac{P(A)}{P(B)}=\frac{2/16}{6/16}=\frac{1}{3}$
+
+Theorem: $P(\cdot\vert B)$ is a probability measure if $P(B)>0$, as in
+\begin{itemize}
+    \item $P(A\vert B)\ge0$
+    \item $P(S\vert B)=1$ if $B\subseteq S$
+    \item $P(A_1\cup A_2\vert B)=P(A_1\vert B)+P(A_2\vert B)$ if $A_1,A_2$ are mutually exclusive
+\end{itemize}
+
+Implications:
+\begin{itemize}
+    \item $P(A^C\vert B)=1-P(A\vert B)$
+    \item $P(A\cup D\vert B)=P(A\vert B)+P(D\vert B)-P(A\cap D\vert B)$
+\end{itemize}
+
+Multiplication rule: for two events $A,B$:
+\begin{itemize}
+    \item $P(A\cap B)=P(A)\cdot P(B\vert A)$ provided $P(A)>0$
+    \item $P(A\cap B)=P(B)\cdot P(A\vert B)$ provided $P(B)>0$
+\end{itemize}
+
+$P(B)\cdot P(A\vert B)=P(B)\cdot\frac{P(A\cap B)}{P(B)}=P(A\cap B)$
+
+Ex: 25 balloons (10 yellow, 8 red, 7 green), hit one uniformly with a dart two times
+$A=\{\text{first is yellow}\}$
+$B=\{\text{second is yellow}\}$
+
+$P(A)=\frac{10}{25}$
+$P(B\vert A)=\frac{9}{24}$
+$P(A\cap B)=P(A)\cdot P(B\vert A)=\frac{10}{25}\cdot\frac{9}{24}=\frac{3}{20}$
+
+Ex: two cups with marbles
+Cup 1: 3 blue, 2 white
+Cup 2: 1 blue, 2 white
+Transfer one marble from cup 1 to cup 2 uniformly at random, then draw one marble uniformly at random from cup 2
+
+$B1=\{\text{draw blue from cup 1}\}$
+$W1=\{\text{draw white from cup 1}\}$
+$B2=\{\text{draw blue from cup 2}\}$
+$W2=\{\text{draw white from cup 2}\}$
+
+$P(B1\cap B2)=P(B1)\cdot P(B2\vert B1)=\frac{3}{5}\cdot\frac{2}{4}$
+$P(B2)\cdot P(B1\vert B2)$ gives the same result but also way more complicated
+
+$P(B2)=P(B2\cap(B1\cup W1))=P((B1\cap B2)\cup(W1\cap B2))=P(B1\cap B2)+P(W1\cap B2)$
+$=\frac{3}{5}\cdot\frac{2}{4}+\frac{2}{5}\cdot\frac{1}{4}=\frac{4}{10}$
+
+Independent events: $A,B$ are events, we say that $A,B$ are independent if $P(A\cap B)=P(A)\cdot P(B)$, otherwise, they are called dependent
+
+Observation: $A,B$ are independent if and only if $P(B\vert A)=P(B)$, in which case$P(B\vert A)=\frac{P(A\cap B)}{P(A)}=P(B)$
+
+Ex: flip a fair coin twice, the sample space is $S=\{HH,HT,TH,TT\}$
+$A=\{HH,HT\}$ (heads on 1st)
+$B=\{HT,TT\}$ (tail on 2nd)
+$C=\{TT\}$ (both tails)
+
+$D\subseteq S,P(D)=\frac{\lvert D\rvert}{4}$
+
+$P(B\vert A)=\frac{P(B\cap A)}{P(A)}=\frac{P(\{HT\})}{1/2}=\frac{1}{2}=P(B)$
+$A,B$ are independent
+
+$P(C\vert B)=\frac{P(B\cap C)}{P(B)}=\frac{P(\{TT\})}{1/2}=\frac{1}{2}\neq P(C)$
+$B,C$ are dependent
+
+$P(A\cap C)=0\neq P(A)\cdot P(C)$
+$A,C$ are dependent
+
+Note: if $P(A)=0$, then $A,B$ are independent
+$0\le P(A\cap B)\le P(A)=0$, so $P(A\cap B)=0$
+$P(A\cap B)=0\cdot P(B)=P(A)\cdot P(B)$
+
+Theorem: if $A,B$ are independent, then so are
+\begin{itemize}
+    \item $A^C,B$
+    \item $A,B^C$
+    \item $A^C,B^C$
+\end{itemize}
+
+We prove the first line, other cases work the same
+Clear if $P(B)=0$, since it does not matter what $A$ is
+For $P(B)>0$, $P(A^C\cap B)=P(A^C\vert B)\cdot P(B)=(1-P(A\vert B))\cdot P(B)=(1-P(A))\cdot P(B)=P(A^C)\cdot P(B)$
+
+Corollary: if $P(A)=1$, and $A,B$ are events, then $A,B$ are independent
+$A^C,B$ are independent as $P(A^C)=1-P(A)=0$, then apply above theorem
+$A=(A^C)^C,B$ are independent
+
+Define:
+\begin{itemize}
+    \item $A_1,\dots,A_k$ are called pairwise independent if $P(A_i\cap A_j)=P(A_i)\cdot P(A_j)$ for all $i\neq j$
+    \item $A_1,\dots,A_k$ are called mutually independent if $P(\cap A_i)=\prod P(A_i)$ for all combinations of $A_i$
+\end{itemize}
+
+Law of total probability: let $B_1,\dots,B_m$ be mutually exclusive and exhaustive, with $P(B_i)>0$ for all $i$, then $P(A)=\sum P(B_i)\cdot P(A\vert B_i)$
+
+Theorem: let $B_1,\dots,B_m$ be a partition of $S$ and $P(B_i)>0$ for all $i$, if $P(A)>0$, then $P(B_k\vert A)=\frac{P(B_k\cap A)}{P(A)}=\frac{P(B_k)\cdot P(A\vert B_k)}{\sum P(B_i)\cdot P(A\vert B_i)}$
+
+\section{Random variables}
+
+Define: given a random experiment with sample space $S$, a function $X:S\to\mathbb{R}$ is called a random variable
+The space of $X$ is the set $X(S)=\{x\in\mathbb{R}:X(s)=x\text{ for some }s\in S\}$
+
+Ex: $S=\{1,2,\dots,6\}$
+$X(S)=S$ but also $X(S)=S^2$
+
+Ex: $S=\{H,T\}$
+$X(H)=1$ and $X(T)=0$
+
+Let $S$ be a discrete sample space (finite or countable), $X$ is called a random variable of the discrete type (or a discrete random variable), and $X$ is said to have a distribution of the discrete type
+
+Note:
+$S$ being finite means $\lvert S\rvert<\infty$
+$S$ being countable means there exists a bijection $\phi:S\to\mathbb{N}$
+Countable: $S=\mathbb{N}$, $S=\mathbb{Z}$, $S=\mathbb{Q}$
+Not countable: $S=\mathbb{R}$, $S=[0,1]$
+
+For a discrete random variable, the probability $P(X=x)=P(\{s\in S:X(s)=x\})$ is denoted by $f(x)$ and called the probability mass function (pmf)
+
+We define $S_X=\{x\in\mathbb{R}:f(x)>0\}$ as the support of $X$
+
+The pmf of a discrete random variable is a function $f:\mathbb{R}\to[0,1]$ that satisfies the following properties
+\begin{enumerate}
+    \item $f(x)>0$ for $x\in S_X$
+    \item $f(x)=0$ for $x\notin S_X$
+    \item $\sum_{x\in S_X}f(x)=1$
+    \item $P(X\in A)=\sum_{x\in A}f(x)$ for all $A\subseteq S_X$
+    \begin{enumerate}
+        \item $P(X\in A)=\sum_{x\in A\cap S_X}f(x)$ for all $A\subseteq\mathbb{R}$
+    \end{enumerate}
+\end{enumerate}
+
+Ex: $X$ corresponds to a fair 6-sided die
+$S_X=\{1,\dots,6\}$
+$f(x)=\frac{1}{6}$ for $x\in\{1,\dots,6\}$ and $0$ otherwise
+
+$P(X\in[-5,3])=\sum_{x\in[-5,3]\cap S_X}f(x)=\sum_{x\in\{1,2,3\}}f(x)=\frac{3}{6}$
+
+Define: if $f(x)$ is constant over $S_X$, we say that $X$ is uniform over $S_X$ (uniformly distributed)
+
+Define: the (cumulative) distribution function (cdf) of a random variable $X$ is defined by $F(x)=P(X\le x)=P(X\in(-\infty,x])=\sum_{a\in(-\infty,x]\cap S_X}f(a)$
+
+Ex: $S_X=\{1,\dots,m\}$, $f(x)=\frac{1}{m}$ for $x\in S_X$
+$F(x)=P(X\le x)=0$ for $x<1$, $\frac{k}{m}$ for $k\le x<k+1$ and $k=1,\dots,m$, and $1$ for $x\ge m$
+
+Ex: roll a fair 4-sided die twice
+$S=\{1,\dots,4\}^2$
+$X((S_1,S_2))=max(S_1,S_2)$
+$S_X=\{1,\dots,4\}$
+
+$P(X=1)=\frac{1}{16}$
+$P(X=2)=\frac{3}{16}$
+$P(X=3)=\frac{5}{16}$
+$P(X=4)=\frac{7}{16}$
+
+Probability histogram is only for $S_X\subseteq\mathbb{Z}$
+For all $x\in S_X$, draw a rectangle of height $f(x)$ and width $1$, centered at $x$
+
+Note: pmf is the area of the rectangle
+
+Let $X_1,X_2,\dots$ be independent random variables with pmf $f(x)=\frac{4-x}{6}$ with $S_X=\{1,2,3\}$
+We take $n$ random samples and get the empirical average $\frac{1}{n}(X_1+X_2+\dots+X_n)=\frac{1}{n}\sum_{i=1}^3i\lvert\{k\in\{1,\dots,n\}:X_k=i\}\rvert=\sum_{i=1}^3i\frac{\lvert\{k\in\{1,\dots,n\}:X_k=i\}\rvert}{n}$
+$\frac{\lvert\{k\in\{1,\dots,n\}:X_k=i\}\rvert}{n}$ is the relative frequency, so it intuitively converts into the probability
+$\sum_{i=1}^3if(i)=1\cdot\frac{3}{6}+2\cdot\frac{2}{6}+3\cdot\frac{1}{6}=\frac{10}{6}$
+
+Define: let $X$ be a discrete random variable with pmf $f(x)$, the expectation (or expected value) of $X$ is denoted by $E(x)=\sum_{x\in S_X}x\cdot f(x)$ whenever this sum converges absolutely ($\sum_{x\in S_X}\lvert x\cdot f(x)\rvert<\infty$)
+
+If $u:\mathbb{R}\to\mathbb{R}$ is a function, we define the expectation of $u(x)$ by $E(u)=\sum_{x\in S_X}u(x)\cdot f(x)$ whenever this sum converges absolutely
+
+Theorem: whenever it exists, the following properties are true
+\begin{enumerate}
+    \item If $c$ is a constant, then $E(c)=c$
+    \item $E(c\cdot a(x))=c\cdot E(a(x))$
+    \item $E(u_1(x)+u_2(x))=E(u_1(x))+E(u_2(x))$
+\end{enumerate}
+
+Ex: $X$ is a random variable with pmf $f(x)=\frac{1}{3}$ with $S_X=\{-1,0,1\}$
+$E(X)=(-1)\cdot f(-1)+0\cdot f(0)+1\cdot f(1)=0$
+$E(X^2)=(-1)^2\cdot f(-1)+0^2\cdot f(0)+1^2\cdot f(1)=\frac{2}{3}$
+$E(10X^2+7X)=10\cdot E(X^2)+7\cdot E(X)=\frac{20}{3}$
+
+An experiment is a success with probability $p\in(0,1)$ and a failure with probability $1-p$, the experiment is repeated until the first success occurs, say this happens on the trial $X$
+$f(k)=P(X=k)=(1-p)^{k-1}\cdot p$
+$k=1,2,3,\dots$
+
+Note that $\sum_{k=1}^\infty f(k)=\sum_{k=1}^\infty(1-p)^{k-1}\cdot p=p\cdot\sum_{k=0}^\infty(1-p)^k=p\cdot\frac{1}{1-(1-p)}=1$
+$E(X)=\sum_{k=1}^\infty k\cdot f(k)=\sum_{k=1}^\infty k\cdot p\cdot(1-p)^{k-1}=p\cdot\sum_{k=1}^\infty k\cdot(1-p)^{k-1}=p\cdot\frac{1}{(1-(1-p))^2}=\frac{1}{p}$
+
+If $X$ has pmf $f(k)=(1-p)^{k-1}\cdot p$ where $k\in\{1,2,3,\dots\}$, we say that $X$ has a geometric distribution
+
+Ex: let $b\in\mathbb{R}$
+$E((X-b)^2)=E(X^2-2bX+b^2)=E(X^2)-2bE(X)+b^2=E(X^2)+b(b-2E(X))$
+Over all $b\in\mathbb{R}$, this is minimized by $b=E(X)$
+
+$E(X^k)$ is called the $k$-th moment of $X$
+$E((X-E(X))^2)$ is called the variance of $X$, often denoted by $\sigma^2=var(X)$
+
+Notes:
+\begin{itemize}
+    \item $E((X-E(X))^2)=E(X^2-2E(X)X+E(X)^2)=E(X^2)-2E(X)^2+E(X)^2=E(X^2)-E(X)^2$
+    \item $\sigma^2=var(X)\ge0$
+    \item $var(aX)=E((aX)^2)-E(aX)^2=a^2E(X^2)-a^2E(X)^2=a^2var(X)$
+    \item $var(X+b)=E((X+b-E(X+b))^2)=E((X-E(X))^2)=var(X)$
+    \item $\sigma=\sqrt{\sigma^2}$ is called the standard deviation of $X$
+\end{itemize}
+
+Define: let $X$ be a discrete random variable with pmf $f(x)$ and space $S_X$, if there exists $h>0$ such that $M(t)=E(e^{tx})=\sum_{x\in S_X}e^{tx}\cdot f(x)$ exists and is finite for all $t\in(-h,h)$, the function $M$ is called the moment-generating function of $X$
+
+$M(0)=\sum_{x\in S_X}1\cdot f(x)=1$
+
+$M^\prime(t)=\frac{d}{dt}M(t)=\frac{d}{dt}\sum_{x\in S_X}e^{tx}\cdot f(x)=\sum_{x\in S_X}xe^{tx}\cdot f(x)$
+$M^\prime(0)=\sum_{x\in S_X}x\cdot1\cdot f(x)=E(X)$
+
+$M^{\prime\prime}(t)=\frac{d}{dt}M^\prime(t)=\frac{d}{dt}\sum_{x\in S_X}xe^{tx}\cdot f(x)=\sum_{x\in S_X}x^2e^{tx}\cdot f(x)$
+$M^{\prime\prime}(0)=\sum_{x\in S_X}x^2\cdot1\cdot f(x)=E(X^2)$
+
+$M^{(k)}(0)=E(X^k)$
+
+Ex: let $X$ have uniform distribution on $\{1,\dots,m\}$, $X$ has pmf $f(x)=\frac{1}{m}$ for $x\in\{1,\dots,m\}$
+$E(X)=\sum_{x\in S_X}x\cdot\frac{1}{m}=\sum_{x=1}^mx\cdot\frac{1}{m}=\frac{1}{m}\cdot\sum_{x=1}^mx=\frac{1}{m}\cdot\frac{m(m+1)}{2}=\frac{m+1}{2}$
+$E(X^2)=\sum_{x\in S_X}x^2\cdot\frac{1}{m}=\frac{1}{m}\cdot\sum_{x=1}^mx^2=\frac{1}{m}\cdot\frac{m(m+1)(2m+1)}{6}=\frac{(m+1)(2m+1)}{6}$
+$var(X)=E(X^2)-E(X)^2=\frac{(m+1)(2m+1)}{6}-(\frac{m+1}{2})^2=\frac{m^2-1}{12}=E((X-E(X))^2)$
+
+\section{Binomial distribution}
+
+A Bernoulli experiment is a random experiment with two possible outcomes
+
+A sequence of Bernoulli trials occurs when a Bernoulli experiment is performed several independent times and the probability of success $p$ remains the same for each trial
+
+Let $X$ be the random variable defined by $X(\text{success})=1$ and $X(\text{failure})=0$, we say that $X$ has Bernoulli distribution
+
+In a sequence of Bernoulli trials, we write $X_i$ for the random variable associated with the $i$-th trial, $(X_1,\dots,X_n)$ is called a random sample of size $n$ from a Bernoulli distribution
+
+We are interested in the number of successes of a Bernoulli trial of size $n$, as in $X=\sum_{i=1}^nX_i$
+
+$X$ is said to have a binomial distribution with parameters $n$ and $p$
+\begin{itemize}
+    \item Bernoulli performed $n$ times $\rightarrow$ independent trials
+    \item Probability of success is $p$ (constant) $\rightarrow$ $X$ is the number of successes
+\end{itemize}
+
+Let $k\in\{0,\dots,n\}$, then $X=k$ if and only if there exists  $A\subseteq\{1,\dots,n\}$ such that $\lvert A\rvert=k,X_i=1$ for all $i\in A$, and $X_i=0$ for all $i\in\{1,\dots,n\}\backslash A$
+
+$P(X=k)=\begin{pmatrix}
+    n\\k
+\end{pmatrix}p^k(1-p)^{n-k}$
+
+Note: $\sum_{k=0}^n\begin{pmatrix}
+    n\\k
+\end{pmatrix}p^k(1-p)^{n-k}=(p+1-p)^n=1$ and $E(X)=\sum_{i=1}^nE(X_i)=np$
+
+Note: if $X$ has a binomial distribution with parameters $n$ and $p$, then $n-X$ has a binomial distribution with parameters $n$ and $1-p$
+
+$M(t)=E(e^{tx})=\sum_{k=0}^n\begin{pmatrix}
+    n\\k
+\end{pmatrix}p^k(1-p)^{n-k}e^{tk}=\sum_{k=0}^n\begin{pmatrix}
+    n\\k
+\end{pmatrix}(pe^t)^k(1-p)^{n-k}=(pe^t+1-p)^n$
+$M^\prime(t)=n(pe^t+1-p)^{n-1}pe^t$
+$M^\prime(0)=np=E(X)$
+
+Let $X$ be the number of trials needed until we see the $r$-th success, we say that $X$ has a negative binomial distribution
+
+$X=k$ means $r-1$ successes after $k-1$ trials and success on the $k$-th trial
+$P(X=k)=\begin{pmatrix}
+    k-1\\
+    r-1
+\end{pmatrix}p^{r-1}(1-p)^{k-1-(r-1)}p=\begin{pmatrix}
+    k-1\\
+    r-1
+\end{pmatrix}p^r(1-p)^{k-r}$
+
+If $r=1$, this is a geometric distribution, as $P(X=k)=(1-p)^{k-1}p$
+For $r=1$, we computed $E(X)=\frac{1}{p}$
+For $r\ge1$, let $y_r$ be the number of repeats until the $r$-th success, so $X=y_1+\sum_{k=2}^r(y_k-y_{k-1})$ and $E(X)=\frac{r}{p}$
+
+\section{Poisson distribution}
+
+Let the number of occurrences of some event in a given continuous interval be counted, then we have an approximate Poisson process with parameter $\lambda>0$ if the following conditions are satisfied:
+\begin{enumerate}
+    \item The number of occurrences in non-overlapping sub-intervals are independent
+    \item The probability of exactly one occurrence in a sufficiently short sub-interval of length $n$ is approximately $\lambda n$
+    \item The probability of two or more occurrences in a sufficiently short sub-interval is essentially $0$
+\end{enumerate}
+
+Ex: people arriving at the post office between 10AM and 11AM
+Say we have an interval of length $L$, the number of occurrences in this interval has a Poisson distribution with parameters $\lambda$ and $L$
+
+$n$ is the number of sub-intervals
+$\lambda$ is the expected number of occurrences over interval $L$
+$X_n$ is the number of sub-intervals in which an occurrence happens
+$X$ is the total number of occurrences
+$X_n$ is binomially distributed with parameters $n$ and $\lambda\frac{1}{n}$
+As $n\to\infty$, $P(X_n=k)\to P(X=k)=e^{-n\lambda\frac{1}{n}}\frac{(n\lambda\frac{1}{n})^k}{k!}=e^{-\lambda}\frac{\lambda^k}{k!}$
+
+\section{Bivariate distribution}
+
+Define: let $X$ and $Y$ be two random variables, let $S=S_X\times S_Y$, the function $f:\mathbb{R}^2\to[0,1]$ defined by $f(x,y)=P(X=x,Y=y)$ is called the joint pmf of $X$ and $Y$, it satisfies
+\begin{enumerate}
+    \item $f(x,y)\ge0$ for all $(x,y)\in\mathbb{R}^2$
+    \item $\sum_{(x,y)\in S}f(x,y)=1$
+    \item $P((X,Y)\in A)=\sum_{(x,y)\in A}f(x,y)$
+    \item $f(x,y)=0$ for all $(x,y)\in\mathbb{R}^2\backslash S$
+\end{enumerate}
+
+Define: let $X$ and $Y$ have joint pmf $f$, the marginal probability mass functions $f_X$ (resp. $f_Y$) of $X$ (resp. of $Y$) are defined by $f_X(x)=P(X=x)=\sum_{y\in S_Y}f(x,y)$ and $f_Y(y)=P(Y=y)=\sum_{x\in S_X}f(x,y)$
+
+$X$ and $Y$ are called independent if $P(X=x,Y=y)=P(X=x)P(Y=y)$ for all $(x,y)\in S_X\times S_Y$ and dependent otherwise
+This is equivalent to $f(x,y)=f_X(x)f_Y(y)$ for all $(x,y)\in\mathbb{R}^2$
+
+Define: let $X$ and $Y$ be two discrete random variables with joint pmf $f$ and $u:S_X\times S_Y\to\mathbb{R}$, then the expectation $E(u(X,Y))$ is defined by $E(u(X,Y))=\sum_{(x,y)\in S}u(x,y)f(x,y)$ whenever the sum converges absolutely
+
+Remarks: if $u(x,y)=x$, $E(u(X,Y))=\sum_{(x,y)\in S}xf(x,y)=\sum_{x\in S_X}xf_X(x)=E(X)$
+If $u(x,y)=(x-E(X))^2$, $E(u(X,Y))=var(X)$
+If $u(x,y)=x+y$, $E(u(X,Y))=E(X+Y)=E(X)+E(Y)$
+
+Theorem: if $X$ and $Y$ are independent, then $E(XY)=E(X)E(Y)$
+$E(XY)=\sum_{x\in S_X}\sum_{y\in S_Y}xyf(x,y)=\sum_{x\in S_X}\sum_{y\in S_Y}xyf_X(x)f_Y(y)=\sum_{x\in S_X}xf_X(x)\sum_{y\in S_Y}yf_Y(y)=E(X)E(Y)$
+
+Remark: $X$ and $Y$ are independent implies $E(XY)=E(X)E(Y)$, but $E(XY)=E(X)E(Y)$ does not imply $X$ and $Y$ are independent
+
+Define: let $X$ and $Y$ be two discrete random variables with $\mu_X=E(X)$ and $\mu_Y=E(Y)$, the covariance of $X$ and $Y$ is defined by $\sigma_{X,Y}=Cov(X,Y)=E((X-\mu_X)(Y-\mu_Y))$
+
+The correlation coefficient of $X$ and $Y$ is defined by $\rho=\frac{\sigma_{X,Y}}{\sigma_X\sigma_Y}=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$
+
+Note: one can show that $p\in[-1,1]$
+
+$Cov(X,Y)=E(XY-\mu_XY-X\mu_Y+\mu_X\mu_Y)=E(XY)-E(X)E(Y)$
+$X$ and $Y$ are independent implies $\sigma_{X,Y}=0$
+
+Best approximation: $Y=aX+b$
+$a=\rho\frac{\sigma_Y}{\sigma_X}$
+$b=E(Y)-aE(X)$
+
+\section{Conditional distribution}
+
+$P(Y=y\mid X=x)=\frac{P(X=x,Y=y)}{P(X=x)}$
+
+Define: let $X$ and $Y$ be two random variables with joint pmf $f$, the conditional probability mass function of $Y$ given $X$ is given by $g(y\mid x)=\frac{f(x,y)}{f_X(x)}$
+
+Define: the conditional expectation of $Y$ given $X$ is defined by $E(Y\mid X=x)=\sum_{y\in S_Y}y\cdot P(Y=y\mid X=x)$
+$E(u(Y)\mid X=x)=\sum_{y\in S_Y}u(y)\cdot P(Y=y\mid X=x)$
+
+Law of total expectation: assume that $E(Y)$ exists, then $E(Y)=E(E(Y\mid X))=\sum_{x\in S_X}E(Y\mid X=x)P(X=x)$
+
+Proof: $\sum_{x\in S_X}E(Y\mid X=x)P(X=x)=\sum_{x\in S_X}\sum_{y\in S_Y}yP(Y=y\mid X=x)P(X=x)=\sum_{x\in S_X}\sum_{y\in S_Y}yf(x,y)=E(Y)$
+
+\section{Continuous random variables}
+
+The distribution of the random variable is defined through its cumulative distribution function (cdf) $F$, defined as $F(x)=P(X\le x)$ and its probability density function (pdf) defined by $f(x)=F^\prime(x)$
+
+Note:
+\begin{itemize}
+    \item $F(x)\to0$ as $x\to-\infty$ and $F(x)\to1$ as $x\to\infty$
+    \item $F(x)$ is weakly increasing, so $f(x)=F^\prime(x)\ge0$
+    \item $F(x)=P(X\le x)=\int_{-\infty}^xf(t)dt$
+    \item $P(a<X\le b)=F(b)-F(a)=\int_a^bf(t)dt$
+    \item $P(X\in A)=\int_Af(t)dt$
+\end{itemize}
+
+Define: if $X$ is a random variable and there exists $f$ such that $P(X\in A)=\int_Af(t)dt$, we say that $X$ is of the continuous type, or a continuous random variable
+
+Interpretation: $P(X\in[x-\frac{\epsilon}{2},x+\frac{\epsilon}{2}])=\int_{x-\frac{\epsilon}{2}}^{x+\frac{\epsilon}{2}}f(t)dt\approx\epsilon f(x)$
+
+Define: let $X$ be a continuous random variable with cdf $F$ and pdf $f$
+\begin{itemize}
+    \item The expectation of $X$ is defined by $E(X)=\int_{-\infty}^\infty xf(x)dx$ if the integral exists
+    \item For a function $u:\mathbb{R}\to\mathbb{R}$, the expectation of $u(X)$ is defined by $E(u(X))=\int_{-\infty}^\infty u(x)f(x)dx$ if the integral exists
+\item We define the variance of $X$ to be $\sigma^2=Var(X)=E((X-E(X))^2)=\int_{-\infty}^\infty(x-E(X))^2f(x)dx$
+\item For $p\in(0,1)$, we define the p-th percentile as the number $\pi_p$ such that $F(\pi_p)=\int_{-\infty}^{\pi_p}f(t)dt=p$
+\begin{itemize}
+    \item $\pi_{0.25}$ is the first quartile
+    \item $\pi_{0.5}$ is the second quartile/median
+    \item $\pi_{0.75}$ is the third quartile
+\end{itemize}
+\end{itemize}
+
+Ex: let $X$ have uniform distribution on $[0,m]$
+$E(X)=\int_0^m\frac{1}{m}xdx=\frac{1}{m}(\frac{x^2}{2})\vert_0^m=\frac{m}{2}$
+$E(X)=\int_0^m\frac{1}{m}x^2dx=\frac{1}{m}(\frac{x^3}{3})\vert_0^m=\frac{m^2}{3}$
+$Var(X)=\frac{m^2}{3}-\frac{m^2}{4}=\frac{m^2}{12}$
+$\pi_{0.25}$ is such that $F(\pi_{0.25})=\frac{1}{m}\pi_{0.25}=\frac{1}{4}$, so $\pi_{0.25}=\frac{m}{4}$
+
+Ex: $f(x)=2x$ for $x\in(0,1)$, $f(x)=0$ otherwise
+$F(x)=x^2$ for $x\in(0,1)$, $1$ for $x\ge1$, and $0$ for $x\le0$
+$P(X\in(0.5,2])=F(2)-F(0.5)=1-\frac{1}{4}=\frac{3}{4}$
+
+\section{Exponential distribution}
+
+Consider an approximate Poisson process with rate $\lambda$, let $W$ be the time until the first arrival, $W\in\mathbb{R}\ge0$
+$P(W>t)=P(\text{no arrival in }(0,t])=e^{-\lambda t}\frac{(\lambda t)^0}{0!}=e^{-\lambda t}$
+$W$ is said to have an exponential distribution with parameter $\lambda>0$
+For $t>0$, $F(t)=1-P(W>t)=1-e^{-\lambda t}$ and $f(t)=\lambda e^{-\lambda t}$
+For $t\le0$, $F(t)=f(t)=0$
+$E(W)=\int_0^\infty x\lambda e^{-\lambda x}dx=(-\frac{e^{-\lambda x}(\lambda x+1)}{\lambda})\vert_0^\infty=\frac{1}{\lambda}$
+
+\section{Normal distribution}
+
+We say that a continuous random variable has a normal (or Gaussian) distribution if its pdf is of the form $f(x)=\frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$ for $x\in\mathbb{R}$ and some $\mu\in\mathbb{R}$, $\sigma>0$
+
+$f(x)\ge0$
+$\int_{-\infty}^\infty f(x)dx=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx=I$ (can use variable change to get rid of $\mu$ and $\sigma$)
+$I^2=\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx\int_{-\infty}^\infty\frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy=\frac{1}{2\pi}\int_{-\infty}^\infty\int_{-\infty}^\infty\exp(-\frac{x^2+y^2}{2})dxdy=\frac{1}{2\pi}\int_0^\infty\int_0^{2\pi}e^{-\frac{r^2}{2}}rd\theta dr=\int_0^\infty e^{-\frac{r^2}{2}}rdr$
+$=(-e^{-\frac{r^2}{2}})\rvert_0^\infty=1$
+
+One can show that $E(X)=\mu$ and $var(X)=\sigma^2$
+
+In the case that $\mu=0$ and $\sigma^2=1$, we say that $X$ has a standard normal distribution
+We write $N(\mu,\sigma^2)$ for this distribution
+
+For a standard normal distribution, we have (by symmetry) $-\pi_\alpha=\pi_{1-\alpha}$ for all $\alpha\in(0,1)$
+
+If $X$ has distribution $N(\mu_1,\sigma_1^2)$ and $Y$ has distribution $N(\mu_2,\sigma_2^2)$, and $X$ and $Y$ are independent, then $X+Y$ has distribution $N(\mu_1+\mu_2,\sigma_1^2+\sigma_2^2)$
+
+If $X$ has distribution $N(\mu,\sigma^2)$, then $Z=\frac{X-\mu}{\sigma}$ has distribution $N(0,1)$
+Proof: $P(Z\le z)=P(\frac{X-\mu}{\sigma}\le z)=P(X\le z\sigma+\mu)$
+$=\int_{-\infty}^{z\sigma+\mu}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}dx=\int_{-\infty}^{z\sigma}\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{x^2}{2\sigma^2}}dx=\int_{-\infty}^z\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx$
+
+Ex: if $X=N(3,16)$, then $P(4\le X\le 8)=P(\frac{4-3}{4}\le\frac{X-3}{4}\le\frac{8-3}{4})=P(\frac{1}{4}\le Z\le\frac{5}{4})=\Phi(1.25)-\Phi(0.25)\approx0.296$
+
+Remarks: values of $P(Z\le z)=\Phi(z)$ are not easy to compute and approximations are often given in old textbooks
+
+If $Z$ has a standard normal distribution, then $Z^2$ is chi-squared distribution with 1 degree of freedom
+
+If $X$ and $Y$ are independent and are normally distributed with expectations $\mu_X$ and $\mu_Y$ and variance $\sigma_X^2$ and $\sigma_Y^2$, then $\alpha X+\beta Y$ is normally distributed with expectation $\alpha\mu_X+\beta\mu_Y$ and variance $\alpha^2\sigma_X^2+\beta^2\sigma_Y^2$
+
+\section{Continuous bivariate distributions}
+
+Define: let $X$ and $Y$ be two random variables of the continuous type, we say that $X$ and $Y$ have joint pdf $f$, if $P(X\le a,Y\le b)=\int_{-\infty}^b\int_{-\infty}^a f(x,y)dxdy$ for all $a,b\in\mathbb{R}$
+
+Example: $f(x,y)=\frac{1}{2}$ for $0\le x\le2,0\le y\le1$, and $0$ otherwise
+$P(X\le a,Y\le b)=\int_0^b\int_0^a\frac{1}{2}dxdy=\frac{ab}{2}$
+
+If $X$ and $Y$ have joint pdf $f$:
+\begin{enumerate}
+    \item The set $S=\{(x,y)\in\mathbb{R}^2:f(x,y)>0\}$ is called the support of $X$ and $Y$
+    \item $f(x,y)\ge0$ for all $x,y\in\mathbb{R}$
+    \item $\int_{-\infty}^\infty\int_{-\infty}^\infty f(x,y)dxdy=1$
+    \item For $A\subseteq\mathbb{R}^2$, $P((X,Y)\in A)=\iint_Af(x,y)dxdy$
+\end{enumerate}
+
+Ex: $X$ and $Y$ have joint pdf $f(x,y)=\frac{4}{3}(1-xy)$ for $x,y\in[0,1]$ and $0$ otherwise
+$P(X\le\frac{1}{2},Y\le\frac{1}{4})=P((X,Y)\in A)$ where $A=\{(x,y)\in\mathbb{R}^2:x\le\frac{1}{2},y\le\frac{1}{4}\}$
+$=\iint_Af(x,y)dxdy=\int_0^\frac{1}{4}\int_0^\frac{1}{2}\frac{4}{3}-\frac{4}{3}xydxdy=\frac{4}{3}\frac{1}{4}\frac{1}{2}-\frac{4}{3}\int_0^\frac{1}{4}\int_0^\frac{1}{2}xydxdy=\frac{11}{64}$
+
+$P(Y\le\frac{X}{2})=\int_0^1\int_0^\frac{x}{2}\frac{4}{3}(1-xy)dydx=\int_0^1\frac{4}{3}(y-\frac{xy^2}{2})\rvert_0^\frac{x}{2}dx=\frac{4}{3}\int_0^1\frac{x}{2}-\frac{x^3}{8}dx=\frac{4}{3}(\frac{x^2}{4}-\frac{x^4}{32})\rvert_0^1=\frac{7}{24}$
+
+Define: let $X$ and $Y$ be two continuous random variables with pdf $f$, the marginal density function of $X$ and $Y$ is given by $f_X(x)=\int_{-\infty}^\infty f(x,y)dy$ and $f_Y(y)=\int_{-\infty}^\infty f(x,y)dx$
+
+$f_X$ and $f_Y$ are the density functions of $X$ and $Y$
+For $A\subseteq\mathbb{R}$, $P(X\in A)=P((X,Y)\in A\times\mathbb{R})=\int_A\int_\mathbb{R}f(x,y)dydx=\int_Af_X(x)dx$
+
+Ex: $f(x,y)=\frac{4}{3}(1-xy)$ for $x,y\in[0,1]$ and $0$ otherwise
+$f_X(x)=\int_0^1\frac{4}{3}-\frac{4}{3}xydy=\frac{4}{3}-\frac{2}{3}x$
+
+Define: for a function $u:\mathbb{R}^2\to\mathbb{R}$, the expectation $E(u(x,y))$ is defined by $\int_\mathbb{R}\int_\mathbb{R}u(x,y)f(x,y)dxdy$
+
+Ex: $E(Y)=\int_\mathbb{R}\int_\mathbb{R}yf(x,y)dxdy=\int_\mathbb{R}y\int_\mathbb{R}f(x,y)dxdy=\int_\mathbb{R}yf_Y(y)dy$
+
+Ex:
+$E(X)=\int_0^1\int_0^1x\frac{4}{3}(1-xy)dydx=\int_0^1\int_0^1\frac{4}{3}xdydx-\frac{4}{3}\int_0^1x^2\int_0^1ydydx=\frac{4}{3}\int_0^1xdx-\frac{4}{3}\int_0^1\frac{x^2}{2}dx=\frac{4}{6}-\frac{4}{6}(\frac{1}{3}x^3)\rvert_0^1=\frac{4}{9}$
+$E(X^2)=\int_0^1\int_0^1x^2\frac{4}{3}(1-xy)dydx=\int_0^1\frac{4}{3}x^2dx-\int_0^1\frac{4}{3}x^3\int_0^1ydydx=\frac{5}{18}$
+
+Theorem: if $X$ and $Y$ are random variables with joint pdf $f$, then $X$ and $Y$ are independent if and only if $f(x,y)=f_X(x)f_Y(y)$
+
+Ex: $f(x,y)=\frac{4}{3}(1-xy)$ for $x,y\in[0,1]$
+$f_X(x)=\frac{4}{3}(1-\frac{x}{2})$ for $x\in[0,1]$
+$f_Y(y)=\frac{4}{3}(1-\frac{y}{2})$ for $y\in[0,1]$
+
+Consider $x=y=\frac{1}{4}$
+$f(x,y)=\frac{5}{4}$
+$f_X(x)f_Y(y)=\frac{49}{36}\neq f(x,y)$
+
+\section{Functions of a random variable}
+
+Theorem: if $X$ is a discrete random variable with pmf $f$, and $u:\mathbb{R}\to\mathbb{R}$ is a function, then $Y=u(X)$ has pmf $g(y)=P(Y=y)=P(u(X)=y)=P(X\in u^{-1}(y))=\sum_{x\in u^{-1}(y)}f(x)$ where $u^{-1}(y)=\{x\in\mathbb{R}:u(x)=y\}$
+
+Ex: $S_X=\{-2,-1,\dots,5\}$, $f(x)=\frac{1}{8}$ for all $x\in S_X$, $u(x)=x^2$
+$g(y)=P(u(X)=y)=P(X^2=y)=\frac{2}{8}$ for $y=1,4$ and $\frac{1}{8}$ for $y=0,9,16,25$
+
+Let $X$ be a continuous random variable with state space $S_X$, let $u:S_X\to S_Y$ be a function, the inverse function of $u$ is the function $v:S_Y\to S_X$ such that $u(v(y))=y$ for all $y\in S_Y$ and $v(u(x))=x$ for all $x\in S_X$
+
+Ex: $S_X=S_Y=\mathbb{R}\ge0$, $u(x)=x^2$, $v(y)=\sqrt{y}$
+$S_X=\mathbb{R}$, $S_Y=\mathbb{R}\ge0$, $u(x)=x^2$, the inverse does not exist as $v(u(1))=v(1)$ needs to be $1$ and $v(u(-1))=v(1)$ needs to be $-1$
+
+Ex: let $X$ be a continuous random variable with $S_X=\mathbb{R}$ and pdf $f$, and $u:\mathbb{R}\to\mathbb{R}$ be monotone, increasing, and invertible, let $v$ be the inverse of $u$
+$P(u(X)\le t)=P(v(u(X))\le v(t))=P(X\le v(t))=\int_{-\infty}^{v(t)}f(x)dx$
+The pdf of $Y=u(X)$ is $\frac{d}{dt}P(u(X)\le t)=\frac{d}{dt}\int_{-\infty}^{v(t)}f(x)dx=\frac{d}{dt}\int_{-\infty}^tf(v(t))v^\prime(t)dt=f(v(t))v^\prime(t)$
+
+Theorem: if $X$ is a continuous random variable with state space $S_X$ and $u:S_X\to S_Y$ is a continuous function with inverse $v$, the $Y=u(X)$ has pdf $g(y)=f(v(y))\lvert v^\prime(y)\rvert$
+
+Ex: $S_X=\mathbb{R}_{\ge0}$, $f(x)=e^{-x}$, $u:\mathbb{R}_{\ge0}\to\mathbb{R}_{\ge1}$, $u(x)=e^x$, $v(y)=ln(y)$, and if $X$ has pdf $f$, then $Y=u(X)$ has pdf $g(y)=f(v(y))\lvert v^\prime(y)\rvert=e^{-ln(y)}\frac{1}{y}=\frac{1}{y^2}$
+
+Several independent random variables
+
+Setup: $X_1,\dots,X_n$ independent random variables, $u_1,\dots,u_n$ functions from $\mathbb{R}\to\mathbb{R}$, $X_1,\dots,X_n$ is called a random sample of size $n$, $Y$ is a combination of $u_1(X_1),\dots,u_n(X_n)$, for example $Y=\sum_{i=1}^nu_i(X_i)$ or $Y=\prod_{i=1}^nu_i(X_i)$, if $X_i$ has pdf $f_i(x_i)$, then $(X_1,\dots,X_n)$ has pdf $f:\mathbb{R}^n\to\mathbb{R}$ $f(x)=f_1(x_1)\cdot\dots\cdot f_n(x_n)$
+
+Theorem: if $X_1,\dots,X_n$ are independent, then when all expectations exist, $E(u_1(X_1)\cdot\dots\cdot u_n(X_n))=E(u_1(X_1))\cdot\dots\cdot E(u_n(X_n))$
+
+If $X_1,\dots,X_n$ are random variables (independent or not), then $E(u_1(X_1)+\dots+u_n(X_n)=E(u_1(X_1))+\dots+E(u_n(X_n))$
+
+Proof: discrete case only
+$Y=(X_1,\dots,X_n)$ has pmf $f(x_1,\dots,x_n)=P(Y=(x_1,\dots,x_n))=\prod_{i=1}^nP(X_i=x_i)=\prod_{i=1}^nf_i(x_i)$
+$E(u_1(X_1)\cdot\dots\cdot u_n(X_n))=\sum_{x_1}\dots\sum_{x_n}u_1(x_1)\cdot\dots\cdot u_n(x_n)f(x_1,\dots,x_n)=\sum_{x_1}u_1(x_1)f_1(x_1)\cdot\dots\cdot\sum_{x_n}u_n(x_n)f_n(x_n)$
+$=E(u_1(X_1))\cdot\dots\cdot E(u_n(X_n))$
+
+$E(u_1(X_1)+\dots+u_n(X_n))=\sum_{x_1}\dots\sum_{x_n}(u_1(x_1)+\dots+u_n(x_n))f(x_1,\dots,x_n)$
+$=\sum_{x_1}\dots\sum_{x_n}u_1(x_1)f(x_1,\dots,x_n)+\dots+\sum_{x_1}\dots\sum_{x_n}u_n(x_n)f(x_1,\dots,x_n)=E(u_1(X_1))+\dots+E(u_n(X_n))$
+
+If $X_1,\dots,X_n$ are independent and $E(X_i)=\mu_i$, $Var(X_i)=\sigma_i^2$, and $\alpha_1,\dots,\alpha_n\in\mathbb{R}$, then $E(\sum_{i=1}^n\alpha_iX_i)=\sum_{i=1}^n\alpha_i\mu_i$ and $Var(\sum_{i=1}^n\alpha_iX_i)=\sum_{i=1}^n\alpha_i^2\sigma_i^2$
+
+Proof:
+Let $Y=\sum_{i=1}^n\alpha_iX_i$ and $\mu_Y=E(Y)$
+$Var(Y)=E((Y-\mu_Y)^2)=E((\sum_{i=1}^n\alpha_iX_i-\sum_{i=1}^n\alpha_i\mu_i)^2)=E((\sum_{i=1}^n\alpha_i(X_i-\mu_i))^2)$
+$=\sum_{i=1}^n\sum_{j=1}^nE(\alpha_i(X_i-\mu_i)\alpha_j(X_j-\mu_j))=\sum_{i=1}^nE(\alpha_i^2(X_i-\mu_i)^2)+2\sum_{1\le i<j\le n}E(a_i(X_i-\mu_i)a_j(X_j-\mu_j))$
+Since $X_1,\dots,X_n$ are independent, $E(u_1(X_1)\cdot\dots\cdot u_n(X_n))=E(u_1(X_1))\cdot\dots\cdot E(u_n(X_n))$
+$=\sum_{i=1}^n\alpha_i^2E((X_i-\mu_i)^2)+2\sum_{1\le i<j\le n}\alpha_i\alpha_jE(X_i-\mu_i)E(X_j-\mu_j)$
+$E((X_i-\mu_i)^2)=\sigma_i^2$, $E(X_i-\mu_i)=0$
+$=\sum_{i=1}^n\alpha_i^2\sigma_i^2$
+
+Markov's inequality: let $X$ be a non-negative random variable and let $a>0$, then $P(X\ge a)\le\frac{E(X)}{a}$
+Proof: define $Y$ by $Y=a$ for $x\ge a$ and $0$ otherwise, so $Y\le X$
+$E(X)=E(X-Y+Y)=E(X-Y)+E(Y)\ge E(Y)$, so $E(Y)\le E(X)$
+$E(Y)=a\cdot P(X\ge a)$ therefore $P(X\ge a)\le\frac{E(X)}{a}$
+
+Chebyshev's inequality: let $X$ be a random variable with $E(X)=\mu$, then for $t\ge0$, $P(\lvert X-\mu\rvert\ge t)\le\frac{Var(X)}{t^2}$
+Proof: $P(\lvert X-\mu\rvert\ge t)=P((X-\mu)^2\ge t^2)\le\frac{E((X-\mu)^2)}{t^2}=\frac{Var(X)}{t^2}$
+
+Law of large numbers (weak): let $X_1,\dots,X_n$ be independent random variables with $E(X_i)=\mu$ and $Var(X_i)=\sigma^2$ for all $i$, define $S_n=\frac{1}{n}\sum_{i=1}^nX_i$, then for every $\epsilon>0$, $P(\lvert S_n-\mu\rvert\ge\epsilon)\to0$ as $n\to\infty$
+In particular, this holds if $X_1,\dots,X_n$ are independent and identically distributed, we say that $S_n$ converges to $\mu$ in probability
+Proof: $P(\lvert S_n-\mu\rvert\ge\epsilon)=P(\lvert X_1+\dots+X_n-n\mu\rvert\ge n\epsilon)\le\frac{Var(X_1+\dots+X_n)}{n^2\epsilon^2}=\frac{n\sigma^2}{n^2\epsilon^2}-\frac{\sigma^2}{n\epsilon^2}\to0$ as $n\to\infty$
+
+Note: for $X_1,\dots,X_n$ independent random variables with $E(X_i)=\mu$ and $Var(X_i)=\sigma^2$, $P(\lvert S_n-\mu\rvert\ge\frac{c}{\sqrt{n}})=P(\lvert X_1+\dots+X_n-n\mu\rvert\ge c\sqrt{n})\le\frac{Var(X_1+\dots+X_n)}{c^2n}=\frac{n\sigma^2}{c^2n}=\frac{\sigma^2}{c^2}$
+
+\end{document}

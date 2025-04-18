@@ -39,7 +39,7 @@
         \]
         $$\text{that is, } S = \bigcup_{t\in \text{im}(S)}f^{-1}(\{t\}) \text{ and } f^{-1}(\{t_1\}) \cap f^{-1}(\{t_2\}) = \emptyset \text{ whenever } t_1 \neq t_2$$
         \item[ ] 
-        \textbf{Solution}: In other words, we need to show that the union of all preimages over all elements in the image is equal to the domain $S$, and all the preimages are disjoint.
+        \textbf{Solution:} In other words, we need to show that the union of all preimages over all elements in the image is equal to the domain $S$, and all the preimages are disjoint.
         \vspace{0.2cm} 
 
         Since $f$ is a function, we know every element in the preimage must be mapped to 1 element in the codomain at most. 
@@ -77,44 +77,194 @@
 
 
 
+    \item[(b)] Show that for any $B_1,B_2 \subset T$ we have $$f^{-1}(B_1 \cup B_2)=f^{-1}(B_1) \cup f^{-1}(B_2)$$ 
+    \item[ ] \textbf{Solution:} Put more simply, we need to show that for any two subsets of the codomain, the preimage of the union of these two subsets is equal to the union of the two preimages of the subsets individually. To prove, we will show either side is a subset of the other.
+    \item[ ] Remember that  
+    \[
+        f^{-1}(B) = \{s \in S \mid f(s) \in B\} \subset S
+    \]
+\item[ ] We know that every element in the $f^{-1}(B_1 \cup B_2)$ will map at most to one element in $B_1$ or $B_2$. As such, we can rewrite 
+    \[
+    f^{-1}(B_1 \cup B_2) = 
+    \{s \in S \mid f(s) \in B_1 \lor f(s) \in B_2\} 
+    \]
+    \item[ ] When considering sets, or is essentially the same as the union of two sets; an element must either be in one set or the other, or both. Therefore, we know that for any $f(s)$, $s$ is either in $f^{-1}(B_1)$ 
+        or $f^{-1}(B_2)$. We can restate this as 
+    \[
+        \text{If } s \in f^{-1}(B_1 \cup B_2) \Rightarrow s \in (f^{-1}(B_1) \lor f^{-1}(B_2)) \Rightarrow s \in f^{-1}(B_1) \cup  f^{-1}(B_2)
+    \]
+    \item[ ] Since we have shown every element in $f^{-1}(B_1 \cup B_2)$ is an element of $f^{-1}(B_1) \cup f^{-1}(B_2)$, by the definition of a subset, 
+        \[
+        f^{-1}(B_1 \cup B_2) \subset f^{-1}(B_1) \cup f^{-1}(B_2)
+        \]
+    \item[ ] Now, let's prove the reverse
+        \[
+            \text{If } s \in f^{-1}(B_1) \Rightarrow f(s) \in (B_1 \cup B_2) 
+        \]
+        \[
+            \text{If } s \in f^{-1}(B_2) \Rightarrow f(s) \in (B_1 \cup B_2) 
+        \]
+        \[
+            \text{If } s \in f^{-1}(B_1) \cup f^{-1}(B_2) \Rightarrow f(s) \in B_1 \cup B_2 
+        \]
+    \item[ ] Then we can conclude
+
+          $f^{-1}(B_1 \cup B_2)$ contains all $s$ in  $f^{-1}(B_1) \cup f^{-1}(B_2)$, meaning 
+        \[
+          f^{-1}(B_1) \cup f^{-1}(B_2) \subset f^{-1}(B_1 \cup B_2)  
+        \]
+    \item[ ] Since we have proven the subset goes both ways, we can state 
+$$f^{-1}(B_1 \cup B_2)=f^{-1}(B_1) \cup f^{-1}(B_2)$$ 
+
+
+
+    \item[(c)] Show that for any $B_1,B_2 \subset T$ we have $$f^{-1}(B_1 \cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2)$$
+    \item[ ] \textbf{Solution:}
+        We'll prove both sides are subsets of the either, like we did for the previous problem 
+    \[
+        \text{If } s \in f^{-1}(B_1 \cap B_2) \Rightarrow f(s) \in B_1 \wedge B_2
+        \Rightarrow f(s) \in B_1 \cap B_2
+    \]
+    \item[ ] By the definition of the preimage, 
+    \[
+        s \in f^{-1}(B_1) \wedge s \in f^{-1}(B_2) \Rightarrow s \in  f^{-1}(B_1) \cap f^{-1}(B_2) 
+    \]
+    \[
+        f^{-1}(B_1 \cap B_2) \subset f^{-1}(B_1) \cap f^{-1}(B_2)
+    \]
+    \item[ ] For the other way around, 
+    \[
+        \text{If } s \in f^{-1}(B_1) \cap f^{-1}(B_2) \Rightarrow s \in f^{-1}(B_1) \wedge s \in f^{-1}(B_2) 
+    \]
+    \[
+        \text{Then } f(s) \in B_1 \wedge f(s) \in B_2 \Rightarrow f(s) \in B_1 \cap B_2 
+    \]
+    \[
+        s \in f^{-1}(f(s)) \Rightarrow s \in f^{-1}(B_1 \cap B_2)
+    \]
+    \[
+        f^{-1}(B_1) \cap f^{-1}(B_2) \subset  f^{-1}(B_1 \cap B_2) 
+    \]
+    \item[ ] Since the subset goes both ways, we know that 
+    $$f^{-1}(B_1 \cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2)$$
 
 
 
 
-    \item[(b)] Show that for any $B_1,B_2 \subset T$ we have $$f^{-1}(B_1 \cup B_2)=f^{-1}(B_1) \cup f^{-1}(B_2)$$.  
 
-    \item[(c)] Show that for any $B_1,B_2 \subset T$ we have $$f^{-1}(B_1 \cap B_2)=f^{-1}(B_1)\cap f^{-1}(B_2)$$.
+
+
+
+
+
+
+
 \end{itemize}
 \newpage
 
 \section*{The $n$ coin flips experiment}
+Consider the experiment of flipping a coin $n$ times, for some number $n \geq 1$, and with probability $p \in (0,1)$ of heads and $q = 1-p$ of tails. For each of the following questions, provide the general answer as a function of $n$ unless stated otherwise.
+
 \begin{itemize}
-    \item[(a)] 
-    \item[(b)] 
-    \item[(c)] 
+    \item[(d)] What is the sample space $S$ for this experiment and how many elements does it have?
+    \begin{itemize}
+        \item[] \textbf{Solution:} The sample space is the number of different combinations of heads and tails you could have gotten when flipping a coin $n$ times. It would have $2^n$ elements
+    \end{itemize}
+    \item[(e)] What is the probability of each outcome? Explain your answer. Note: this should depend on which outcome you consider.
+    \begin{itemize}
+        \item[] \textbf{Solution:} Since the probability of getting heads is not the same as getting tails, probability of each outcome depends on how many heads and tails you are looking to get. Specifically, if we are looking to get $h$ number of heads, the probability of any given combination is 
+        \[
+            (p^h) \cdot (1 - p)^{n - h} 
+        \]
+        \item[ ] This makes sense, as this would give us the chance of getting $h$ heads, and tacks on the probability of getting $n - h$ tails
+    \end{itemize}
+    \item[(f)] What is the probability that the number of heads among the $n$ flips is exactly $k$, for each $0 \leq k \leq n$? Explain your answer.
+    \begin{itemize}
+        \item[] \textbf{Solution:} We can use the binomial coefficient to solve this problem. Given $n$ flips, and $k$ of them are heads, we know that there are 
+            \[
+            \begin{pmatrix}n \\ k \end{pmatrix}  = \frac{n!}{k!(n-k)!}
+            \]
+        \item[ ] This tells us how many different ways there are to choose $k$ heads from $n$ flips, and it accounts for over-counting. Now, we just need to multiply this number by the actual probability of getting $k$ heads 
+            \[
+                \frac{n!}{k!(n-k)!}(p^h \cdot  (1-p)^{n-h})
+            \]
+    \end{itemize}
 \end{itemize}
 \newpage
 
 \section*{Enumeration practice}
+Recall that the binomial coefficients $\binom{n}{k} \in \mathbb{Z}_{\geq 0}$ are defined by
+
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!} \quad \text{and more generally} \quad \binom{n}{k_1 \ldots k_s} = \frac{n!}{k_1! \ldots k_s!}.$$
+
+
+
+
+
 \begin{itemize}
-    \item[(a)] 
-    \item[(b)] 
-    \item[(c)] 
+    \item[(g)]  Explain why $\binom{n}{k}$ is the number of subsets of cardinality $k$ of a set of cardinality $n$.
+    \begin{itemize}
+        \item[ ] \textbf{Solution:} When we say $\binom{n}{k}$, we're essentially asking how many ways we can choose $k$ items from $n$ item. If we expand this idea to sets, we can ask how many ways we can choose $k$ elements of a set with cardinality $n$. These $k$ elements can be combined to make a set, and since every $k$ came from the original set with $n$ elements, this new set is a subset. Therefore $\binom{n}{k}$ can be used to determine how many subsets with cardinality $k$ exist within a set with cardinality $n$
+
+    \end{itemize}
+Recall that a partition of a set $S$ is a collection of subsets $A_1, \ldots, A_s \subset S$ such that
+
+$$S = \bigsqcup_{i=1}^s A_i.$$
+    \item[(h)] Explain why $\binom{n}{k_1 \ldots k_s}$ is the number of partitions of a set $S$ of cardinality $n$ into a number $s \geq 2$ of subsets $A_1, \ldots, A_s$ of cardinality $k_1, \ldots, k_s$, respectively. Why does this agree with the previous question in the case $s = 2$?
+    \begin{itemize}
+        \item[ ] \textbf{Solution:}
+        As stated before, $\binom{n}{k_1 \ldots k_s}$ is the number of ways we can partition a set with $n$ elements into subsets of $k_1$ elements. If we were then to take the remaining elements and create subsets with cardinality $k_2$, we would only have $n-k_1$ elements to choose from, netting us $\binom{n-k_1}{k_2 }$. If we continue this pattern, we would get 
+    \[
+    \frac{n!}{k_1!(n-k_1!)} \cdot \frac{(n - k_1)!}{k_2!(n - k_1 - k_2)!} \cdot \frac{(n - k_1-k_2)!}{k_3!(n - k_1 - k_2 - k_3)!} \cdot ... 
+    \]
+        \item[ ] From this pattern, we can recognize that the numerators of subsequent terms and denominator of previous terms cancel, netting us 
+    \[
+        \frac{n!}{k_1! \cdot k_2! \cdot ... \cdot k_s!} \text{, which is just } \binom{n}{k_1 \ldots k_s} 
+    \]
+    \item[ ] This agrees with our previous problem if $s = 2$ since this just means we're creating two partitions from a set with size $n$: one with size $k$ and the other has cardinality $n - k$. Then from the form we deduced in here, we would get 
+    \[
+    \binom{n}{k(n-k)} = \frac{n!}{k!(n-k)!}
+    \]
+\item[ ] which matches with the explanation of the previous part
+    \end{itemize}
+
+    \item[(j)] Show that
+$$\sum_{k=0}^{n} \binom{n}{k} = 2^n,$$
+and explain the corresponding statement about subsets of a set of cardinality $n$.
+    \begin{itemize}
+        \item[ ] \textbf{Solution:} 
+    \end{itemize}
+    \[
+        (a+b)^n = \sum_{k=0}^{n} \binom{n}{k}a^kb^{n-k}
+    \]
+    \[
+    a, b = 1 \Rightarrow (1 + 1)^n =  \sum_{k=0}^{n} \binom{n}{k}1^k1^{n-k} = \sum_{k=0}^{n} \binom{n}{k} = 2^n 
+    \]
+    \item[ ] What this tells us is that with a set of cardinality $n$, we can make $2^n$ different subsets from it. This makes sense, as $2^n$ is the cardinality of the powerset, which is the set that contains all possible subsets of a set. Additionally, for every element in the set, we can either choose to add it or not add it to the new subset we're making, giving us $2^n$ options 
+    \newpage
+    \item[(k)] Show that
+$$\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}.$$
+Hint: Give an interpretation in terms of sets for both sides!
+
+    \begin{itemize}
+        \item[ ] \textbf{Solution:}
+        \[
+         = \frac{(n-1)!}{k!(n-1-k)!} + \frac{(n-1)!}{(k-1)!(n - k)!}
+        \]
+        \[
+            k! = k(k-1)! \quad \quad (n-k)! = (n - k - 1)!(n-k)
+        \]
+        \[
+             = \frac{(n-1)!(n-k)}{k!(n-k)!} + \frac{(n-1)!k}{k!(n-k)!} 
+        \]
+        \[
+            = \frac{(n-1)!(n - k + k)}{k!(n-k)!} = \frac{n!}{k!(n-k)!}
+        \]
+    \item[ ] As for the left side, we know that it's the number of ways we can create a subset of size $k$ from a set of cardinality $n$. The right side is another methods we can use to count how many subsets of size $k$ we can make. However, in this case, we can simply consider whether or not an element $i$ is in the subset or not.
+    \item[ ] We can first exclude $x$ from $S$, giving us $n-1$ elements to choose k elements from. If $k$ is already in the subset, we only need to choose from $k-1$ elements to create a subset with cardinality $k$. By adding these two, we can figure out how many subsets of size $k$ can be made 
+    \end{itemize}
 \end{itemize}
 
 
 \end{document}
 
-Let $f: S \to T$ be a function from the set $S$ to the set $T$, that is, a rule which assigns to each $s \in S$ an element $f(s) \in T$.
-
-Recall that for some $t \in T$ there may be more than one $s \in S$ such that $f(s) = t$ (that is, the function may not be injective), but that there is only one element $t = f(s) \in T$ assigned to each $s \in S$ by definition (this is sometimes called the vertical line test when $S = T = \mathbb{R}$).
-
-Let $A \subset S$, a subset of $S$, and define the image $f(A) \subset T$ as the subset
-$$f(A) = \{ f(s) \mid s \in A \} = \{ t \in T \mid t = f(s) \text{ for some } s \in A \} \subset T.$$
-
-In particular, let $\operatorname{im}(f) = f(S) = \{ t \in T \mid t = f(s) \text{ for some } s \in S \}$.
-
-Similarly, let $B \subset T$, a subset of $T$, and define the preimage as the subset
-$$f^{-1}(B) = \{ s \in S \mid f(s) \in B \} \subset S.$$
-
-Note that the preimage is always defined, even if the function $f$ itself is not invertible!

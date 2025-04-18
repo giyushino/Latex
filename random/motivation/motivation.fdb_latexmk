@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743619825.36613 "motivation.tex" "motivation.pdf" "motivation" 1743619825.77009 0
+["pdflatex"] 1743620319.12886 "motivation.tex" "motivation.pdf" "motivation" 1743620319.51463 0
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1742685315 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1742685315 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -223,9 +223,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1742948927 5306604 df2447a3a3aadc3acfc686cd8dc19dd6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1742948922 2008246 a710e5d269193ba1961186da0b890a5a ""
-  "motivation.aux" 1743619825.73089 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
-  "motivation.out" 1743619825.67384 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "motivation.tex" 1743619823.7069 5997 740f1612f7eda756e3d1911229ab87dc ""
+  "motivation.aux" 1743620319.47563 162 87159b23cce7c2b923b11c85495bbd6d "pdflatex"
+  "motivation.out" 1743620319.41988 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "motivation.tex" 1743620317.34662 5997 6478bea47a679389fcae175340f4e73f ""
   (generated)
   "motivation.aux"
   "motivation.log"

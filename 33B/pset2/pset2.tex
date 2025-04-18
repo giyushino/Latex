@@ -1,0 +1,599 @@
+\documentclass[hidelinks]{article}
+\usepackage[a4paper, total={7in, 10in}, top=0.5in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[unicode]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage{amsmath}
+\usepackage{array}
+\mathchardef\mhyphen="2D % Define a "math hyphen"
+\newcommand\rnumber{\mathop{r\mhyphen number}}
+
+\usetikzlibrary{angles,calc, decorations.pathreplacing}
+
+\definecolor{carminered}{rgb}{1.0, 0.0, 0.22}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{brightlavender}{rgb}{0.75, 0.58, 0.89}
+\title{\textbf{Math 33B Problem Set 2}}
+\author{Allan Zhang}
+\date{April 16, 2025}
+\begin{document}
+\hypersetup{bookmarksnumbered=true,}
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}
+\definecolor{darkseagreen}{rgb}{0.56, 0.74, 0.56}
+\definecolor{green(munsell)}{rgb}{0.0, 0.66, 0.47}
+\pagecolor{white}
+\color{black}
+\maketitle 
+\section*{Problem 1}
+Obtain the general solution by variation of parameters
+\begin{itemize}
+    \item[ ] \textbf{Section 2.4 Ex 30} 
+            \[
+                y' = -3y + 4 
+            \]
+    \begin{itemize}
+        \item[ ] First, let's solve for the associated homogenous equation 
+        \[
+            \frac{dy}{dx} = -3y
+        \]
+        \[
+            y = A\exp(\int-3 \, dx) = e^{-3x}
+        \]
+        \item[ ] In our case, we'll use $A(x)$
+        \[
+            y(x) = A(x)e^{-3x}
+        \]
+        \[
+            \frac{dy}{dx} = A'(x)e^{-3x} - 3A(x)e^{-3x} = -3A(e)^{-3x} + 4
+        \]
+        \[
+            A'(x) = 4e^{3x}
+        \]
+        \[
+            A(x) = \int A'(x) \, dx = \int 4e^{3x}\,dx = \frac{4e^{3x}}{3} + C
+        \]
+        \[
+            y(x) = (\frac{4e^{3x}}{3} + C)e^{-3x}
+        \]
+        \[
+            y(x) = \frac{4}{3} + Ce^{-3x}
+        \]
+    \end{itemize}
+
+    \item[ ] \textbf{Section 2.4 Ex 35} 
+            \[
+                y' + 2xy = 4x 
+            \]
+    \begin{itemize}
+        \item[ ]
+        Same as above, the homogenous equation would be
+        \[
+            \frac{dy}{dx} = -2xy
+        \]
+        \[
+            y = \exp(\int -2x \, dx) = e^{-x^2}
+        \]
+        \[
+            y(x) = A(x) e^{-x^{2}}
+        \]
+        \[
+            A'(x)e^{-x^2} - 2A(x)xe^{-x^2} = -2xA(x)e^{-x^2} + 4x
+        \]
+        \[
+            A'(x) = 4xe^{x^2}
+        \]
+        \[
+            A(x) = \int 4xe^{x^2} \, dx = 2e^{x^2} + C
+        \]
+        \[
+            y(x) = 2 + Ce^{-x^2}
+        \]
+    \end{itemize}
+\end{itemize}
+\newpage
+\section*{Problem 2}
+Solve the initial value problems by variation of parameters
+\begin{itemize}
+    \item[ ] \textbf{Section 2.4 Ex 37} 
+    \begin{itemize}
+        \item[ ] 
+        \[
+            y' + \frac{1}{2} y = t \quad y(0) = 1
+        \]
+        \[
+            \frac{dy}{dt} = -\frac{1}{2} y
+        \]
+        \[
+            y = A\exp(\int -\frac{1}{2} \, dt) = Ae^{-t/2}
+        \]
+        \[
+            y(t) = A(t)e^{-t/2}
+        \]
+        \[
+            A'(t)e^{-t/2} - \frac{1}{2}A(t)e^{-t/2} =\frac{1}{2}A(t)e^{-t/2} + t
+        \]
+        \[
+            A'(t) = te^{t/2}
+        \]
+        \[
+            \int u \, dv = uv - \int v \, du 
+        \]
+        \[
+            A(t) = \int te^{t/2} \, dt =  2te^{t/2} + C - \int 2e^{t/2} \, dt 
+            = 2te^{t/2} - 4e^{t/2} + C
+        \]
+        \[
+            y(t) = 2t - 4 + Ce^{-t/2}
+        \]
+        \[
+            1 = -4 + C \cdot 1
+            \quad C = 5
+        \]
+        \[
+            y(t) = 2t - 4 + 5e^{-t/2} 
+        \]
+    \end{itemize}
+    \item[ ] \textbf{Section 2.4 Ex 40} 
+    \begin{itemize}
+        \item[ ] 
+        \[
+            x' + \frac{2}{t^2} x = \frac{1}{t^2} \quad x(1) = 0 
+        \]
+        \[
+            \frac{dx}{dt} = -\frac{2}{t^2} x 
+        \]
+        \[
+            x = A\exp(\int -\frac{2}{t^2} \, dt) = Ae^{2/t}  
+        \]
+        \[
+            x(t) = A(t)e^{2/t}
+        \]
+        \[
+            A'(t)e^{2/t} - \frac{2}{t^2}A(t) e^{2/t} = 
+            -\frac{2}{t^2}A(t) e^{2/t} + \frac{1}{t^2}
+        \]
+        \[
+            A'(t) = \frac{1}{t^2} e^{-2/t}
+        \]
+        \[
+            A(t) = \int\frac{1}{t^2} e^{-2/t} \, dt
+                 = \frac{e^{-2/t}}{2} + C
+        \]
+        \[
+            x(t) = \frac{1}{2} + Ce^{2/t}
+        \]
+        \[
+            0 = \frac{1}{2} + Ce^{2}
+        \]
+        \[
+            -\frac{1}{2} = Ce^{2}
+        \]
+        \[
+            -\frac{1}{2e^2} = C
+        \]
+        \[
+            x(t) = \frac{1}{2} - \frac{1}{2e^2}
+        \]
+    \end{itemize}
+\end{itemize}
+\newpage
+\section*{Problem 3}
+Suppose that $y_1$ and $y_2$ are both solutions to the equation $y^{\prime}=a(t) y+f(t)$ where $a(t)>0$ and $f(t)>0$. For what constants $C_1$ and $C_2$ is $y=C_1 y_1+C_2 y_2$ a solution to the same equation?
+\[
+    a(t)y + f(t) = C_1y'_1 + C_2y'_2
+\]
+\[
+    y'_1 = a(t)y_1 + f(t) 
+\]
+\[
+    y'_2 = a(t)y_2 + f(t) 
+\]
+\[
+    y' = C_1(a(t)y_1 + f(t)) + C_2(a(t)y_2 + f(t))
+\]
+\[
+    a(t)(C_1y_1 + C_2y_2) + f(t)(C_1 + C_2) = a(t)y + f(t)
+\]
+\[
+    f(t)(C_1 + C_2) = f(t)
+\]
+\[
+    C_1 + C_2 = 1
+\]
+\newpage
+\section*{Problem 4}
+\textbf{Section 2.4, exercise 43}
+\[
+    T' = -k(T - A \sin \omega t)
+\]
+\begin{itemize}
+    \item[a)] Find a solution $T_h$ of the homogeneous equation $T' + kT = 0$
+    \[
+        \frac{dT}{dt} = -kT  
+    \]
+    \[
+        T = A\exp(\int -k \, dt) = Ae^{-kt}
+    \]
+    \item[b)] The equation (4.45) is not autonomous, so finding a particular solution $T_p$ is a bit more difficult. However, it doesn't hurt to guess. ${ }^4$ As a first guess, substitute $T_p=C \cos \omega t+D \sin \omega t$ into the equation $T^{\prime}+k T=k A \sin \omega t$ and show that
+$$
+-\omega C+k D=k A \quad \text { and } \quad k C+\omega D=0 .
+$$
+    \item[ ] $\quad$ Solution:
+\[
+    T'_p = -C\omega \sin\omega t + D \omega \cos \omega t 
+\]
+\[
+-C\omega \sin\omega t + D \omega \cos \omega t + k(C \cos \omega t + D \sin \omega t) = kA \sin \omega t
+\]
+\[
+    (kD - \omega C)\sin \omega t + (\omega D + kC) kA \cos \omega t
+= kA \sin \omega t
+\]
+    \item[ ] $\quad$ Since coefficients need to match, 
+$$
+-\omega C+k D=k A \quad \text { and } \quad k C+\omega D=0 .
+$$
+    \item[ ] $\quad$ is true 
+    \item[c)] Solve the simultaneous equations in part (b) and use Theorem 4.41 to show that the general solution of equation (4.45) is
+$$
+\begin{aligned}
+T & =T_h+T_p \\
+& =F e^{-k t}+\frac{k A}{k^2+\omega^2}[k \sin \omega t-\omega \cos \omega t],
+\end{aligned}
+$$
+where $F$ is an arbitrary constant.
+\[
+    C = \frac{-\omega D}{k}
+\]
+\[
+    -\omega (-\frac{\omega D}{k})+k D=kA = \frac{\omega^2 D}{k} + kD  
+\]
+\[
+    D\frac{w^2 + k^2}{k} = kA \quad D = \frac{k^2 A}{w^2+k^2} 
+\]
+\[
+    C = -\frac{\omega k A}{w^2 + k^2}
+\]
+\[
+T_p =\frac{k^2 A}{w^2+k^2} \cos \omega t  -\frac{\omega k A}{w^2 + k^2} \sin \omega t
+= \frac{kA}{k^2 + w^2}(k \sin \omega t - \omega \cos \omega t)
+\]
+\[
+    T = Ae^{-kt} + 
+ \frac{kA}{k^2 + w^2}(k \sin \omega t - \omega \cos \omega t)
+\]
+\end{itemize}
+\newpage
+\section*{Problem 5}
+\textbf{Section 2.5 Exercise 6}
+
+A tank initially contains 100 gal of a salt-water solution containing 0.05 lb of salt for each gallon of water. At time zero, pure water is poured into the tank at a rate of 2 gal per minute. Simultaneously, a drain is opened at the bot-tom of the tank that allows the salt-water solution to leave the tank at a rate of 3 gal per minute. What will be the salt content in the tank when precisely 50 gal of salt solution remain
+
+
+\begin{itemize}
+    \item[ ]  Let $V(t)$ represent the volume of salt solution present in the tank
+    \[
+        V = V(0) + \int^t -1 dV/dt = 100 - t
+    \]
+    \[
+        \text{For } V  = 50, \quad t = 50
+    \]
+    \item[ ] Let $S(t)$ represent the amount of salt in the tank
+    \[
+        \frac{dS}{dt} = 0 - \frac{S(t)}{V(t)} 3 = -\frac{3S}{100 - t}
+    \]
+    \[
+        \frac{dS}{S} = -3\frac{dt}{100 - t}
+    \]
+    \[
+        \ln|S| = 3\ln|100 - t| + C
+    \]
+    \[
+    S = e^C (100-t)^3 = C(100-t)^3
+    \]
+    \[
+        5 = C(100 - 0)^3 \quad C = \frac{5}{100^3}
+    \]
+    \[
+        S = \frac{5}{10^6}(100 - 50)^3 
+    \]
+    \[
+        S = 0.625
+    \]
+\end{itemize}
+\newpage
+\section*{Problem 6}
+\textbf{Section 2.5 Exercise 6}
+
+Consider two tanks, labeled tank A and tank B for reference. Tank A contains 100 gal of solution in which is dissolved 20 lb of salt. Tank B contains 200 gal of solution in which is dissolved 40 lb of salt. Pure water flows into tank A at a rate of 5 gal/s. There is a drain at the bottom of tank A. The solution leaves tank A via this drain at a rate of 5 gal/s and flows immediately into tank B at the same rate. A drain at the bottom of tank B allows the solution to leave tank B at a rate of 2.5 gal/s. What is the salt content in tank B at the precise moment that tank B contains 250 gal of solution? 
+
+
+
+\begin{itemize}
+    \item[ ] Let $S_a, S_b, V_b$ represent the salt content of A, salt content of B, and volume of B respectively
+    \[
+        \frac{dV_b}{dt} = 5 - 2.5 = 2.5 
+    \]
+    \[
+        \frac{dS_a}{dt} = 0 - 5 \frac{S}{100} = -\frac{S}{20}
+    \]
+    \[
+        S = A\exp(\int \frac{-1}{20} \, dt) = Ae^{-t/20}
+    \]
+    \[
+        S(0) = 20 \quad A = 20 \quad 20e^{-t/20}
+    \]
+    \item[ ] So the amount of salt that is flowing into tank B is 
+    \[
+        5 \frac{S_a}{100} = e^{-t/20}
+    \]
+    \[
+        \frac{dS_b}{dt} = e^{-t/20} - 2.5\frac{S_b}{200 + 2.5t} = e^{-t/20} - \frac{Q_b}{80 + t}
+    \]
+    \[
+        \frac{dS_b}{dt} + \frac{S_b}{80+t} = e^{-t/20}
+    \]
+    \[
+        \mu(x) = A\exp\int\frac{1}{80+t} \, dt = 80 + t 
+    \]
+    \[
+        (t+80)\frac{dS_b}{dt} + S_b = (t+80)e^{-t/20}
+    \]
+    \[
+        S_b = \int (t+80)e^{-t/20} \, dt
+        = (t+80)e^{-t/20} - \int e^{-t/20} \, dt
+        = (t+80)e^{-e/20} + 20e^{-t/20} + C
+    \]
+    \[
+    40 = 20 + C \quad C = 20 
+    \]
+    \[
+        S_b(t) = (t+80)e^{-e/20} + 20e^{-t/20} + 40
+    \]
+    \[
+        S_b(20) = 43.17
+    \]
+\end{itemize}
+\newpage
+\section*{Question 7}
+Lake Happy Times contains $100 \mathrm{~km}^3$ of pure water. It is fed by a river at a rate of $50 \mathrm{~km}^3 / \mathrm{yr}$. At time zero, there is a factory on one shore of Lake Happy Times that begins introducing a pollutant to the lake at a rate of $2 \mathrm{~km}^3 / \mathrm{yr}$. There is another river that is fed by Lake Happy Times at a rate that keeps the volume of Lake Happy Times constant. This means that the rate of flow from Lake Happy Times into the outlet river is $52 \mathrm{~km}^3 / \mathrm{yr}$. In turn, the flow from this outlet river goes into another lake, Lake Sad Times, at an equal rate. Finally, there is an outlet river from Lake Sad Times flowing at a rate that keeps the volume of Lake Sad Times at a constant $100 \mathrm{~km}^3$.
+
+(a) Find the amount of pollutant in Lake Sad Times at the end of 3 months.
+
+(b) At the end of 3 months, observers close the factory due to environmental concerns and no further pollutant enters Lake Happy Times. How long will it take for the pollutant in Lake Sad Times (found in part (a)) to be cut in half?
+\begin{itemize}
+    \item[ ] Let $P_h, P_s$ be the amount of pollutant is Happy and Sad lakes
+    \[
+        \frac{dP_h}{dt} = 2 - 52\frac{P_h}{100}
+    \]
+    \[
+        \frac{dP_h}{dt}  +  52\frac{P_h}{100}= 2 
+    \]
+    \[
+        \mu(t) = A\exp(\int \frac{13t}{25})\, dt  = e^{13t/25} 
+    \]
+    \[
+    e^{13t/25}\frac{dP_h}{dt} + \frac{13t}{25}e^{13t/25}P_h = 2e^{13t/25}
+    \]
+    \[
+        P_h e^{13t/25} = \int 2e^{13t/25}
+    \]
+    \[
+        P_h  e^{13t/25}= \frac{50}{13}e^{13t/25} + C
+    \]
+    \[
+        P_h =   \frac{50}{13} + Ce^{-13t/25}
+    \]
+    \[
+        P_h(0) = 0 \quad C = -\frac{50}{13}
+    \]
+    \[
+        P_h   = \frac{50}{13} - \frac{50}{13}e^{-13t/25}
+    \]
+    \item[ ] For Sad lake,
+    \[
+        \frac{dP_s}{dt} = 52\frac{P_h}{100} - 52\frac{P_s}{100}
+    \]
+    \[
+        \frac{dP_s}{dt} +  \frac{52}{100}P_s= 2(1 - e^{-13t/25}) 
+    \]
+    \[
+        \mu = A\exp(\int \frac{52}{100} \, dt) = e^{13t/25}
+    \]
+    \[
+        e^{13t/25}\frac{dP_s}{dt} + \frac{52}{100}e^{13t/25}P_s = 2(e^{13t/25} - 1)
+    \]
+    \[
+        P_s = e^{13t/25}\int 2(e^{13t/25} - 1) \, dt 
+    \]
+    \[
+        P_s(t) = 2e^{13t/25}(\frac{25}{13}e^{13t/25} - t) + C
+    \]
+    \[
+        P_s(0) = 0 \quad C = 0
+    \]
+    \[
+        P_s(3) = 0.031 
+    \]
+    \item[ ] For part b, we have
+    \[
+    \frac{dP_s}{dt} = -\frac{52}{100}P_s
+    \]
+    \[
+    P_s(t) = Ae^{-\frac{52}{100}t} 
+    \]
+    \[
+        0.015 = 0.031e^{-\frac{52}{100}t}
+    \]
+    \[
+        t = 1.33
+    \]
+\end{itemize}
+\newpage
+\section*{Problem 8}
+Determine if the equation is exact or not and solve. Find $y(\pi) = 0$
+\[
+    (1-y \sin x)dx + (\cos x) dy = 0
+\]
+\[
+    \frac{\partial (1-y \sin x)}{\partial y} = -\sin x
+\]
+\[
+    \frac{\partial (\cos x)}{\partial x} = -\sin x
+\]
+\[
+    \frac{\partial F}{\partial x} = (1- y \sin x) \, dx 
+\]
+\[
+    F = \int (1 - y \sin x) \, dx = x + y \cos x + g(y)
+\]
+\[
+    \frac{\partial F}{\partial y} = \cos x + g'(y) = \cos x
+\]
+\[
+    g'(y) = 0 \quad g(y) = C
+\]
+\[
+    x + y \cos x = K
+\]
+\[
+    \pi = K
+\]
+\[
+    y = \frac{\pi -x}{\cos x}
+\]
+\newpage
+\section*{Problem 9}
+Determine if the equation is exact or not and solve
+\[
+    \frac{dy}{dx} = \frac{3x^2+y}{3y^2-x}
+\]
+\[
+    (3y^2 - x)dy - (3x^2 + y)dx = 0
+\]
+\[
+    \frac{\partial (3y^2 - x)}{\partial x} = 1
+\]
+\[
+    \frac{\partial (3x^2 + y)}{\partial y} = 1
+\]
+\[
+    F = \int (3y^2 - x) \, dy = y^3 - xy + g(x)
+\]
+\[
+    \frac{\partial F}{\partial x} = -y + g'(x) = -(3x^2 + y)
+\]
+\[
+    g'(x) = -3x^2 \quad g(x) = -x^3 + C
+\]
+\[
+    F = y^3 - xy - x^3 + C
+\]
+\newpage
+\section*{Problem 10}
+
+Find all solutions to the differential equation
+$$
+(\sin y+x)\left(\frac{d y}{d x}\right)^2+\left(x^2+y+x \sin y\right) \frac{d y}{d x}+x y=0
+$$
+
+Show that there exist two solution with $y(0)=0$.
+\[
+    (\frac{dy}{dx} + x)((\sin y + x)\frac{dy}{dx} + y) = 0
+\]
+\[
+    \frac{dy}{dx} + x = 0 \quad \frac{dy}{dx} = -x
+\]
+\[
+    dy = -x \, dx 
+\]
+\[
+    y = -\frac{x^2}{2} + C
+\]
+\[
+    0 = 0 + C \quad C = 0 
+\]
+\[
+    y = -\frac{x^2}{2}
+\]
+
+The other solution is
+\[
+    \frac{dy}{dx} + \frac{y}{\sin y + x} = 0
+\]
+
+I guess $y(x) = 0$ would fit this solution 
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solve the initial value problems by variation of parameters
+\begin{itemize}
+    \item[ ] \textbf{Section 2.4 Ex 37} 
+    \begin{itemize}
+        \item[ ]  
+    \end{itemize}
+    \item[ ] \textbf{Section 2.4 Ex 40} 
+    \begin{itemize}
+        \item[ ] temp
+    \end{itemize}
+\end{itemize}
+
+
+Problem 3. Suppose that $y_1$ and $y_2$ are both solutions to the equation $y^{\prime}=a(t) y+f(t)$ where $a(t)>0$ and $f(t)>0$. For what constants $C_1$ and $C_2$ is $y-C_1 y_1+C_2 y_2$ a solution to the same equation?
+
+Problem 4. Section 2.4, exercise 43. The point of this exercise is to see how the theorem on the general solution for linear equations can itself be used to construct solutions, by making an educated guess at a particular solution (this is part (b)). The exercise makes some references to the previous exercise, however it is not necessary to do exercise 42 to do 43 .
+Background (see page 31 of the textbook): Newton's law of cooling states that the rate of change of temperature, $T$, of an object is proportional to the difference between its temperature and the ambient temperature, $A$ (e.g. the temperature of the room the object is in). This leads to the equation
+$$
+\frac{d T}{d t}=-k(T-A)
+$$
+
+Here $k$ is a positive constant, so we need the minus sign to ensure the correct dynamics (i.e. when $T>A$, we expect the temperature to decrease).
+
+Wednesday:
+Problem 5. Section 2.5, exercise 6. Note there is an error in the statement: there should be 2 gal per minute flowing in to the tank, and 3 gal per minute flowing out.
+
+Problem 6. Section 2.5, exercise 12.
+Problem 7. * Section 2.5, exercise 13. There is a clarification required: you should assume that once the pollutant stops entering the lake, the flow between the two lakes decreases so that the volume of both lakes remains constant.
+
+Friday:
+Problem 8. Section 2.6, Exercise 10. Hence also find the particular solution with $y(\pi)=0$.
+Problem 9. Section 2.6, Exercise 13.
+Problem 10. Find all solutions to the differential equation
