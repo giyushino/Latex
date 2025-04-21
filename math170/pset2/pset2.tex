@@ -145,7 +145,7 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
        \begin{itemize}
             \item[1.] $P(S) = 1$
             \begin{itemize}
-                \item[ ] \textbf{Solution: }By definition,  
+                \item[ ] By definition,  
                 \[
                     f_X(x) = P(X^{-1}(\{x\})) 
                 \]
@@ -163,7 +163,7 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
             \end{itemize}
             \item[2.] $P(A \cup B) = P(A) + P(B)$
            \begin{itemize}
-               \item[ ] \textbf{Solution: }We have already proved that $f^{-1}(A_1 \cup A_2) = f^{-1}(A_1) \cup f^{-1}(A_2)$. Then 
+               \item[ ] We have already proved that $f^{-1}(A_1 \cup A_2) = f^{-1}(A_1) \cup f^{-1}(A_2)$. Then 
                 \[
                     P_X(A_1 \cup A_2) =  \sum_{x \in A_1 \cup A_2} f_X(x) =  \sum_{x \in A_1} f_X(x) +  \sum_{x \in A_2} f_X(x)
                 \]
@@ -173,7 +173,7 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
             \end{itemize}
             \item[3.] $P(A_1 \cup A_2 \cup ...) = P(A_1) + P(A_2) + ...$ for any countable (or finite) list of events $A_1, A_2, ...$ such that $A_i \cap A_j= \emptyset$ for each $i \neq j$
             \begin{itemize}
-                \item[ ] \textbf{Solution: }From our knowledge that the sets $A_1 \cup A_2 \cup ...$ are all disjoint (show in the previous homework set), we can just extend the work we did above to an infinite number of subsets of $V_X$
+                \item[ ] From our knowledge that the sets $A_1 \cup A_2 \cup ...$ are all disjoint (show in the previous homework set), we can just extend the work we did above to an infinite number of subsets of $V_X$
                 \[
                     P_X(A_1 \cup A_2 \cup ... ) =  \sum_{x \in A_1 \cup A_2 \cup ... } f_X(x) =  \sum_{x \in A_1} f_X(x) +  \sum_{x \in A_2} f_X(x) + ... + \sum_{x \in A_n} f_X(x) 
                 \]
@@ -186,14 +186,86 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
 \end{itemize}
 \newpage
 \section{The n coin flips experiment, revisited}
+Recall the experiment of flipping a coin $n$ independent times, for some number $n \geq 1$, and with probability $p \in (0,1)$ of heads and $q = 1 - p$ of tails, for which the sample space was $S = \{H, T\}^{ \times n } = \{s = (s_1, ..., s_n) \mid s_i \in \{H, T\} \text{ for each } i = 1, ..., n. \}$.
+Let $X : S \rightarrow \mathbb{R}$ be the random variable defined by
+$$X(s) = \text{the number of heads flipped in the outcome } s \in S$$
+
+so that for example when $n = 3$ we have $X(TTT) = 0$, $X(TTH) = 1$, and $X(THH) = 2$.
+
+For each of the following questions, provide the general answer as a function of $n$:
     \begin{itemize}
     \item[(h)] What is $V_X$ and $f_X : V_X \rightarrow [0, 1]$ for the random variable $X$ defined above? 
+   \begin{itemize}
+       \item[ ] \textbf{Solution: } 
+           \[
+               V_X = \{x \in R\ | \; x= f(s) \text{ for some }s \in S \} = \{
+                0, 1, 2, ... ,n
+               \}
+           \]
+        \item[ ] If we only flip the coin once, since it can either be heads or tails, we could possibly have 0 heads. From there one out, it would be possible to have any number of heads depending on how many times we flip the coin
+    \end{itemize}
+    \item[(i)] Compute the expected value of $\mathbb{E}(X)$ for the random variable $X$ defined above 
+   \begin{itemize}
+       \item[ ] \textbf{Solution: }By definition, 
+           \[
+               \mathbb{E}(X) = \sum_{x \in V_X} x \cdot P(X) = \sum_{x \in V_X} x \cdot f_X(x)
+           \]
+        \item[ ] In general, the probability of each outcome is 
+        \[
+            p^x (1-p)^{n - x}
+        \]
+    \item[ ] If we want to take into account the probability that we get exactly $x$ heads, we can add on the binomial coefficient, netting us 
+        \[
+            \frac{n!}{(n-x)x!}\cdot  p^x (1-p)^{n - x}, 
+        \]
+    \item[] which can substitute $f_X(x)$ for us
+        \[
+            \sum_{x}^n x \cdot \frac{n!}{(n-x)x!}\cdot  p^x (1-p)^{n - x} 
+        \]
+    \item[ ] We could simplify the sum, but applying linearity of expectation, which we learned in discussion, is far simpler
+    \[
+        X_i = 1 \text{ if the $i$-th toss is heads} \quad \quad
+        X_i = 0 \text{ if the $i$-th toss is tails} 
+    \]
+    \[
+        \mathbb{E}(X_i) = 0\cdot(1 - p) + 1 \cdot p = p
+    \]
+    \[
+        \mathbb{E}(X) = \mathbb{E}(X_1 + X_2 + ... + X_n) = \mathbb{E}(X_1) + \mathbb{E}(X_2) + ... + \mathbb{E}(X_n) = np
+    \]
+    \end{itemize}
+    \item[(j)] Compute the variance $\sigma^2(X)$ for the random variable X defined above
+   \begin{itemize}
+       \item[ ] \textbf{Solution: }
+        \[
+            \sigma^2(X) = \mathbb{E}((X - \mathbb{E}(X))^2) 
+            = E(X^2) - (E(X))^2
+        \]
+        \[
+            X^2 = X_i X_j | i, j \in n = X_1^2 + X_2^2 + ... + X^2_n + 2 \sum_{i \leq i < j \leq n} X_iX_j
+        \]
+        \[
+            \mathbb{E}(X^2) = \mathbb{E}(X_1^2) + \mathbb{E}(X_2^2) + ... + \mathbb{E}(X_n^2) + 2 \sum_{i \leq i < j \leq n} \mathbb{E}(X_iX_j)
+        \]
+    \item[ ] Since $0^2$ and $1^2$ remain their original values, we can say 
+    \[
+        \mathbb{E}(X_i^2) = 0\cdot(1 - p) + 1 \cdot p = p
+    \]
+    \[
+        \sum_x^n \mathbb{E}(X_i^2) = \sum_x^n \mathbb{E}(X_i)= np
+    \]
+    \[
+        \mathbb{E}(X_iX_j) = \mathbb{E}(X_i)\mathbb{E}(X_j) = p^2
+    \]
+    \[
+        2 \cdot \sum_{i \leq i < j \leq n} \mathbb{E}(X_iX_j) = 2\cdot \binom{n}{2} \cdot p^2 = 2 \cdot \frac{n!}{(n-2)!2!} \cdot p^2 = n(n-1)p^2
+    \]
+    \[
+        \sigma^2(X) =np + n(n -1)p^2 - n^2p^2 =  np(1 + p(n -1) - np) = np(1 - p)
+    \]
+    \end{itemize}
     \end{itemize}
 \end{document}
    \begin{itemize}
         \item[ ] 
     \end{itemize}
-
-       \[
-            S = \bigsqcup_{t \in im(S)} f^{-1}(\{t\})
-       \]
