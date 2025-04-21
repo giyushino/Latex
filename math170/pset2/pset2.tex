@@ -40,7 +40,7 @@ suppose that the probability that a random person in the population has the dise
 \begin{itemize}
     \item[(a)]  What is the probability that a random person who is tested tests positive?
     \begin{itemize}
-        \item[ ] Let + and $-$ indicate positive and negative tests. Let $H$ and $S$ represent people who do not have the disease and people who do (happy and sad lol)
+        \item[ ] \textbf{Solution:} Let + and $-$ indicate positive and negative tests. Let $H$ and $S$ represent people who do not have the disease and people who do (happy and sad lol)
         \item[ ] Then we know that
         \[
             P(+|S) = 0.99 \quad P(+|H) = 0.03 \quad P(S)=0.05 
@@ -56,9 +56,9 @@ suppose that the probability that a random person in the population has the dise
             P(+) = 0.078
         \]
     \end{itemize}
-    \item[(b)] What is the probability that a random person has the disease, given they test positive?
+    \item[(b)]  What is the probability that a random person has the disease, given they test positive?
     \begin{itemize}
-        \item[ ] In other words, what is $P(S|+)$
+        \item[ ] \textbf{Solution:} In other words, what is $P(S|+)$
         \item[ ] Bayes' theorem states 
         \[
             P(S|+) = \frac{P(+|S)}{P(+)}P(S)
@@ -93,7 +93,7 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
 \begin{itemize}
     \item[(c)] What is the probability $P(C|x)$ that the sample is from $C$, the words from jokes?
     \begin{itemize}
-        \item[ ] We know that $P(C)$ and $P(N)$ are both 0.5. Then 
+        \item[ ] \textbf{Solution:} We know that $P(C)$ and $P(N)$ are both 0.5. Then 
         \[
             P(C|x) = \frac{P(x|C)}{P(x)}P(C)
         \]
@@ -122,19 +122,78 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
     \end{itemize}
     \item[(d)] What is the probability $P(N|x)$
     \begin{itemize}
-        \item[ ] We know that $P(N|x) = 1 - P(C|x)$
+        \item[ ]  \textbf{Solution:} We know that $P(N|x) = 1 - P(C|x)$
         \[
             P(N|x) = 1 - 0.987 = 0.013
         \]
     \end{itemize}
-    \item[(e)] If you later saw this list of words in a new sentence, how would you (naively) decide whether it is a joke or news using the principle of maximum likelihood estimation?
+    \item[(e)] If you later saw this list of words in a new sentence, how would you (naively) decide whether it is a joke or news using the principle of maximum likelihood estimation? 
     \begin{itemize}
-        \item[ ] temp
+        \item[ ] \textbf{Solution:} Since we have calculated $P(C | x)$ to be 0.987 and $P(N | x)$ to be 0.013, we would classify the sentence as a joke 
     \end{itemize}
-
 \end{itemize}
-\end{document}
-
+\newpage
+\section{The probability space induced by a random variable}
+\begin{itemize}
+    \item[(f)] Recall the proof from class that for any $A \subset V_X$ we have $$P_X(A) = \sum_{x \in A} f_X(x)$$ 
+   \begin{itemize}
+       \item[ ] \textbf{Solution:} I don't think this is a problem?
+   \end{itemize}
+    \item[(g)] Prove that the function $P_X: \mathcal{P}(V_X) \rightarrow [0, 1]$ defined a probability measure on $V_X$, that is, satisfies the definition of a probability space recalled above 
+   \begin{itemize}
+       \item[ ] \textbf{Solution:} To prove this satisfies the definition of a probability space, we need to show 
+       \begin{itemize}
+            \item[1.] $P(S) = 1$
+            \begin{itemize}
+                \item[ ] \textbf{Solution: }By definition,  
+                \[
+                    f_X(x) = P(X^{-1}(\{x\})) 
+                \]
+                \item[ ] We also proved on the last homework assignment that 
+                \[
+                    S = \bigsqcup_{t \in im(S)} f^{-1}(\{t\})
+                \]
+            \item[ ] Then we can state 
+                \[
+                    P_X(A) = P(\bigsqcup_{x \in A} X^{-1}(\{x\})) = \sum_{x \in A} P(X^{-1}(\{x\})))= \sum_{x \in A} f_X(x)
+                \]
+                \[
+                P_X(A)  =  1 = \sum_{x \in A} f_X(x)
+                \]
+            \end{itemize}
+            \item[2.] $P(A \cup B) = P(A) + P(B)$
+           \begin{itemize}
+               \item[ ] \textbf{Solution: }We have already proved that $f^{-1}(A_1 \cup A_2) = f^{-1}(A_1) \cup f^{-1}(A_2)$. Then 
+                \[
+                    P_X(A_1 \cup A_2) =  \sum_{x \in A_1 \cup A_2} f_X(x) =  \sum_{x \in A_1} f_X(x) +  \sum_{x \in A_2} f_X(x)
+                \]
+                \[
+                    = P_X(A_1) + P_X(A_2)
+                \]
+            \end{itemize}
+            \item[3.] $P(A_1 \cup A_2 \cup ...) = P(A_1) + P(A_2) + ...$ for any countable (or finite) list of events $A_1, A_2, ...$ such that $A_i \cap A_j= \emptyset$ for each $i \neq j$
+            \begin{itemize}
+                \item[ ] \textbf{Solution: }From our knowledge that the sets $A_1 \cup A_2 \cup ...$ are all disjoint (show in the previous homework set), we can just extend the work we did above to an infinite number of subsets of $V_X$
+                \[
+                    P_X(A_1 \cup A_2 \cup ... ) =  \sum_{x \in A_1 \cup A_2 \cup ... } f_X(x) =  \sum_{x \in A_1} f_X(x) +  \sum_{x \in A_2} f_X(x) + ... + \sum_{x \in A_n} f_X(x) 
+                \]
+                \[
+                    = P_X(A_1) + P_X(A_2) + ... +P_X(A_n)
+                \]
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\newpage
+\section{The n coin flips experiment, revisited}
     \begin{itemize}
+    \item[(h)] What is $V_X$ and $f_X : V_X \rightarrow [0, 1]$ for the random variable $X$ defined above? 
+    \end{itemize}
+\end{document}
+   \begin{itemize}
         \item[ ] 
     \end{itemize}
+
+       \[
+            S = \bigsqcup_{t \in im(S)} f^{-1}(\{t\})
+       \]
