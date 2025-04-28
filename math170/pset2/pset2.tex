@@ -137,7 +137,18 @@ Now you randomly choose one of the two lists $C$ or $N$ with equal probability, 
 \begin{itemize}
     \item[(f)] Recall the proof from class that for any $A \subset V_X$ we have $$P_X(A) = \sum_{x \in A} f_X(x)$$ 
    \begin{itemize}
-       \item[ ] \textbf{Solution:} I don't think this is a problem?
+       \item[ ] \textbf{Solution:} Remember that 
+           \[
+            P_X(A) = P(\{X\in A\}) = P(\{s \in S | X(s) \in A\}) = P(X^{-1}(A))
+           \]
+           \[
+               f_X(x) = P(\{X = x\} ) = P(\{s \in S | X(s) = x\}) = P(X^{-1}(\{x\}))
+           \]
+       \item[ ] We also know that $P(A_1 \cup A_2 \cup ... \cup A_n) = P(A_1) + P(A_2) + ... + P(A_n)$ 
+           , so if we partition the set into single set elements, we can write
+           \[
+               P_X(A) = \sum_{x \in A} f_X(x)
+           \]
    \end{itemize}
     \item[(g)] Prove that the function $P_X: \mathcal{P}(V_X) \rightarrow [0, 1]$ defined a probability measure on $V_X$, that is, satisfies the definition of a probability space recalled above 
    \begin{itemize}
@@ -222,6 +233,30 @@ For each of the following questions, provide the general answer as a function of
         \[
             \sum_{x}^n x \cdot \frac{n!}{(n-x)x!}\cdot  p^x (1-p)^{n - x} 
         \]
+    \[
+    \sum_{x}^n x \cdot \binom{n}{x}\cdot  p^x (1-p)^{n - x} 
+\]
+\[
+    x\binom{n}{x} = n \binom{n-1}{x-1}
+\]
+\[
+    \sum_{x}^n n \cdot \binom{n-1}{x-1}\cdot  p^x (1-p)^{n - x} 
+\]
+\[
+    n \sum_{x}^n \binom{n-1}{x-1}\cdot  p^x (1-p)^{n - x} 
+\]
+\[
+    k = x - 1 \quad 
+    n \sum_{k}^{n-1} \binom{n-1}{k}\cdot  p^{k+1} (1-p)^{n - k - 1} 
+\]
+\[
+    np \sum_{k}^{n-1} \binom{n-1}{k}\cdot  p^{k} (1-p)^{(n-1) - k} 
+\]
+\[
+    np (p + (1 - p))^{n-1} = np 
+    \cdot 1^{n - 1} = np
+\]
+
     \item[ ] We could simplify the sum, but applying linearity of expectation, which we learned in discussion, is far simpler
     \[
         X_i = 1 \text{ if the $i$-th toss is heads} \quad \quad
@@ -265,6 +300,7 @@ For each of the following questions, provide the general answer as a function of
     \]
     \end{itemize}
     \end{itemize}
+\newpage 
 \end{document}
    \begin{itemize}
         \item[ ] 
